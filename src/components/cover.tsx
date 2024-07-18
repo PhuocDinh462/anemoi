@@ -17,18 +17,27 @@ export default function Cover() {
 
   return (
     // BG
-    <div
-      className={
-        windowWidth >= width_m
-          ? "h-screen bg-[url('./src/assets/fv_main_bg.jpg')] bg-cover bg-center flex justify-center"
-          : windowWidth < width_m && windowWidth >= width_s
-          ? "h-screen bg-[url('./src/assets/fv_main_bg_sp.jpg')] bg-cover bg-bottom-top-52 flex justify-center"
-          : "h-screen bg-[url('./src/assets/fv_main_bg_sp.jpg')] bg-cover flex justify-center"
-      }
-    >
-      {/* Logo */}
-      <div className="w-96 sm:w-1/2 md:w-1/3">
-        <img src="./src/assets/anemoi_logo.png" alt="anemoi_logo.png" className="object-cover" />
+    <div>
+      <div
+        className={
+          windowWidth >= width_m
+            ? "h-screen bg-[url('./src/assets/fv_main_bg.jpg')] bg-cover bg-center flex justify-center"
+            : windowWidth < width_m && windowWidth >= width_s
+            ? "h-screen bg-[url('./src/assets/fv_main_bg_sp.jpg')] bg-cover bg-bottom-top-52 flex justify-center"
+            : ""
+        }
+      >
+        {windowWidth < width_s && (
+          <img
+            src="./src/assets/fv_main_bg_sp.jpg"
+            alt="fv_main_bg_sp.jpg"
+            className="object-cover"
+          />
+        )}
+        {/* Logo */}
+        {/* <div className="w-96 sm:w-1/2 md:w-1/3">
+          <img src="./src/assets/anemoi_logo.png" alt="anemoi_logo.png" className="object-cover" />
+        </div> */}
       </div>
     </div>
   );
