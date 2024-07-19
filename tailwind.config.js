@@ -6,6 +6,9 @@ export default {
       inset: {
         "28rem": "28rem",
       },
+      colors: {
+        "regal-blue": "rgba(40, 178, 230, 1)",
+      },
     },
     screens: {
       sm: "699px",
