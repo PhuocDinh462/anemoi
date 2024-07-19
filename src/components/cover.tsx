@@ -19,25 +19,29 @@ export default function Cover() {
     // BG
     <div>
       <div
-        className={
-          windowWidth >= width_m
-            ? "h-screen bg-[url('./src/assets/fv_main_bg.jpg')] bg-cover bg-center flex justify-center"
-            : windowWidth < width_m && windowWidth >= width_s
-            ? "h-screen bg-[url('./src/assets/fv_main_bg_sp.jpg')] bg-cover bg-bottom-top-52 flex justify-center"
-            : ""
-        }
+        className={`flex justify-center ${
+          windowWidth >= width_m &&
+          "bg-cover bg-top h-screen bg-[url('./src/assets/fv_main_bg.jpg')]"
+        }`}
       >
-        {windowWidth < width_s && (
+        {windowWidth < width_m && (
           <img
             src="./src/assets/fv_main_bg_sp.jpg"
             alt="fv_main_bg_sp.jpg"
-            className="object-cover"
+            className={`w-full object-cover object-top ${
+              windowWidth >= width_s && "relative bottom-[28rem]"
+            }`}
           />
         )}
+
         {/* Logo */}
-        {/* <div className="w-96 sm:w-1/2 md:w-1/3">
+        <div
+          className={`absolute top-0 min-w-64 ${
+            windowWidth >= width_m ? "w-96" : "w-1/2 sm:w-2/5 md:w-1/4"
+          }`}
+        >
           <img src="./src/assets/anemoi_logo.png" alt="anemoi_logo.png" className="object-cover" />
-        </div> */}
+        </div>
       </div>
     </div>
   );
