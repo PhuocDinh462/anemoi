@@ -4,10 +4,9 @@ import Navbar from "./components/navbar";
 function App() {
   return (
     <>
-      <div className="w-full fixed">
+      <div className="w-full fixed z-50">
         <Navbar />
       </div>
-      <Cover />
       <Cover />
     </>
   );
