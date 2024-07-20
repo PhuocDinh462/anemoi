@@ -38,7 +38,11 @@ export default function Cover() {
           windowWidth >= width_m ? "w-96" : "w-1/2 sm:w-2/5 md:w-1/4"
         }`}
       >
-        <img src="./src/assets/anemoi_logo.png" alt="anemoi_logo.png" className="object-cover" />
+        <img
+          src="./src/assets/anemoi_logo.png"
+          alt="anemoi_logo.png"
+          className="object-cover drop-shadow-3xl"
+        />
       </div>
     </div>
   );

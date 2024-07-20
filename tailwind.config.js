@@ -9,6 +9,9 @@ export default {
       colors: {
         "regal-blue": "rgba(40, 178, 230, 1)",
       },
+      dropShadow: {
+        "3xl": ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
+      },
     },
     screens: {
       sm: "699px",
