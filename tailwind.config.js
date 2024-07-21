@@ -10,7 +10,8 @@ export default {
         "regal-blue": "rgba(40, 178, 230, 1)",
       },
       dropShadow: {
-        "3xl": ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
+        logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
+        slogan: ["0 0 20px #1191d6", "0 0 20px #1191d6", "0 0 20px #1191d6"],
       },
       height: {
         225: "56.3rem",
