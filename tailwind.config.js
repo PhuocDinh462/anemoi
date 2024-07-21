@@ -18,6 +18,9 @@ export default {
       width: {
         100: "25rem",
       },
+      spacing: {
+        "1440px": "1440px",
+      },
     },
     screens: {
       sm: "699px",
