@@ -19,6 +19,9 @@ export default {
       width: {
         100: "25rem",
       },
+      backgroundImage: {
+        "cover-bg": "url('./src/assets/fv_main_bg.png')",
+      },
     },
     screens: {
       "2sm": "499px",
