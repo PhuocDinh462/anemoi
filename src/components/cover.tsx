@@ -20,7 +20,7 @@ export default function Cover() {
     <div
       className={`flex justify-center ${
         windowWidth >= width_m &&
-        "bg-cover bg-top h-225 2xl:min-h-1440px bg-[url('./src/assets/fv_main_bg.png')]"
+        "bg-cover bg-top h-225 2xl:min-h-screen bg-[url('./src/assets/fv_main_bg.png')]"
       }`}
     >
       {windowWidth < width_m && (
@@ -36,10 +36,10 @@ export default function Cover() {
       )}
 
       {/* Slogan & Logo */}
-      <div className="absolute mt-12 flex align-middle justify-center">
+      <div className="absolute mt-12 flex items-center justify-center max-sm:flex-col-reverse">
         <div
-          className="mt-6 mr-14 [writing-mode:vertical-rl] font-light
-         text-white text-lg/9 tracking-[0.25em] drop-shadow-slogan"
+          className="sm:mr-14 2sm:text-lg/9 text-base/9 mt-6 [writing-mode:vertical-rl] font-light
+         text-white tracking-[0.25em] drop-shadow-slogan"
         >
           約束は
           <span>、</span>
@@ -49,7 +49,7 @@ export default function Cover() {
         </div>
 
         <div
-          className={`mr-32 min-w-64 ${
+          className={`sm:mr-32 min-w-64 ${
             windowWidth >= width_m ? "w-100" : "w-1/2 sm:w-2/5 md:w-1/4"
           }`}
         >
