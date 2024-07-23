@@ -2,7 +2,7 @@ export default function Cover() {
   return (
     <div
       className="bg-cover bg-no-repeat md:bg-top md:h-225 2xl:min-h-screen md:bg-cover-bg 
-      sm:h-screen min-h-[900px] sm:bg-bottom sm:bg-cover-bg-sp"
+      sm:h-screen sm:min-h-[900px] sm:bg-bottom sm:bg-cover-bg-sp"
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">
