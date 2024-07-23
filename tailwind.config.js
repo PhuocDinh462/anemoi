@@ -3,9 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      inset: {
-        "28rem": "28rem",
-      },
       colors: {
         "regal-blue": "rgba(40, 178, 230, 1)",
       },
@@ -20,8 +17,12 @@ export default {
         100: "25rem",
       },
       backgroundImage: {
-        "cover-bg": "url('./src/assets/fv_main_bg.png')",
-        "cover-bg-sp": "url('./src/assets/fv_main_bg_sp.png')",
+        "cover-bg": "url('./src/assets/images/fv_main_bg.png')",
+        "cover-bg-sp": "url('./src/assets/images/fv_main_bg_sp.png')",
+      },
+      fontFamily: {
+        seasons: ['"the-seasons"', "sans-serif"],
+        tsukumin: ['"fot-tsukumin"', "sans-serif"],
       },
     },
     screens: {

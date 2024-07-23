@@ -17,7 +17,7 @@ export default function Cover() {
       <div className="absolute top-11 w-full flex items-center justify-center max-bm:flex-col-reverse">
         <div
           className="bm:mr-14 ss:text-lg/9 text-base/7 mt-6 [writing-mode:vertical-rl] font-light
-        text-white tracking-[0.25em] drop-shadow-slogan"
+        text-white tracking-[0.25em] drop-shadow-slogan font-tsukumin"
         >
           約束は
           <span>、</span>
@@ -28,7 +28,7 @@ export default function Cover() {
 
         <div className="bm:mr-32 min-w-64 w-1/2 md:w-100 sm:w-2/5">
           <img
-            src="./src/assets/anemoi_logo.png"
+            src="./src/assets/images/anemoi_logo.png"
             alt="anemoi アネモイ"
             className="object-cover drop-shadow-logo"
           />

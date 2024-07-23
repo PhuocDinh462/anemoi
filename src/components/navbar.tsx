@@ -1,30 +1,31 @@
 export default function Navbar() {
   return (
-    <div className="pt-1 pb-5 bg-gradient-to-b from-regal-blue to-transparent flex items-center justify-center select-none">
-      {/* <div className="flex items-center">
-        <img src="./src/assets/anemoi_logo.png" alt="anemoi_logo.png" className="h-8" />
-      </div> */}
-      <div className="text-white text-lg font-thin">|</div>
-      <a href="#" className="text-white font-light mx-4 px-5">
+    <div
+      className="pt-2 pb-5 bg-gradient-to-b from-regal-blue to-transparent 
+      flex items-center justify-center select-none text-center text-white font-semibold
+      font-seasons tracking-widest text-[1em]"
+    >
+      |
+      <a href="#" className="font-thin px-[30px]">
         top
       </a>
-      <div className="text-white text-lg font-thin">|</div>
-      <a href="#" className="text-white font-light text-lg mx-4 px-5">
+      |
+      <a href="#" className="font-thin px-[30px]">
         introduction
       </a>
-      <div className="text-white text-lg font-thin">|</div>
-      <a href="#" className="text-white font-light text-lg mx-4 px-5">
+      |
+      <a href="#" className="font-thin px-[30px]">
         story
       </a>
-      <div className="text-white text-lg font-thin">|</div>
-      <a href="#" className="text-white font-light text-lg mx-4 px-5">
+      |
+      <a href="#" className="font-thin px-[30px]">
         character
       </a>
-      <div className="text-white text-lg font-thin">|</div>
-      <a href="#" className="text-white font-light text-lg mx-4 px-5">
+      |
+      <a href="#" className="font-thin px-[30px]">
         movie
       </a>
-      <div className="text-white text-lg font-thin">|</div>
+      |
     </div>
   );
 }
