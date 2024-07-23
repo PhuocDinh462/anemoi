@@ -23,15 +23,11 @@ export default {
         "cover-bg": "url('./src/assets/fv_main_bg.png')",
         "cover-bg-sp": "url('./src/assets/fv_main_bg_sp.png')",
       },
-      backgroundPosition: {
-        top: "top",
-        bottom: "bottom",
-        "bottom-4": "center bottom -13rem",
-      },
     },
     screens: {
-      "2sm": "499px",
+      ss: "499px",
       sm: "699px",
+      bm: "799px",
       md: "899px",
       xl: "1280px",
       "2xl": "1600px",

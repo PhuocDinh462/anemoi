@@ -8,7 +8,6 @@ function App() {
         <Navbar />
       </div>
       <Cover />
-      <div className="bg-red-500 h-96"></div>
     </>
   );
 }
