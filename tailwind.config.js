@@ -21,6 +21,12 @@ export default {
       },
       backgroundImage: {
         "cover-bg": "url('./src/assets/fv_main_bg.png')",
+        "cover-bg-sp": "url('./src/assets/fv_main_bg_sp.png')",
+      },
+      backgroundPosition: {
+        top: "top",
+        bottom: "bottom",
+        "bottom-4": "center bottom -13rem",
       },
     },
     screens: {
