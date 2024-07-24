@@ -1,14 +1,29 @@
+import { useEffect, useState } from "react";
+
 export default function Cover() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const width_m = 899;
+
   return (
     <div
-      className="bg-cover bg-no-repeat md:bg-top md:h-225 2xl:min-h-screen md:bg-cover-bg 
-      sm:h-screen sm:min-h-[900px] sm:bg-bottom sm:bg-cover-bg-sp"
+      className="h-screen min-h-[900px] bg-cover bg-no-repeat md:bg-top md:bg-cover-bg 
+      sm:bg-bottom sm:bg-cover-bg-sp"
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">
         <img
-          src="./src/assets/fv_main_bg_sp.png"
-          alt="fv_main_bg_sp.jpg"
+          src="./src/assets/images/fv_main_bg_sp.png"
+          alt="fv_main_bg_sp"
           className="w-screen object-cover object-top"
         />
       </div>
@@ -34,6 +49,19 @@ export default function Cover() {
           />
         </div>
       </div>
+
+      <div className="absolute bottom-[22.5%] left-[50%] text-4xl">Coming</div>
+      <div className="absolute bottom-[18%] left-[50%] tracking-[0.42em] font-light text-4xl">
+        2025
+      </div>
+
+      {/* Key logo */}
+      <a href="https://key.visualarts.gr.jp/" className="absolute bottom-[0px] right-[50px] w-[4%]">
+        <img
+          src={`./src/assets/images/key_logo_${windowWidth >= width_m ? "white" : "black"}.png`}
+          alt="Key"
+        />
+      </a>
     </div>
   );
 }
