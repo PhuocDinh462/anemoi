@@ -51,13 +51,13 @@ export default function Cover() {
       </div>
 
       <div
-        className="absolute bottom-[8%] sm:bottom-[22.5%] left-[50%] 
+        className="absolute bottom-[14%] sm:bottom-[22.5%] left-[50%] 
       -translate-x-1/2 text-4xl text-[#7ca0d1] font-thomasita"
       >
         Coming
       </div>
       <div
-        className="absolute bottom-[2%] sm:bottom-[18%] left-[50%] 
+        className="absolute bottom-[8%] sm:bottom-[18%] left-[50%] 
         -translate-x-1/2 tracking-[0.42em] indent-[0.42em]
         font-seasons font-thin text-5xl text-[#231815]"
       >
@@ -65,12 +65,13 @@ export default function Cover() {
       </div>
 
       {/* Key logo */}
-      <div
-        className="absolute w-[12%] bottom-[2%] right-[4%]
-        md:w-[4%] md:bottom-[30px]
-        sm:w-[8%] sm:bottom-[10%] sm:right-[50px]"
-      >
-        <a href="https://key.visualarts.gr.jp/">
+      <div className="flex justify-end pr-[4%] pb-[4%]">
+        <a
+          href="https://key.visualarts.gr.jp/"
+          className="relative w-[12%]
+          md:w-[4%] md:bottom-[30px]
+          sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]"
+        >
           <img
             src={`./src/assets/images/key_logo_${windowWidth >= width_s ? "white" : "black"}.png`}
             alt="Key"
