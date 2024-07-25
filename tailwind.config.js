@@ -25,6 +25,15 @@ export default {
         tsukumin: ['"fot-tsukumin"', "sans-serif"],
         thomasita: ['"thomasita"', "sans-serif"],
       },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(200%)" },
+        },
+      },
+      animation: {
+        slideDown: "slideDown 2s infinite",
+      },
     },
     screens: {
       ss: "499px",
