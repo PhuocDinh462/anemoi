@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "regal-blue": "rgba(40, 178, 230, 1)",
+        "custom-blue-100": "rgba(40, 178, 230, 1)",
       },
       dropShadow: {
         logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
@@ -23,6 +23,7 @@ export default {
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],
         tsukumin: ['"fot-tsukumin"', "sans-serif"],
+        thomasita: ['"thomasita"', "sans-serif"],
       },
     },
     screens: {

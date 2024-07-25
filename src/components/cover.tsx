@@ -12,12 +12,12 @@ export default function Cover() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const width_m = 899;
+  const width_s = 699;
 
   return (
     <div
-      className="h-screen min-h-[900px] bg-cover bg-no-repeat md:bg-top md:bg-cover-bg 
-      sm:bg-bottom sm:bg-cover-bg-sp"
+      className="relative h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-cover-bg
+      sm:bg-bottom sm:bg-cover-bg-sp sm:min-h-[900px]"
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">
@@ -50,18 +50,34 @@ export default function Cover() {
         </div>
       </div>
 
-      <div className="absolute bottom-[22.5%] left-[50%] text-4xl">Coming</div>
-      <div className="absolute bottom-[18%] left-[50%] tracking-[0.42em] font-light text-4xl">
+      <div
+        className="absolute bottom-[8%] sm:bottom-[22.5%] left-[50%] 
+      -translate-x-1/2 text-4xl text-[#7ca0d1] font-thomasita"
+      >
+        Coming
+      </div>
+      <div
+        className="absolute bottom-[2%] sm:bottom-[18%] left-[50%] 
+        -translate-x-1/2 tracking-[0.42em] indent-[0.42em]
+        font-seasons font-thin text-5xl text-[#231815]"
+      >
         2025
       </div>
 
       {/* Key logo */}
-      <a href="https://key.visualarts.gr.jp/" className="absolute bottom-[0px] right-[50px] w-[4%]">
-        <img
-          src={`./src/assets/images/key_logo_${windowWidth >= width_m ? "white" : "black"}.png`}
-          alt="Key"
-        />
-      </a>
+      <div
+        className="absolute w-[12%] bottom-[2%] right-[4%]
+        md:w-[4%] md:bottom-[30px]
+        sm:w-[8%] sm:bottom-[10%] sm:right-[50px]"
+      >
+        <a href="https://key.visualarts.gr.jp/">
+          <img
+            src={`./src/assets/images/key_logo_${windowWidth >= width_s ? "white" : "black"}.png`}
+            alt="Key"
+            className="align-bottom"
+          />
+        </a>
+      </div>
     </div>
   );
 }
