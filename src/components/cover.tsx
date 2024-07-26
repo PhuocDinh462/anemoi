@@ -29,7 +29,10 @@ export default function Cover() {
       </div>
 
       {/* Slogan & Logo */}
-      <div className="absolute top-11 w-full flex items-center justify-center max-bm:flex-col-reverse">
+      <div
+        className="absolute top-11 w-full flex items-center justify-center 
+        max-bm:flex-col-reverse animate-fadeSlideDown"
+      >
         <div
           className="bm:mr-14 ss:text-lg/9 text-base/7 mt-6 [writing-mode:vertical-rl] font-light
         text-white tracking-[0.25em] drop-shadow-slogan font-tsukumin"

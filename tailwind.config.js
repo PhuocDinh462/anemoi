@@ -30,9 +30,14 @@ export default {
           "0%": { transform: "translateY(0%)", opacity: "0", height: "0" },
           "100%": { transform: "translateY(150%)", opacity: "1", height: "30px" },
         },
+        fadeSlideDown: {
+          "0%": { transform: "translateY(-20%)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
+        fadeSlideDown: "fadeSlideDown 2.5s",
       },
     },
     screens: {
