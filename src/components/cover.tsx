@@ -87,7 +87,7 @@ export default function Cover() {
         flex flex-col items-center bottom-0 h-[70px] font-seasons w-10 overflow-hidden"
       >
         <span className="text-xs tracking-widest italic pb-2">Scroll</span>
-        <div className="h-8 w-[.1px] bg-black animate-slideDown" />
+        <div className="h-8 w-[.5px] bg-black animate-pathMove" />
       </div>
     </div>
   );

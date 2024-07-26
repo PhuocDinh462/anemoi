@@ -26,13 +26,13 @@ export default {
         thomasita: ['"thomasita"', "sans-serif"],
       },
       keyframes: {
-        slideDown: {
-          "0%": { transform: "translateY(0%)" },
-          "100%": { transform: "translateY(200%)" },
+        pathMove: {
+          "0%": { transform: "translateY(0%)", opacity: "0", height: "0" },
+          "100%": { transform: "translateY(150%)", opacity: "1", height: "30px" },
         },
       },
       animation: {
-        slideDown: "slideDown 2s infinite",
+        pathMove: "pathMove 2s infinite",
       },
     },
     screens: {
