@@ -14,7 +14,7 @@ export default function Intro() {
 
       <div
         className="py-[30px] text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem] max-xs:text-[.75rem]"
+        max-sm:text-[.875rem] max-xs:text-[.75rem] max-xs:leading-8"
       >
         {"黄金色の海がそよいだ"}
         <br />
@@ -28,7 +28,7 @@ export default function Intro() {
       <div className="font-thomasita font-semibold text-sm">staff</div>
       <div
         className="text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem] max-xs:text-[.75rem]"
+        max-sm:text-[.875rem] max-xs:text-[.75rem] max-xs:leading-8"
       >
         {"［ 原画 ］Na-Ga ／ ふむゆん ／ 永山ゆうのん ／ きみしま青"}
         <br />
