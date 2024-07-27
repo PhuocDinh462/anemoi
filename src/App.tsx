@@ -1,5 +1,6 @@
 import Cover from "./components/cover";
 import Navbar from "./components/navbar";
+import Intro from "./components/intro";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <Navbar />
       </div>
       <Cover />
-      <div className="h-96 bg-red-500"></div>
+      <Intro />
     </>
   );
 }
