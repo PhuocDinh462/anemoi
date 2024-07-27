@@ -17,7 +17,7 @@ export default function Cover() {
   return (
     <div
       className="relative h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
-      sm:bg-bottom sm:bg-cover-bg-sp sm:min-h-[900px]"
+      sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]"
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">
@@ -31,7 +31,7 @@ export default function Cover() {
       {/* Slogan & Logo */}
       <div
         className="absolute top-11 w-full flex items-center justify-center 
-        max-bm:flex-col-reverse animate-fadeLogo"
+        max-bm:flex-col-reverse animate-fadeDown"
       >
         <div
           className="bm:mr-14 xs:text-lg/9 text-base/7 mt-6 [writing-mode:vertical-rl] font-light

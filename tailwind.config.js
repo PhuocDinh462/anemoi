@@ -15,6 +15,7 @@ export default {
       },
       backgroundImage: {
         "main-bg": "url('@assets/images/fv_main_bg.png')",
+        "main-bg-sp": "url('@assets/images/fv_main_bg_sp.png')",
         "intro-bg": "url('@assets/images/intro_bg.jpg')",
       },
       fontFamily: {
@@ -27,14 +28,14 @@ export default {
           "0%": { transform: "translateY(0%)", opacity: "0", height: "0" },
           "100%": { transform: "translateY(150%)", opacity: "1", height: "30px" },
         },
-        fadeLogo: {
+        fadeDown: {
           "0%": { transform: "translateY(-50px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
-        fadeLogo: "fadeLogo 2.5s",
+        fadeDown: "fadeDown 2.5s",
       },
     },
     screens: {
