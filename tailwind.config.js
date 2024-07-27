@@ -17,6 +17,7 @@ export default {
         "main-bg": "url('@assets/images/fv_main_bg.png')",
         "main-bg-sp": "url('@assets/images/fv_main_bg_sp.png')",
         "intro-bg": "url('@assets/images/intro_bg.jpg')",
+        "story-bg": "url('@assets/images/story_bg.jpg')",
       },
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],
