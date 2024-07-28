@@ -17,7 +17,13 @@ export default {
         "main-bg": "url('@assets/images/fv_main_bg.png')",
         "main-bg-sp": "url('@assets/images/fv_main_bg_sp.png')",
         "intro-bg": "url('@assets/images/intro_bg.jpg')",
+        "intro-leaf-1": "url('@assets/images/intro_leaf_1.png')",
+        "intro-leaf-2": "url('@assets/images/intro_leaf_2.png')",
+        "intro-leaf-3": "url('@assets/images/intro_leaf_3.png')",
         "story-bg": "url('@assets/images/story_bg.jpg')",
+        "story-leaf-1": "url('@assets/images/story_leaf_1.png')",
+        "story-leaf-2": "url('@assets/images/story_leaf_2.png')",
+        "story-leaf-3": "url('@assets/images/story_leaf_3.png')",
       },
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],

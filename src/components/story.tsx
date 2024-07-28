@@ -3,6 +3,7 @@ import { useRef, useEffect, useState } from "react";
 export default function Story() {
   const introRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+  const [bgPositionY, setBgPositionY] = useState(0);
 
   useEffect(() => {
     const currentIntroRef = introRef.current;
@@ -28,14 +29,33 @@ export default function Story() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercentage = scrollTop / docHeight;
+      const newPositionY = scrollPercentage * 600; // increase from 0 to 600
+      setBgPositionY(newPositionY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       className="w-full min-h-[800px] bg-story-bg bg-cover bg-no-repeat bg-center
-      flex justify-center items-center"
+      flex justify-center items-center relative"
       ref={introRef}
     >
+      {/* Text box */}
       <div
-        className={`flex flex-col justify-center items-center ${isInView && "animate-fadeDown"}`}
+        className={`flex flex-col justify-center items-center z-50 ${
+          isInView && "animate-fadeDown"
+        }`}
       >
         <div
           className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] text-white
@@ -75,6 +95,23 @@ export default function Story() {
           <br />
         </div>
       </div>
+
+      {/* Leaf box */}
+      <div
+        className="bg-story-leaf-1 z-10 h-full w-full absolute
+      bg-repeat-y bg-fixed bg-cover bg-center"
+        style={{ backgroundPositionY: `${bgPositionY}px` }}
+      />
+      <div
+        className="bg-story-leaf-2 z-10 h-full w-full absolute
+      bg-repeat-y bg-fixed bg-cover bg-center [background-position-y:${0}px]"
+        style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
+      />
+      <div
+        className="bg-story-leaf-3 z-10 h-full w-full absolute
+      bg-repeat-y bg-fixed bg-cover bg-center [background-position-y:${0}px]"
+        style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
+      />
     </div>
   );
 }
