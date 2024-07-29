@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { LEAF_HEIGHT } from "@constants/size";
 
 export default function Character() {
   const componentRef = useRef(null);
@@ -34,7 +35,7 @@ export default function Character() {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = scrollTop / docHeight;
-      const newPositionY = scrollPercentage * 600; // increase from 0 to 600
+      const newPositionY = scrollPercentage * LEAF_HEIGHT; // increase from 0 to LEAF_HEIGHT
       setBgPositionY(newPositionY);
     };
 
