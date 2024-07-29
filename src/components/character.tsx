@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 
-export default function Story() {
+export default function Character() {
   const componentRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
   const [bgPositionY, setBgPositionY] = useState(0);
@@ -47,68 +47,34 @@ export default function Story() {
 
   return (
     <div
-      className="w-full min-h-[800px] bg-story-bg bg-cover bg-no-repeat bg-center
+      className="w-full min-h-[800px] bg-character-bg-sp sm:bg-character-bg bg-cover bg-no-repeat bg-center
       flex justify-center items-center relative"
       ref={componentRef}
     >
       {/* Text box */}
-      <div
-        className={`flex flex-col justify-center items-center z-50 ${
-          isInView && "animate-fadeDown"
-        }`}
-      >
+      <div className="flex flex-col justify-center items-center z-50">
         <div
-          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] text-white
+          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
         max-sm:text-4xl max-xs:text-3xl"
         >
-          story
+          character
         </div>
-        <div className="font-thomasita text-[#cc719c] font-semibold text-lg">anemoi</div>
-
-        <div
-          className="py-[30px] text-center font-tsukumin leading-8 text-white
-          max-xs:text-[.875rem] max-xs:leading-7"
-        >
-          {"10年前に埋めた"}
-          <br />
-          {"タイムカプセルを開ける日が近づいていた。"}
-          <br />
-          <br />
-          {"主人公の速川 麦は、妹の六花とともに"}
-          <br />
-          {"ふたりで北の地、真澄町へ訪れる。"}
-          <br />
-          <br />
-          {"都会の喧噪を忘れさせてくれる町は、"}
-          <br />
-          {"強く吹く風の中でゆっくりとした時間が流れていた。"}
-          <br />
-          <br />
-          {"大きな風車の恩恵を受けながら、"}
-          <br />
-          {"経験と知恵と人のつながりで築かれる生活。"}
-          <br />
-          <br />
-          {"約束の時間まで、麦は人々と交流を重ねながら"}
-          <br />
-          {"町でスローライフを送ることにする。"}
-          <br />
-        </div>
+        <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>
       </div>
 
       {/* Leaf */}
       <div
-        className="bg-story-leaf-1 z-10 h-full w-full absolute
+        className="bg-character-leaf-1 z-10 h-full w-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY}px` }}
       />
       <div
-        className="bg-story-leaf-2 z-10 h-full w-full absolute
+        className="bg-character-leaf-2 z-10 h-full w-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
       />
       <div
-        className="bg-story-leaf-3 z-10 h-full w-full absolute
+        className="bg-character-leaf-3 z-10 h-full w-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
       />

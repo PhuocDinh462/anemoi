@@ -2,6 +2,7 @@ import Cover from "./components/cover";
 import Navbar from "./components/navbar";
 import Intro from "./components/intro";
 import Story from "./components/story";
+import Character from "./components/character";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Cover />
       <Intro />
       <Story />
+      <Character />
     </>
   );
 }

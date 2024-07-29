@@ -24,6 +24,11 @@ export default {
         "story-leaf-1": "url('@assets/images/story_leaf_1.png')",
         "story-leaf-2": "url('@assets/images/story_leaf_2.png')",
         "story-leaf-3": "url('@assets/images/story_leaf_3.png')",
+        "character-bg": "url('@assets/images/character_bg.jpg')",
+        "character-bg-sp": "url('@assets/images/character_bg_sp.jpg')",
+        "character-leaf-1": "url('@assets/images/character_leaf_1.png')",
+        "character-leaf-2": "url('@assets/images/character_leaf_2.png')",
+        "character-leaf-3": "url('@assets/images/character_leaf_3.png')",
       },
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],

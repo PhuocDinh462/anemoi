@@ -1,12 +1,12 @@
 import { useRef, useEffect, useState } from "react";
 
 export default function Intro() {
-  const introRef = useRef(null);
+  const componentRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
   const [bgPositionY, setBgPositionY] = useState(0);
 
   useEffect(() => {
-    const currentIntroRef = introRef.current;
+    const currentIntroRef = componentRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsInView(true);
@@ -49,7 +49,7 @@ export default function Intro() {
     <div
       className="w-full min-h-[800px] bg-intro-bg bg-cover bg-no-repeat bg-center
       flex justify-center items-center relative"
-      ref={introRef}
+      ref={componentRef}
     >
       {/* Text box */}
       <div
@@ -95,7 +95,7 @@ export default function Intro() {
         </div>
       </div>
 
-      {/* Leaf box */}
+      {/* Leaf */}
       <div
         className="bg-intro-leaf-1 z-10 h-full w-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
@@ -103,12 +103,12 @@ export default function Intro() {
       />
       <div
         className="bg-intro-leaf-2 z-10 h-full w-full absolute
-      bg-repeat-y bg-fixed bg-cover bg-center [background-position-y:${0}px]"
+      bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
       />
       <div
         className="bg-intro-leaf-3 z-10 h-full w-full absolute
-      bg-repeat-y bg-fixed bg-cover bg-center [background-position-y:${0}px]"
+      bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
       />
     </div>
