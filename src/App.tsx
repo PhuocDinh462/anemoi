@@ -7,7 +7,7 @@ import Character from "./components/character";
 function App() {
   return (
     <>
-      <div className="w-full fixed z-50">
+      <div className="w-full fixed z-[99]">
         <Navbar />
       </div>
       <Cover />
