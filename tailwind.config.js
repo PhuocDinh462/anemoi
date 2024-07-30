@@ -9,6 +9,7 @@ export default {
       dropShadow: {
         logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
         slogan: ["0 0 20px #1191d6", "0 0 20px #1191d6", "0 0 20px #1191d6"],
+        text: ["0px 0px 4px #1688ca"],
       },
       width: {
         100: "25rem",
@@ -29,6 +30,17 @@ export default {
         "character-leaf-1": "url('@assets/images/character_leaf_1.png')",
         "character-leaf-2": "url('@assets/images/character_leaf_2.png')",
         "character-leaf-3": "url('@assets/images/character_leaf_3.png')",
+        "character-bt-1": "url('@assets/images/character_bt_1.png')",
+        "character-bt-2": "url('@assets/images/character_bt_2.png')",
+        "character-bt-3": "url('@assets/images/character_bt_3.png')",
+        "character-bt-4": "url('@assets/images/character_bt_4.png')",
+        "character-bt-5": "url('@assets/images/character_bt_5.png')",
+        "character-bt-1_a": "url('@assets/images/character_bt_1_a.png')",
+        "character-bt-2_a": "url('@assets/images/character_bt_2_a.png')",
+        "character-bt-3_a": "url('@assets/images/character_bt_3_a.png')",
+        "character-bt-4_a": "url('@assets/images/character_bt_4_a.png')",
+        "character-bt-5_a": "url('@assets/images/character_bt_5_a.png')",
+        character_border: "url('@assets/images/character_border.png')",
       },
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],

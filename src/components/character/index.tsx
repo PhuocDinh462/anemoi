@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { LEAF_HEIGHT } from "@constants/size";
+import CharacterBox from "./character_box";
 
 export default function Character() {
   const componentRef = useRef(null);
@@ -49,11 +50,14 @@ export default function Character() {
   return (
     <div
       className="w-full min-h-[800px] bg-character-bg-sp sm:bg-character-bg bg-cover bg-no-repeat bg-center
-      flex justify-center items-center relative"
+      relative"
       ref={componentRef}
     >
       {/* Text box */}
-      <div className="flex flex-col justify-center items-center z-50">
+      <div
+        className="flex flex-col justify-center items-center z-50 absolute 
+        top-[100px] left-1/2 -translate-x-1/2 "
+      >
         <div
           className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
         max-sm:text-4xl max-xs:text-3xl"
@@ -63,19 +67,23 @@ export default function Character() {
         <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>
       </div>
 
+      <div className="absolute size-full z-20">
+        <CharacterBox />
+      </div>
+
       {/* Leaf */}
       <div
-        className="bg-character-leaf-1 z-10 h-full w-full absolute
+        className="bg-character-leaf-1 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY}px` }}
       />
       <div
-        className="bg-character-leaf-2 z-10 h-full w-full absolute
+        className="bg-character-leaf-2 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
       />
       <div
-        className="bg-character-leaf-3 z-10 h-full w-full absolute
+        className="bg-character-leaf-3 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
       />

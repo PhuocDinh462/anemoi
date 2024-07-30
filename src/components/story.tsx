@@ -99,17 +99,17 @@ export default function Story() {
 
       {/* Leaf */}
       <div
-        className="bg-story-leaf-1 z-10 h-full w-full absolute
+        className="bg-story-leaf-1 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY}px` }}
       />
       <div
-        className="bg-story-leaf-2 z-10 h-full w-full absolute
+        className="bg-story-leaf-2 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
       />
       <div
-        className="bg-story-leaf-3 z-10 h-full w-full absolute
+        className="bg-story-leaf-3 z-10 size-full absolute
       bg-repeat-y bg-fixed bg-cover bg-center"
         style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
       />
