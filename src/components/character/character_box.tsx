@@ -13,7 +13,7 @@ export default function CharacterBox() {
       </div>
 
       {/* Character image */}
-      <div className="absolute align-top w-[70%] md:w-[54%] mt-2">
+      <div className="absolute align-top w-[70%] md:w-[54%] mt-2 -z-20">
         <img src="./src/assets/images/character_1.png" width="100%" />
       </div>
 
@@ -83,7 +83,10 @@ export default function CharacterBox() {
       </div>
 
       {/* Character name */}
-      <div className="absolute left-[44%] bottom-[20%] font-thomasita text-8xl -z-10 text-[#8fdbe9]">
+      <div
+        className="absolute left-[44%] md:bottom-[20%] font-thomasita text-8xl -z-10 text-[#8fdbe9]
+      bottom-[10%]"
+      >
         Spica
       </div>
 
