@@ -49,8 +49,8 @@ export default function Character() {
 
   return (
     <div
-      className="w-full min-h-[800px] bg-character-bg-sp sm:bg-character-bg bg-cover bg-no-repeat bg-center
-      relative"
+      className="w-full h-screen min-h-[950px] bg-character-bg-sp sm:bg-character-bg bg-cover bg-no-repeat bg-bottom
+      relative overflow-hidden"
       ref={componentRef}
     >
       {/* Text box */}

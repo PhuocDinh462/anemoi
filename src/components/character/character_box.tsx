@@ -1,45 +1,57 @@
 export default function CharacterBox() {
   return (
-    <div className="flex justify-center items-center">
-      {/* Arrow left */}
-      <div className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  left-5">
-        <img src="./src/assets/images/arrow_chara_left.png" />
+    <div
+      className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
+    min-w-[90%] pt-[10%]"
+    >
+      {/* Character slogan */}
+      <div
+        className="absolute top-[16%] left-[4%] z-[1] bg-white py-[4px] px-[2px]
+        [writing-mode:vertical-rl] text-lg font-tsukumin"
+      >
+        「私はただ風に吹かれていることにするわ」
       </div>
 
-      {/* Character box */}
-      <div className="flex relative">
-        <div
-          className="[writing-mode:vertical-rl] font-tsukumin py-[4px] px-[2px] bg-white h-fit text-xl
-          absolute z-[1] top-[16%] left-[4%]"
-        >
-          「私はただ風に吹かれていることにするわ」
-        </div>
-        <img src="./src/assets/images/character_1.png" className="w-[54%] align-top" />
+      {/* Character image */}
+      <div className="absolute align-top w-[70%] md:w-[54%] mt-2">
+        <img src="./src/assets/images/character_1.png" width="100%" />
       </div>
 
       {/* Thumbnail box */}
-      <div className="flex absolute left-[51%] top-[19%]">
-        <div className="size-[70px] bg-contain mr-3 bg-character-bt-1" />
-        <div className="size-[70px] bg-contain mr-3 bg-character-bt-2" />
-        <div className="size-[70px] bg-contain mr-3 bg-character-bt-3" />
-        <div className="size-[70px] bg-contain mr-3 bg-character-bt-4" />
-        <div className="size-[70px] bg-contain mr-3 bg-character-bt-5" />
+      <div
+        className="flex absolute left-[51%] top-[24%] md:top-[19%] md:w-[400px]
+      w-[360px]"
+      >
+        <div className="size-[70px] bg-cover mr-auto bg-character-bt-1_a" />
+        <div className="size-[70px] bg-cover mr-auto bg-character-bt-2" />
+        <div className="size-[70px] bg-cover mr-auto bg-character-bt-3" />
+        <div className="size-[70px] bg-cover mr-auto bg-character-bt-4" />
+        <div className="size-[70px] bg-cover mr-auto bg-character-bt-5" />
       </div>
 
       {/* Text box */}
-      <div className="absolute left-[52%] top-[27%] align-top drop-shadow-text">
+      <div
+        className="absolute left-[52%] md:top-[27%] align-top drop-shadow-text
+      top-[34%]"
+      >
         <div className="text-lg font-tsukumin text-white tracking-[.2em] leading-10">
           風をまとった少女
         </div>
         <div className="h-[1px] w-full bg-cover bg-character_border" />
 
-        <div className="text-4xl font-tsukumin text-white tracking-[.1em] leading-[3.5rem]">
+        <div
+          className="md:text-4xl font-tsukumin text-white tracking-[.1em] leading-[3.5rem]
+        text-2xl"
+        >
           辻倉朱比華
           <span className="text-[.4em] align-[8px] pl-[10px]">つじくら すぴか</span>
         </div>
 
         <div className="text-xs font-seasons text-white italic pt-8">profile</div>
-        <div className="font-tsukumin text-white tracking-[.1em] leading-9">
+        <div
+          className="font-tsukumin text-white tracking-[.1em] leading-9
+        max-md:text-sm max-md:leading-8"
+        >
           町外れのトレーラーハウスで生活している謎めいた少女。
           <br />
           町の人達からは距離を置いて生活している。
@@ -56,20 +68,33 @@ export default function CharacterBox() {
           <br />
         </div>
 
-        <div className="font-tsukumin text-white tracking-[.1em] leading-9">
+        <div
+          className="font-tsukumin text-white tracking-[.1em] leading-9
+        max-md:leading-8"
+        >
           <span className="text-xs font-seasons italic">spec</span>
-          {"　身長：148cm　体重：40kg　B/W/H：74/52/75"}
+          <span className="max-md:text-xs">{"　身長：148cm　体重：40kg　B/W/H：74/52/75"}</span>
         </div>
 
         <div className="font-tsukumin text-white tracking-[.1em] leading-9">
           <span className="text-xs font-seasons italic">illustration</span>
-          {"　原画：Na-Ga"}
+          <span className="max-md:text-xs">{"　原画：Na-Ga"}</span>
         </div>
       </div>
 
+      {/* Character name */}
+      <div className="absolute left-[44%] bottom-[20%] font-thomasita text-8xl -z-10 text-[#8fdbe9]">
+        Spica
+      </div>
+
       {/* Arrow right */}
-      <div className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  right-5">
+      <div className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]">
         <img src="./src/assets/images/arrow_chara_right.png" />
+      </div>
+
+      {/* Arrow left */}
+      <div className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -left-[10%]">
+        <img src="./src/assets/images/arrow_chara_left.png" />
       </div>
     </div>
   );

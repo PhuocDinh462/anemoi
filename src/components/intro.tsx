@@ -48,8 +48,8 @@ export default function Intro() {
 
   return (
     <div
-      className="w-full min-h-[800px] bg-intro-bg bg-cover bg-no-repeat bg-center
-      flex justify-center items-center relative"
+      className="w-full h-screen min-h-[800px] bg-intro-bg bg-cover bg-no-repeat bg-center
+      flex justify-center items-center relative overflow-hidden"
       ref={componentRef}
     >
       {/* Text box */}
