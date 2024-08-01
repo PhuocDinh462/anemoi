@@ -7,10 +7,11 @@ export default function CharacterBox() {
     >
       {/* Character slogan */}
       <div
-        className="absolute md:top-[16%] left-[4%] z-[1] bg-white py-[4px] px-[2px]
-        [writing-mode:vertical-rl] text-lg font-tsukumin
-        sm:top-[25%]
-        top-[30%]"
+        className="absolute md:top-[16%] left-[4%] -z-[1] bg-white py-[4px] px-[2px]
+        [writing-mode:vertical-rl] font-tsukumin
+        sm:top-[25%] sm:text-lg
+        top-[30%]
+        max-xs:text-sm"
       >
         「私はただ風に吹かれていることにするわ」
       </div>
@@ -41,7 +42,7 @@ export default function CharacterBox() {
       <div
         className="absolute md:top-[30%] align-top drop-shadow-text
         sm:top-[34%] sm:left-[52%]
-        bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-character-box-blue max-sm:px-10 max-sm:pb-12"
+        bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12"
       >
         <div
           className="sm:text-lg/10 font-tsukumin text-white tracking-[.2em]
@@ -52,12 +53,12 @@ export default function CharacterBox() {
         <div className="h-[1px] w-full bg-cover bg-character_border" />
 
         <div
-          className="md:text-4xl/[4rem] font-tsukumin text-white tracking-[.1em]
+          className="md:text-4xl/[4rem] font-tsukumin text-white tracking-[.1em] 
         sm:text-2xl/10
         text-3xl/[3.5rem]"
         >
-          辻倉朱比華
-          <span className="text-[.4em] align-[8px] pl-[10px]">つじくら すぴか</span>
+          <span className="pr-[10px]">辻倉朱比華</span>
+          <span className="text-[.4em] align-[8px] whitespace-nowrap">つじくら すぴか</span>
         </div>
 
         <div className="text-xs font-seasons text-white italic pt-8">profile</div>

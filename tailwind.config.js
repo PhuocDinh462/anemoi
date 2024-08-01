@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         "custom-blue-100": "rgba(40, 178, 230, 1)",
-        "character-box-blue": "rgba(65, 141, 204, .5)",
+        "cb-blue": "rgba(65, 141, 204, .5)", // Character box
       },
       dropShadow: {
         logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
