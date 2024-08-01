@@ -3,33 +3,14 @@ export default function CharacterBox() {
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
     min-w-[90%] pt-[10%]
-    max-sm:w-full"
+    max-sm:w-full
+    max-sm:flex max-sm:flex-col"
     >
-      {/* Character slogan */}
-      <div
-        className="absolute md:top-[16%] left-[4%] -z-[1] bg-white py-[4px] px-[2px]
-        [writing-mode:vertical-rl] font-tsukumin
-        sm:top-[25%] sm:text-lg
-        top-[30%]
-        max-xs:text-sm"
-      >
-        「私はただ風に吹かれていることにするわ」
-      </div>
-
-      {/* Character image */}
-      <div
-        className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
-        md:w-[54%] md:top-[1%]
-        top-[20%]"
-      >
-        <img src="./src/assets/images/character_1.png" width="100%" />
-      </div>
-
       {/* Thumbnail box */}
       <div
-        className="flex absolute sm:left-[51%] sm:top-[24%] sm:w-[360px]
+        className="flex sm:left-[51%] sm:top-[24%] sm:w-[360px] sm:absolute
         md:top-[22%] md:w-[400px]
-        w-full top-[20%] left-1/2 max-sm:-translate-x-1/2 justify-evenly"
+        w-full top-[20%] left-1/2 justify-evenly max-sm:mt-40"
       >
         <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-1_a" />
         <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-2" />
@@ -38,11 +19,32 @@ export default function CharacterBox() {
         <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-5" />
       </div>
 
+      {/* Character slogan */}
+      <div
+        className="md:top-[16%] left-[4%] -z-[1] bg-white py-[4px] px-[2px]
+        [writing-mode:vertical-rl] font-tsukumin size-fit
+        sm:top-[25%] sm:text-lg sm:absolute
+        max-sm:ml-10 max-sm:mt-10
+        max-xs:text-sm max-xs:ml-5"
+      >
+        <span>「私はただ風に吹かれていることにするわ」</span>
+      </div>
+
+      {/* Character image */}
+      <div
+        className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
+        md:w-[54%] md:top-[1%]
+        top-[18%]"
+      >
+        <img src="./src/assets/images/character_1.png" width="100%" />
+      </div>
+
       {/* Text box */}
       <div
-        className="absolute md:top-[30%] align-top drop-shadow-text
-        sm:top-[34%] sm:left-[52%]
-        bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12"
+        className="md:top-[30%] align-top drop-shadow-text
+        sm:top-[34%] sm:left-[52%] sm:absolute
+        bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
+        max-xs:px-5 max-xs:pb-8"
       >
         <div
           className="sm:text-lg/10 font-tsukumin text-white tracking-[.2em]

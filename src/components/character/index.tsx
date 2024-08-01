@@ -56,7 +56,7 @@ export default function Character() {
       {/* Text box */}
       <div
         className="flex flex-col justify-center items-center z-50 absolute 
-        top-[100px] left-1/2 -translate-x-1/2 "
+        top-[100px] left-1/2 -translate-x-1/2"
       >
         <div
           className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
