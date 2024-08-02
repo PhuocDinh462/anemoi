@@ -26,8 +26,7 @@ export const CHARACTERS: Array<Character> = [
     <br/>
     口はだいぶ悪いが、動物やお年寄りには優しい。
     <br/>
-    夜、風に吹かれながら草笛を吹く姿がよく目撃されている。
-    <br/>`,
+    夜、風に吹かれながら草笛を吹く姿がよく目撃されている。`,
     // height
     148,
     // weight
@@ -35,7 +34,15 @@ export const CHARACTERS: Array<Character> = [
     // threeSize
     "74/52/75",
     // illustration
-    "Na-Ga"
+    "Na-Ga",
+    // image
+    "character_1.png",
+    // thumbnail
+    "character_bt_1.png",
+    // thumbnailActive
+    "character_bt_1_a.png",
+    // catchphraseColor
+    "#8fdbe9"
   ),
   // Aino
   new Character(
@@ -58,8 +65,7 @@ export const CHARACTERS: Array<Character> = [
     <br/>
     姿も言葉も、全体的にフワフワしている。と、町の人に言われている。
     <br/>
-    工房の２階で父親と２人で暮らしているらしい。
-    <br/>`,
+    工房の２階で父親と２人で暮らしているらしい。`,
     // height
     145,
     // weight
@@ -67,7 +73,15 @@ export const CHARACTERS: Array<Character> = [
     // threeSize
     "73/51/73",
     // illustration
-    "きみしま青"
+    "きみしま青",
+    // image
+    "character_2.png",
+    // thumbnail
+    "character_bt_2.png",
+    // thumbnailActive
+    "character_bt_2_a.png",
+    // catchphraseColor
+    "#ffdc61"
   ),
   // Hiiro
   new Character(
@@ -92,8 +106,7 @@ export const CHARACTERS: Array<Character> = [
     <br/>
     時折「お隣さんに行ってくるわ」と言って、どこかへと出かけてしまうことがある。
     <br/>
-    好きな食べ物は金平糖。
-    <br/>`,
+    好きな食べ物は金平糖。`,
     // height
     167,
     // weight
@@ -101,7 +114,15 @@ export const CHARACTERS: Array<Character> = [
     // threeSize
     "90/60/88",
     // illustration
-    "ふむゆん"
+    "ふむゆん",
+    // image
+    "character_3.png",
+    // thumbnail
+    "character_bt_3.png",
+    // thumbnailActive
+    "character_bt_3_a.png",
+    // catchphraseColor
+    "#ffaab7"
   ),
   // Koyomi
   new Character(
@@ -128,8 +149,7 @@ export const CHARACTERS: Array<Character> = [
       <br/>
       世間のことに疎く、人の言うことを何でも信じてしまうことがある。
       <br/>
-      そんなところも、町のみんなから微笑ましく見守られている愛されキャラ。
-      <br/>`,
+      そんなところも、町のみんなから微笑ましく見守られている愛されキャラ。`,
     // height
     152,
     // weight
@@ -137,7 +157,15 @@ export const CHARACTERS: Array<Character> = [
     // threeSize
     "78/56/79",
     // illustration
-    "永山ゆうのん"
+    "永山ゆうのん",
+    // image
+    "character_4.png",
+    // thumbnail
+    "character_bt_4.png",
+    // thumbnailActive
+    "character_bt_4_a.png",
+    // catchphraseColor
+    "#ffa555"
   ),
   // Rikka
   new Character(
@@ -160,8 +188,7 @@ export const CHARACTERS: Array<Character> = [
         <br/>
         兄以外の男性には塩対応だが、兄にとって有益となると判断した人へはとても丁寧。
         <br/>
-        秘伝の「すき焼きのタレ」を持っていて、これさえあれば何でも作れると信じている。
-        <br/>`,
+        秘伝の「すき焼きのタレ」を持っていて、これさえあれば何でも作れると信じている。`,
     // height
     158,
     // weight
@@ -169,6 +196,14 @@ export const CHARACTERS: Array<Character> = [
     // threeSize
     "86/58/88",
     // illustration
-    "Na-Ga"
+    "Na-Ga",
+    // image
+    "character_5.png",
+    // thumbnail
+    "character_bt_5.png",
+    // thumbnailActive
+    "character_bt_5_a.png",
+    // catchphraseColor
+    "#c498d7"
   ),
 ];

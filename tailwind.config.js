@@ -31,16 +31,6 @@ export default {
         "character-leaf-1": "url('@assets/images/character_leaf_1.png')",
         "character-leaf-2": "url('@assets/images/character_leaf_2.png')",
         "character-leaf-3": "url('@assets/images/character_leaf_3.png')",
-        "character-bt-1": "url('@assets/images/character_bt_1.png')",
-        "character-bt-2": "url('@assets/images/character_bt_2.png')",
-        "character-bt-3": "url('@assets/images/character_bt_3.png')",
-        "character-bt-4": "url('@assets/images/character_bt_4.png')",
-        "character-bt-5": "url('@assets/images/character_bt_5.png')",
-        "character-bt-1_a": "url('@assets/images/character_bt_1_a.png')",
-        "character-bt-2_a": "url('@assets/images/character_bt_2_a.png')",
-        "character-bt-3_a": "url('@assets/images/character_bt_3_a.png')",
-        "character-bt-4_a": "url('@assets/images/character_bt_4_a.png')",
-        "character-bt-5_a": "url('@assets/images/character_bt_5_a.png')",
         character_border: "url('@assets/images/character_border.png')",
       },
       fontFamily: {
@@ -57,10 +47,15 @@ export default {
           "0%": { transform: "translateY(-50px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        charaAnime: {
+          "0%": { transform: "translateY(-100px)", rotate: "-10deg", opacity: "0" },
+          "100%": { transform: "translateY(0)", rotate: "0deg", opacity: "1" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
         fadeDown: "fadeDown 2.5s",
+        charaAnime: "charaAnime 1s",
       },
     },
     screens: {

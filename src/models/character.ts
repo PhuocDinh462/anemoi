@@ -9,6 +9,10 @@ export default class Character {
   weight: number;
   threeSize: string;
   illustration: string;
+  image: string;
+  thumbnail: string;
+  thumbnailActive: string;
+  catchphraseColor: string;
 
   constructor(
     alias: string,
@@ -20,7 +24,11 @@ export default class Character {
     height: number,
     weight: number,
     threeSize: string,
-    illustration: string
+    illustration: string,
+    image: string,
+    thumbnail: string,
+    thumbnailActive: string,
+    catchphraseColor: string
   ) {
     this.alias = alias;
     this.kanji = kanji;
@@ -32,5 +40,9 @@ export default class Character {
     this.weight = weight;
     this.threeSize = threeSize;
     this.illustration = illustration;
+    this.image = image;
+    this.thumbnail = thumbnail;
+    this.thumbnailActive = thumbnailActive;
+    this.catchphraseColor = catchphraseColor;
   }
 }

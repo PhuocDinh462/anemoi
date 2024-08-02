@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { CHARACTERS } from "@/constants/characters";
+import React from "react";
+
 export default function CharacterBox() {
+  const [characterIndex, setCharacterIndex] = useState(0);
+
   return (
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
@@ -12,32 +18,53 @@ export default function CharacterBox() {
         md:top-[22%] md:w-[400px]
         w-full top-[20%] left-1/2 justify-evenly max-sm:mt-40"
       >
-        <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-1_a" />
-        <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-2" />
-        <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-3" />
-        <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-4" />
-        <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-5" />
+        {CHARACTERS.map((character, index) => (
+          <div
+            key={index}
+            className={`size-[70px] max-xs:size-[60px] bg-cover cursor-pointer
+            hover:opacity-70 transition-opacity duration-300`}
+            style={{
+              backgroundImage: `url('./src/assets/images/${
+                characterIndex === index ? character.thumbnailActive : character.thumbnail
+              }')`,
+            }}
+            onClick={() => setCharacterIndex(index)}
+          />
+        ))}
       </div>
 
       {/* Character catchphrase */}
       <div
-        className="md:top-[16%] left-[4%] -z-[1] bg-white py-[4px] px-[2px]
+        className="md:top-[16%] left-[4%] -z-[1]
         [writing-mode:vertical-rl] font-tsukumin size-fit
-        sm:top-[25%] sm:text-lg sm:absolute
+        sm:text-lg sm:top-[25%] sm:absolute
         max-sm:ml-10 max-sm:mt-10
         max-xs:text-sm max-xs:ml-5"
       >
-        <span>「私はただ風に吹かれていることにするわ」</span>
+        {/* <span>{CHARACTERS[characterIndex].catchphrase}</span> */}
+        {CHARACTERS[characterIndex].catchphrase.split("<br/>").map((part, index) => (
+          <React.Fragment key={index}>
+            <span className="size-fit bg-white py-[4px] px-[2px]">
+              {part}
+              <br className="sm:hidden" />
+            </span>
+          </React.Fragment>
+        ))}
       </div>
 
       {/* Character image */}
-      <div
-        className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
-        md:w-[54%] md:top-[1%]
-        top-[18%]"
-      >
-        <img src="./src/assets/images/character_1.png" width="100%" />
-      </div>
+      {CHARACTERS.map(
+        (character, index) =>
+          index === characterIndex && (
+            <div
+              className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
+              md:w-[54%] md:top-[1%]
+              top-[18%] animate-charaAnime"
+            >
+              <img src={`./src/assets/images/${character.image}`} width="100%" />
+            </div>
+          )
+      )}
 
       {/* Text box */}
       <div
@@ -50,7 +77,7 @@ export default function CharacterBox() {
           className="sm:text-lg/10 font-tsukumin text-white tracking-[.2em]
         max-sm:text-xl/10"
         >
-          風をまとった少女
+          {CHARACTERS[characterIndex].alias}
         </div>
         <div className="h-[1px] w-full bg-cover bg-character_border" />
 
@@ -59,8 +86,10 @@ export default function CharacterBox() {
         sm:text-2xl/10
         text-3xl/[3.5rem]"
         >
-          <span className="pr-[10px]">辻倉朱比華</span>
-          <span className="text-[.4em] align-[8px] whitespace-nowrap">つじくら すぴか</span>
+          <span className="pr-[10px]">{CHARACTERS[characterIndex].kanji}</span>
+          <span className="text-[.4em] align-[8px] whitespace-nowrap">
+            {CHARACTERS[characterIndex].furigana}
+          </span>
         </div>
 
         <div className="text-xs font-seasons text-white italic pt-8">profile</div>
@@ -69,20 +98,12 @@ export default function CharacterBox() {
         sm:text-sm/8
         text-xs/7"
         >
-          町外れのトレーラーハウスで生活している謎めいた少女。
-          <br />
-          町の人達からは距離を置いて生活している。
-          <br />
-          麦畑の世話が仕事で、収穫された麦を使って、
-          <br />
-          絶品と言われるピザを焼いている。
-          <br />
-          が、なかなか食べさせて貰えない。
-          <br />
-          口はだいぶ悪いが、動物やお年寄りには優しい。
-          <br />
-          夜、風に吹かれながら草笛を吹く姿がよく目撃されている。
-          <br />
+          {CHARACTERS[characterIndex].profile.split("<br/>").map((part, index) => (
+            <React.Fragment key={index}>
+              {part}
+              <br />
+            </React.Fragment>
+          ))}
         </div>
 
         <div
@@ -91,7 +112,9 @@ export default function CharacterBox() {
         text-xs/7"
         >
           <span className="text-xs font-seasons italic">spec</span>
-          <span>{"　身長：148cm　体重：40kg　B/W/H：74/52/75"}</span>
+          <span>{`　身長：${CHARACTERS[characterIndex].height}cm　
+          体重：${CHARACTERS[characterIndex].weight}kg　
+          B/W/H：${CHARACTERS[characterIndex].threeSize}`}</span>
         </div>
 
         <div
@@ -100,23 +123,27 @@ export default function CharacterBox() {
         text-xs/7"
         >
           <span className="text-xs font-seasons italic">illustration</span>
-          <span>{"　原画：Na-Ga"}</span>
+          <span>{`　原画：${CHARACTERS[characterIndex].illustration}`}</span>
         </div>
       </div>
 
       {/* Character name */}
       <div
-        className="absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 text-[#8fdbe9]
-      sm:bottom-[10%]
-      bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl"
+        className={`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 
+        sm:bottom-[10%]
+        bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl`}
+        style={{
+          color: `${CHARACTERS[characterIndex].catchphraseColor}`,
+        }}
       >
-        Spica
+        {CHARACTERS[characterIndex].latin}
       </div>
 
       {/* Arrow right */}
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]
       max-sm:hidden"
+        onClick={() => setCharacterIndex((characterIndex + 1) % CHARACTERS.length)}
       >
         <img src="./src/assets/images/arrow_chara_right.png" />
       </div>
@@ -125,6 +152,9 @@ export default function CharacterBox() {
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -left-[10%]
       max-sm:hidden"
+        onClick={() =>
+          setCharacterIndex((characterIndex - 1 + CHARACTERS.length) % CHARACTERS.length)
+        }
       >
         <img src="./src/assets/images/arrow_chara_left.png" />
       </div>
