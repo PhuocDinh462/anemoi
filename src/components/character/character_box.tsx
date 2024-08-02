@@ -19,7 +19,7 @@ export default function CharacterBox() {
         <div className="size-[70px] max-xs:size-[60px] bg-cover bg-character-bt-5" />
       </div>
 
-      {/* Character slogan */}
+      {/* Character catchphrase */}
       <div
         className="md:top-[16%] left-[4%] -z-[1] bg-white py-[4px] px-[2px]
         [writing-mode:vertical-rl] font-tsukumin size-fit
