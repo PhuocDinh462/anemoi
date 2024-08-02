@@ -68,7 +68,7 @@ export default function Character() {
       </div>
 
       <div className="absolute size-full z-20">
-        <CharacterBox />
+        <CharacterBox isInView={isInView} />
       </div>
 
       {/* Leaf */}

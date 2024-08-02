@@ -51,11 +51,21 @@ export default {
           "0%": { transform: "translateY(-100px)", rotate: "-10deg", opacity: "0" },
           "100%": { transform: "translateY(0)", rotate: "0deg", opacity: "1" },
         },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        fadeUp: {
+          "0%": { transform: "translateY(100px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
         fadeDown: "fadeDown 2.5s",
         charaAnime: "charaAnime 1s",
+        fadeIn: "fadeIn 1s",
+        fadeUp: "fadeUp 2.5s",
       },
     },
     screens: {
