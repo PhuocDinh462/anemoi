@@ -65,7 +65,7 @@ export default {
         fadeDown: "fadeDown 2.5s",
         charaAnime: "charaAnime 1s",
         fadeIn: "fadeIn 1s",
-        fadeUp: "fadeUp 2.5s",
+        fadeUp: "fadeUp 2s",
       },
     },
     screens: {
