@@ -67,8 +67,8 @@ export default function Character() {
         <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>
       </div>
 
-      <div className="absolute size-full z-20">
-        <CharacterBox isInView={isInView} />
+      <div className={`absolute size-full z-20 ${isInView && "animate-fadeUp"}`}>
+        <CharacterBox />
       </div>
 
       {/* Leaf */}
