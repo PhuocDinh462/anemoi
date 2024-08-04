@@ -4,13 +4,35 @@ import React from "react";
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) nextChara();
+    if (touchEndX - touchStartX > 50) prevChara();
+  };
+
+  const nextChara = () => setCharacterIndex((characterIndex + 1) % CHARACTERS.length);
+  const prevChara = () =>
+    setCharacterIndex((characterIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
 
   return (
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
-      min-w-[90%] pt-[10%]
+      min-w-[90%] pt-[10%] select-none
       max-sm:w-full
       max-sm:flex max-sm:flex-col"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Thumbnail box */}
       <div
@@ -37,7 +59,7 @@ export default function CharacterBox() {
       {CHARACTERS.map(
         (character, index) =>
           index === characterIndex && (
-            <>
+            <React.Fragment key={index}>
               {/* Character catchphrase */}
               <div
                 className="md:top-[16%] left-[4%] -z-[1]
@@ -140,7 +162,7 @@ export default function CharacterBox() {
               >
                 {CHARACTERS[characterIndex].latin}
               </div>
-            </>
+            </React.Fragment>
           )
       )}
 
@@ -148,7 +170,7 @@ export default function CharacterBox() {
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]
         max-sm:hidden"
-        onClick={() => setCharacterIndex((characterIndex + 1) % CHARACTERS.length)}
+        onClick={() => nextChara()}
       >
         <img src="./src/assets/images/arrow_chara_right.png" />
       </div>
@@ -157,9 +179,7 @@ export default function CharacterBox() {
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -left-[10%]
         max-sm:hidden"
-        onClick={() =>
-          setCharacterIndex((characterIndex - 1 + CHARACTERS.length) % CHARACTERS.length)
-        }
+        onClick={() => prevChara()}
       >
         <img src="./src/assets/images/arrow_chara_left.png" />
       </div>
