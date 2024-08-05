@@ -1,4 +1,4 @@
-import Character from "@/models/character";
+import Character from "@/models/character.model";
 
 export const CHARACTERS: Array<Character> = [
   // Spica

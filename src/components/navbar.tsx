@@ -18,18 +18,21 @@ export default function Navbar(props: {
       flex items-center justify-center select-none text-center text-white font-semibold
       font-seasons tracking-widest text-[1em]"
     >
-      <a
-        href="#"
+      <div
         className="w-[6%] h-full absolute left-0 bg-white py-[.4%] px-[.8%] ml-[1%]
-        flex justify-center items-center"
+        flex justify-center items-center cursor-pointer"
+        onClick={() => scrollToSelectedSection(0)} // Scroll to top
       >
         <img src="src/assets/images/anemoi_logo_bk.png" sizes="100%" />
-      </a>
+      </div>
       <div className="flex items-center justify-center w-full">
         |
         {sections.map((section, index) => (
           <React.Fragment key={index}>
-            <div className="font-thin px-[30px]" onClick={() => scrollToSelectedSection(index)}>
+            <div
+              className="font-thin px-[30px] cursor-pointer"
+              onClick={() => scrollToSelectedSection(index)}
+            >
               {section}
             </div>
             |
