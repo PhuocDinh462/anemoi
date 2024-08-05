@@ -3,8 +3,9 @@ import React from "react";
 export default function Navbar(props: {
   sections: string[];
   refs: React.RefObject<HTMLDivElement>[];
+  showHeaderLogo: boolean;
 }) {
-  const { sections, refs } = props;
+  const { sections, refs, showHeaderLogo } = props;
 
   const scrollToSelectedSection = (index: number) => {
     if (refs[index].current) {
@@ -18,9 +19,13 @@ export default function Navbar(props: {
       flex items-center justify-center select-none text-center text-white font-semibold
       font-seasons tracking-widest text-[1em]"
     >
+      {/* Header logo */}
       <div
-        className="w-[6%] h-full absolute left-0 bg-white py-[.4%] px-[.8%] ml-[1%]
-        flex justify-center items-center cursor-pointer"
+        className={`w-[6%] h-full absolute left-0 bg-white py-[.4%] px-[.8%] ml-[1%]
+        flex justify-center items-center cursor-pointer
+        ${showHeaderLogo ? "opacity-100 visible" : "opacity-0 invisible"}
+        transition-all ease-in-out duration-500
+        `}
         onClick={() => scrollToSelectedSection(0)} // Scroll to top
       >
         <img src="src/assets/images/anemoi_logo_bk.png" sizes="100%" />

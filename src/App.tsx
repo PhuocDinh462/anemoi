@@ -3,16 +3,17 @@ import Navbar from "./components/navbar";
 import Intro from "./components/intro";
 import Story from "./components/story";
 import Character from "./components/character";
-import { createRef } from "react";
+import { createRef, useState } from "react";
 
 function App() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
+  const [showHeaderLogo, setShowHeaderLogo] = useState(false);
 
   return (
-    <div onDragStart={(e) => e.preventDefault()}>
+    <div onDragStart={(e) => e.preventDefault()} onClick={() => setShowHeaderLogo(!showHeaderLogo)}>
       <div className="w-full fixed z-[99]">
-        <Navbar sections={sections} refs={refs} />
+        <Navbar sections={sections} refs={refs} showHeaderLogo={showHeaderLogo} />
       </div>
       <div ref={refs[0]}>
         <Cover />
