@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function Cover() {
+export default function Cover(props: {
+  setShowHeaderLogo: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const { setShowHeaderLogo } = props;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const width_s = 699;
+  const blockRef = useRef(null);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -12,12 +17,38 @@ export default function Cover() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const width_s = 699;
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowHeaderLogo(false);
+          } else {
+            setShowHeaderLogo(true);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (blockRef.current) {
+      observer.observe(blockRef.current);
+    }
+
+    return () => {
+      if (blockRef.current) {
+        observer.unobserve(blockRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div
       className="relative h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
       sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]"
+      ref={blockRef}
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">

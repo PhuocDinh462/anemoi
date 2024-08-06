@@ -11,12 +11,12 @@ function App() {
   const [showHeaderLogo, setShowHeaderLogo] = useState(false);
 
   return (
-    <div onDragStart={(e) => e.preventDefault()} onClick={() => setShowHeaderLogo(!showHeaderLogo)}>
+    <div onDragStart={(e) => e.preventDefault()}>
       <div className="w-full fixed z-[99]">
         <Navbar sections={sections} refs={refs} showHeaderLogo={showHeaderLogo} />
       </div>
       <div ref={refs[0]}>
-        <Cover />
+        <Cover setShowHeaderLogo={setShowHeaderLogo} />
       </div>
       <div ref={refs[1]}>
         <Intro />
