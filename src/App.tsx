@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
-      <div className="w-full fixed z-[99]">
+      <div className="w-fit fixed z-[99]">
         <Navbar sections={sections} refs={refs} showHeaderLogo={showHeaderLogo} />
       </div>
       <div ref={refs[0]}>

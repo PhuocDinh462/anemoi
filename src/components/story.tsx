@@ -54,7 +54,7 @@ export default function Story() {
     >
       {/* Text box */}
       <div
-        className={`flex flex-col justify-center items-center z-50 ${
+        className={`flex flex-col justify-center items-center z-50 mx-4 ${
           isInView && "animate-fadeDown"
         }`}
       >
@@ -68,7 +68,7 @@ export default function Story() {
 
         <div
           className="py-[30px] text-center font-tsukumin leading-8 text-white
-          max-xs:text-[.875rem] max-xs:leading-7"
+          max-xs:text-[.875rem]/7"
         >
           {"10年前に埋めた"}
           <br />

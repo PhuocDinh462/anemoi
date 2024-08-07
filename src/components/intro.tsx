@@ -54,7 +54,7 @@ export default function Intro() {
     >
       {/* Text box */}
       <div
-        className={`flex flex-col justify-center items-center z-50 ${
+        className={`flex flex-col justify-center items-center z-50 mx-4 ${
           isInView && "animate-fadeDown"
         }`}
       >
@@ -68,7 +68,7 @@ export default function Intro() {
 
         <div
           className="py-[30px] text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem] max-xs:text-[.75rem] max-xs:leading-8"
+        max-sm:text-[.875rem]/8"
         >
           {"黄金色の海がそよいだ"}
           <br />
@@ -82,7 +82,7 @@ export default function Intro() {
         <div className="font-thomasita font-semibold text-sm">staff</div>
         <div
           className="text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem] max-xs:text-[.75rem] max-xs:leading-8"
+        max-sm:text-[.875rem]/8"
         >
           {"［ 原画 ］Na-Ga ／ ふむゆん ／ 永山ゆうのん ／ きみしま青"}
           <br />
@@ -90,7 +90,7 @@ export default function Intro() {
           <br />
           {"［ 音楽プロデューサー ］折戸伸治　［ ディレクター ］魁"}
           <br />
-          {"［ プロデューサー ］丘野塔也 ――"}
+          {"［ プロデューサー ］丘野塔也"}
           <br />
           {"［ ジャンル ］恋愛アドベンチャーゲーム"}
         </div>
