@@ -41,7 +41,7 @@ export const CHARACTERS: Array<Character> = [
     "character_bt_1.png",
     // thumbnailActive
     "character_bt_1_a.png",
-    // catchphraseColor
+    // latinColor
     "#8fdbe9"
   ),
   // Aino
@@ -80,7 +80,7 @@ export const CHARACTERS: Array<Character> = [
     "character_bt_2.png",
     // thumbnailActive
     "character_bt_2_a.png",
-    // catchphraseColor
+    // latinColor
     "#ffdc61"
   ),
   // Hiiro
@@ -121,7 +121,7 @@ export const CHARACTERS: Array<Character> = [
     "character_bt_3.png",
     // thumbnailActive
     "character_bt_3_a.png",
-    // catchphraseColor
+    // latinColor
     "#ffaab7"
   ),
   // Koyomi
@@ -164,7 +164,7 @@ export const CHARACTERS: Array<Character> = [
     "character_bt_4.png",
     // thumbnailActive
     "character_bt_4_a.png",
-    // catchphraseColor
+    // latinColor
     "#ffa555"
   ),
   // Rikka
@@ -203,7 +203,7 @@ export const CHARACTERS: Array<Character> = [
     "character_bt_5.png",
     // thumbnailActive
     "character_bt_5_a.png",
-    // catchphraseColor
+    // latinColor
     "#c498d7"
   ),
 ];

@@ -48,7 +48,7 @@ export default function Cover(props: {
 
   return (
     <div
-      className="relative h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
+      className="relative overflow-hidden h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
       sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]"
       ref={blockRef}
     >

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
+import { Drawer } from "@mui/material";
 
 export default function Navbar(props: {
   sections: string[];
@@ -12,7 +13,53 @@ export default function Navbar(props: {
     if (refs[index].current) refs[index].current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [isOpen, setOpen] = useState(false);
+  // For mobile only
+  const [open, setOpen] = useState(false);
+  const numberOfRows = 2;
+  const itemsPerRow = Math.ceil(sections.length / numberOfRows);
+
+  const renderSections = () => {
+    const sectionElements = [];
+    let i = 0;
+
+    for (let j = 1; j <= numberOfRows; j++) {
+      const rowElements = [];
+      for (; i < Math.min(itemsPerRow * j, sections.length); i++) {
+        const refIndex = i;
+        rowElements.push(
+          <React.Fragment key={i}>
+            <div
+              className="font-thin px-[14px] cursor-pointer"
+              onClick={() => {
+                setOpen(false);
+                scrollToSelectedSection(refIndex);
+              }}
+            >
+              {sections[i]}
+            </div>
+            |
+          </React.Fragment>
+        );
+      }
+      const rowBlock = (
+        <div className="flex flex-wrap justify-center items-center mb-3">|{rowElements}</div>
+      );
+      sectionElements.push(rowBlock);
+    }
+
+    return sectionElements.map((section, index) => (
+      <React.Fragment key={index}>{section}</React.Fragment>
+    ));
+  };
+
+  useEffect(() => {
+    const handleResize = () => setOpen(false);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  ///
 
   return (
     <div className="w-screen">
@@ -24,17 +71,41 @@ export default function Navbar(props: {
             color="#fff"
             size={26}
             distance="lg"
-            toggled={isOpen}
+            toggled={open}
             toggle={setOpen}
           />
         </div>
       </div>
 
+      <Drawer
+        anchor="top"
+        open={open}
+        style={{ zIndex: 50 }}
+        onClose={() => setOpen(false)}
+        PaperProps={{
+          sx: {
+            backgroundImage: "linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)",
+            backgroundColor: "transparent",
+            boxShadow: "none",
+          },
+        }}
+        slotProps={{ backdrop: { sx: { backgroundColor: "rgba(255, 255, 255, .5)" } } }}
+      >
+        <div
+          className="flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
+          font-seasons text-white font-semibold text-lg 2xs:text-xl xs:text-2xl
+          bg-gradient-to-b from-custom-blue-100 to-transparent"
+        >
+          {renderSections()}
+        </div>
+      </Drawer>
+
       {/* PC case */}
       <div
-        className="relative size-full max-sm:hidden pt-[.6%] pb-[1.2%] bg-gradient-to-b from-custom-blue-100 to-transparent
-        flex items-center justify-center select-none text-center text-white font-semibold
-        font-seasons tracking-widest text-[1em]"
+        className="relative size-full max-sm:hidden pt-[.6%] pb-[1.2%]
+        bg-gradient-to-b from-custom-blue-100 to-transparent
+        flex items-center justify-center select-none text-center font-semibold
+        tracking-widest text-[1em] font-seasons text-white"
       >
         {/* Header logo */}
         <div

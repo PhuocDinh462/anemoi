@@ -12,7 +12,7 @@ export default class Character {
   image: string;
   thumbnail: string;
   thumbnailActive: string;
-  catchphraseColor: string;
+  latinColor: string;
 
   constructor(
     alias: string,
@@ -28,7 +28,7 @@ export default class Character {
     image: string,
     thumbnail: string,
     thumbnailActive: string,
-    catchphraseColor: string
+    latinColor: string
   ) {
     this.alias = alias;
     this.kanji = kanji;
@@ -43,6 +43,6 @@ export default class Character {
     this.image = image;
     this.thumbnail = thumbnail;
     this.thumbnailActive = thumbnailActive;
-    this.catchphraseColor = catchphraseColor;
+    this.latinColor = latinColor;
   }
 }

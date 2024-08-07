@@ -157,7 +157,7 @@ export default function CharacterBox() {
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`}
                 style={{
-                  color: `${CHARACTERS[characterIndex].catchphraseColor}`,
+                  color: `${CHARACTERS[characterIndex].latinColor}`,
                 }}
               >
                 {CHARACTERS[characterIndex].latin}
