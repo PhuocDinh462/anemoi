@@ -62,19 +62,20 @@ export default function Navbar(props: {
   ///
 
   return (
-    <div className="w-screen">
+    <div className="w-screen max-sm:relative">
       {/* Mobile case */}
-      <div className="sm:hidden size-full flex items-center justify-end">
-        <div className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent">
-          <Hamburger
-            direction="right"
-            color="#fff"
-            size={26}
-            distance="lg"
-            toggled={open}
-            toggle={setOpen}
-          />
-        </div>
+      <div
+        className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
+        sm:hidden size-fit absolute top-0 right-0"
+      >
+        <Hamburger
+          direction="right"
+          color="#fff"
+          size={26}
+          distance="lg"
+          toggled={open}
+          toggle={setOpen}
+        />
       </div>
 
       <Drawer

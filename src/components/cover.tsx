@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
 export default function Cover(props: {
@@ -103,7 +104,7 @@ export default function Cover(props: {
 
       {/* Key logo */}
       <div className="flex justify-end pr-[4%] pb-[4%]">
-        <a
+        <Link
           href="https://key.visualarts.gr.jp/"
           target="_blank"
           rel="noopener noreferrer"
@@ -116,7 +117,7 @@ export default function Cover(props: {
             alt="Key"
             className="align-bottom"
           />
-        </a>
+        </Link>
       </div>
 
       {/* Scroll */}
