@@ -42,14 +42,14 @@ export default function Navbar(props: {
         );
       }
       const rowBlock = (
-        <div className="flex flex-wrap justify-center items-center mb-3">|{rowElements}</div>
+        <div key={j} className="flex flex-wrap justify-center items-center mb-3">
+          |{rowElements}
+        </div>
       );
       sectionElements.push(rowBlock);
     }
 
-    return sectionElements.map((section, index) => (
-      <React.Fragment key={index}>{section}</React.Fragment>
-    ));
+    return sectionElements;
   };
 
   useEffect(() => {

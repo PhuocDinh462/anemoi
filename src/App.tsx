@@ -1,9 +1,11 @@
+import "./App.css";
 import Cover from "./components/cover";
 import Navbar from "./components/navbar";
 import Intro from "./components/intro";
 import Story from "./components/story";
 import Character from "./components/character";
 import { createRef, useState } from "react";
+import Movie from "./components/movie";
 
 function App() {
   const sections = ["top", "introduction", "story", "character", "movie"];
@@ -27,7 +29,10 @@ function App() {
       <div ref={refs[3]}>
         <Character />
       </div>
-      <div ref={refs[4]}></div>
+      <div ref={refs[4]}>
+        <Movie />
+      </div>
+      <div className="h-52 bg-red-500"></div>
     </div>
   );
 }

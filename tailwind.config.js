@@ -59,6 +59,10 @@ export default {
           "0%": { transform: "translateY(100px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        fadeAnime: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
@@ -66,6 +70,7 @@ export default {
         charaAnime: "charaAnime 1s",
         fadeIn: "fadeIn 1s",
         fadeUp: "fadeUp 2s",
+        fadeAnime: "fadeAnime 1s",
       },
     },
     screens: {
