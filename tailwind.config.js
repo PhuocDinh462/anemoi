@@ -6,6 +6,7 @@ export default {
       colors: {
         "custom-blue-100": "rgba(40, 178, 230, 1)",
         "cb-blue": "rgba(65, 141, 204, .5)", // Character box
+        "custom-black-900": "#231815",
       },
       dropShadow: {
         logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
@@ -17,8 +18,8 @@ export default {
         100: "25rem",
       },
       backgroundImage: {
-        "main-bg": "url('@assets/images/fv_main_bg.png')",
-        "main-bg-sp": "url('@assets/images/fv_main_bg_sp.png')",
+        "main-bg": "url('@assets/images/fv_main_bg.jpg')",
+        "main-bg-sp": "url('@assets/images/fv_main_bg_sp.jpg')",
         "intro-bg": "url('@assets/images/intro_bg.jpg')",
         "intro-leaf-1": "url('@assets/images/intro_leaf_1.png')",
         "intro-leaf-2": "url('@assets/images/intro_leaf_2.png')",

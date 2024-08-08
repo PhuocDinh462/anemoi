@@ -6,7 +6,7 @@ export default function Cover(props: {
 }) {
   const { setShowHeaderLogo } = props;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const width_s = 699;
+  const width_sm = 699;
   const blockRef = useRef(null);
 
   const handleResize = () => {
@@ -97,7 +97,7 @@ export default function Cover(props: {
       <div
         className="absolute bottom-[8%] sm:bottom-[18%] left-1/2 
         -translate-x-1/2 tracking-[0.42em] indent-[0.42em]
-        font-seasons font-thin text-5xl text-[#231815]"
+        font-seasons font-thin text-5xl text-custom-black-900"
       >
         2025
       </div>
@@ -113,7 +113,7 @@ export default function Cover(props: {
           sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]"
         >
           <img
-            src={`./src/assets/images/key_logo_${windowWidth >= width_s ? "white" : "black"}.png`}
+            src={`./src/assets/images/key_logo_${windowWidth >= width_sm ? "white" : "black"}.png`}
             alt="Key"
             className="align-bottom"
           />
