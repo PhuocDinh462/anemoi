@@ -65,6 +65,10 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        blurInAnime: {
+          "0%": { filter: "blur(0px)" },
+          "100%": { filter: "blur(8px)" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
@@ -73,6 +77,7 @@ export default {
         fadeIn: "fadeIn 1s",
         fadeUp: "fadeUp 2s",
         fadeAnime: "fadeAnime 1s",
+        blurInAnime: "blurInAnime 1s",
       },
     },
     screens: {

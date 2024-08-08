@@ -22,10 +22,13 @@ export default function Movie() {
 
     for (let i = 0; i < numberOfSlides; i++) {
       slideElements.push(
-        <div key={i} className={`${currentSlide !== i ? "blur" : "animate-fadeAnime"}`}>
+        <div
+          key={i}
+          className={`${currentSlide !== i ? "blur animate-blurInAnime" : "animate-fadeAnime"}`}
+        >
           <img
             src={`src/assets/images/movie_thum1${windowWidth < width_sm ? "_sp" : ""}.jpg`}
-            width={"100%"}
+            width="100%"
           />
         </div>
       );
