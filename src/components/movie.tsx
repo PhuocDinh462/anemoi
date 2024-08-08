@@ -21,13 +21,8 @@ export default function Movie() {
 
     for (let i = 0; i < numberOfSlides; i++) {
       slideElements.push(
-        <div
-          key={i}
-          className={`flex justify-center items-center ${
-            currentSlide !== i ? "blur" : "animate-fadeAnime"
-          }`}
-        >
-          <img src="src/assets/images/movie_thum1.jpg" className="w-full object-cover object-top" />
+        <div key={i} className={`${currentSlide !== i ? "blur" : "animate-fadeAnime"}`}>
+          <img src="src/assets/images/movie_thum1.jpg" />
         </div>
       );
     }
@@ -42,11 +37,34 @@ export default function Movie() {
     slidesToScroll: 1,
     centerPadding: `${windowWidth / 5}px`,
     afterChange: (current: number) => setCurrentSlide(current),
+    arrows: false,
   };
 
   return (
-    <div className="w-screen" onClick={() => null}>
+    <div className="relative cursor-pointer" onClick={() => null}>
+      {/* Slider */}
       <Slider {...settings}>{renderSlides()}</Slider>
+
+      {/* Movie title */}
+      <div
+        className="absolute top-[100px] left-1/2 -translate-x-1/2 pointer-events-none z-10
+        font-seasons text-5xl font-thin text-center drop-shadow-movie-title"
+      >
+        movie
+      </div>
+      <div
+        className="absolute top-[150px] left-1/2 -translate-x-1/2 pointer-events-none z-10
+        font-thomasita text-lg font-semibold text-center drop-shadow-movie-title text-[#4fc69a]"
+      >
+        anemoi
+      </div>
+
+      {/* Play button */}
+      <img
+        src="src/assets/images/play_bt.png"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        pointer-events-none w-[4%]"
+      />
     </div>
   );
 }

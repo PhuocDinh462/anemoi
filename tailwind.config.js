@@ -10,7 +10,8 @@ export default {
       dropShadow: {
         logo: ["0px 0px 30px rgba(18, 146, 214, 1)", "0px 0px 30px rgba(18, 146, 214, 1)"],
         slogan: ["0 0 20px #1191d6", "0 0 20px #1191d6", "0 0 20px #1191d6"],
-        text: ["0px 0px 4px #1688ca"],
+        "chara-text-box": ["0px 0px 4px #1688ca"],
+        "movie-title": ["0 0 50px #fff", "0 0 50px #fff", "0 0 50px #fff"],
       },
       width: {
         100: "25rem",

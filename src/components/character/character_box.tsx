@@ -90,7 +90,7 @@ export default function CharacterBox() {
 
               {/* Text box */}
               <div
-                className="md:top-[30%] align-top drop-shadow-text
+                className="md:top-[30%] align-top drop-shadow-chara-text-box
                 sm:top-[34%] sm:left-[52%] sm:absolute
                 bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
                 max-xs:px-5 max-xs:pb-8
