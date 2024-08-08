@@ -56,7 +56,7 @@ export default function Cover(props: {
       {/* BG */}
       <div className="-z-50 sm:hidden">
         <img
-          src="./src/assets/images/fv_main_bg_sp.png"
+          src="./src/assets/images/fv_main_bg_sp.jpg"
           alt="fv_main_bg_sp"
           className="w-screen object-cover object-top"
         />
