@@ -34,6 +34,7 @@ export default {
         "character-leaf-2": "url('@assets/images/character_leaf_2.png')",
         "character-leaf-3": "url('@assets/images/character_leaf_3.png')",
         character_border: "url('@assets/images/character_border.png')",
+        close_icon: "url('@assets/images/close_icon.png')",
       },
       fontFamily: {
         seasons: ['"the-seasons"', "sans-serif"],
@@ -69,6 +70,10 @@ export default {
           "0%": { filter: "blur(0px)" },
           "100%": { filter: "blur(8px)" },
         },
+        dropDiagonal: {
+          "0%": { transform: "translate(-200px, -100px)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
@@ -78,6 +83,7 @@ export default {
         fadeUp: "fadeUp 2s",
         fadeAnime: "fadeAnime 1s",
         blurInAnime: "blurInAnime 1s",
+        dropDiagonal: "dropDiagonal .3s",
       },
     },
     screens: {
