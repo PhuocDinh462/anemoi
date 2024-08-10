@@ -3,10 +3,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import { Backdrop } from "@mui/material";
+import { movie_thum1, movie_thum1_sp, play_bt } from "@/constants/image";
+import { WIDTH_SM } from "@/constants/size";
 
 export default function Movie() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const width_sm = 699;
 
   const [backdropOpen, setBackdropOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function Movie() {
       slideElements.push(
         <img
           key={i}
-          src={`src/assets/images/movie_thum1${windowWidth < width_sm ? "_sp" : ""}.jpg`}
+          src={`${windowWidth < WIDTH_SM ? movie_thum1_sp : movie_thum1}`}
           width="100%"
           className={`${currentSlide !== i ? "blur animate-blurInAnime" : "animate-fadeAnime"}`}
         />
@@ -48,7 +49,7 @@ export default function Movie() {
     centerMode: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    centerPadding: `${windowWidth < width_sm ? 0 : windowWidth / 5}px`,
+    centerPadding: `${windowWidth < WIDTH_SM ? 0 : windowWidth / 5}px`,
     afterChange: (current: number) => setCurrentSlide(current),
     arrows: false,
   };
@@ -78,7 +79,7 @@ export default function Movie() {
 
         {/* Play button */}
         <img
-          src="src/assets/images/play_bt.png"
+          src={play_bt}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           pointer-events-none w-[18%]
           sm:w-[4%]"
@@ -96,9 +97,9 @@ export default function Movie() {
         {videoOpen && (
           <div className="relative sm:w-fit w-full max-sm:mx-3">
             <iframe
-              width={windowWidth < width_sm ? "100%" : windowWidth / 1.5}
+              width={windowWidth < WIDTH_SM ? "100%" : windowWidth / 1.5}
               height={
-                windowWidth < width_sm ? windowWidth / aspectRatio : windowWidth / 1.5 / aspectRatio
+                windowWidth < WIDTH_SM ? windowWidth / aspectRatio : windowWidth / 1.5 / aspectRatio
               }
               src="https://www.youtube.com/embed/ibnem8LFE6o"
               title="『anemoi』ティザームービー"

@@ -1,3 +1,5 @@
+import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from "@/constants/image";
+import { WIDTH_SM } from "@/constants/size";
 import { Link } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
@@ -6,7 +8,6 @@ export default function Cover(props: {
 }) {
   const { setShowHeaderLogo } = props;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const width_sm = 699;
   const blockRef = useRef(null);
 
   const handleResize = () => {
@@ -55,11 +56,7 @@ export default function Cover(props: {
     >
       {/* BG */}
       <div className="-z-50 sm:hidden">
-        <img
-          src="./src/assets/images/fv_main_bg_sp.jpg"
-          alt="fv_main_bg_sp"
-          className="w-screen object-cover object-top"
-        />
+        <img src={fv_main_bg_sp} alt="fv_main_bg_sp" className="w-screen object-cover object-top" />
       </div>
 
       {/* Slogan & Logo */}
@@ -79,11 +76,7 @@ export default function Cover(props: {
         </div>
 
         <div className="bm:mr-32 min-w-64 w-1/2 md:w-100 sm:w-2/5">
-          <img
-            src="./src/assets/images/anemoi_logo.png"
-            alt="anemoi アネモイ"
-            className="object-cover drop-shadow-logo"
-          />
+          <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
         </div>
       </div>
 
@@ -113,7 +106,7 @@ export default function Cover(props: {
           sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]"
         >
           <img
-            src={`./src/assets/images/key_logo_${windowWidth >= width_sm ? "white" : "black"}.png`}
+            src={`${windowWidth >= WIDTH_SM ? key_logo_white : key_logo_black}`}
             alt="Key"
             className="align-bottom"
           />

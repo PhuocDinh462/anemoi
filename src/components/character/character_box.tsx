@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CHARACTERS } from "@/constants/characters";
 import React from "react";
+import { arrow_chara_left, arrow_chara_right } from "@/constants/image";
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);
@@ -46,7 +47,7 @@ export default function CharacterBox() {
             className={`size-[70px] max-xs:size-[60px] bg-cover cursor-pointer
             hover:opacity-70 transition-opacity duration-300`}
             style={{
-              backgroundImage: `url('./src/assets/images/${
+              backgroundImage: `url('${
                 characterIndex === index ? character.thumbnailActive : character.thumbnail
               }')`,
             }}
@@ -85,7 +86,7 @@ export default function CharacterBox() {
                 md:w-[54%] md:top-[1%]
                 top-[18%] animate-charaAnime"
               >
-                <img src={`./src/assets/images/${character.image}`} width="100%" />
+                <img src={character.image} width="100%" />
               </div>
 
               {/* Text box */}
@@ -172,7 +173,7 @@ export default function CharacterBox() {
         max-sm:hidden"
         onClick={() => nextChara()}
       >
-        <img src="./src/assets/images/arrow_chara_right.png" />
+        <img src={arrow_chara_right} />
       </div>
 
       {/* Arrow left */}
@@ -181,7 +182,7 @@ export default function CharacterBox() {
         max-sm:hidden"
         onClick={() => prevChara()}
       >
-        <img src="./src/assets/images/arrow_chara_left.png" />
+        <img src={arrow_chara_left} />
       </div>
     </div>
   );

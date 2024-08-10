@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import { Drawer } from "@mui/material";
+import { anemoi_logo_bk } from "@/constants/image";
 
 export default function Navbar(props: {
   sections: string[];
@@ -117,7 +118,7 @@ export default function Navbar(props: {
           `}
           onClick={() => scrollToSelectedSection(0)} // Scroll to top
         >
-          <img src="src/assets/images/anemoi_logo_bk.png" sizes="100%" />
+          <img src={anemoi_logo_bk} sizes="100%" />
         </div>
         <div className="flex items-center justify-center w-full">
           |

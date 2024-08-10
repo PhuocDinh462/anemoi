@@ -1,4 +1,21 @@
 import Character from "@/models/character.model";
+import {
+  character_1,
+  character_bt_1,
+  character_bt_1_a,
+  character_2,
+  character_bt_2,
+  character_bt_2_a,
+  character_3,
+  character_bt_3,
+  character_bt_3_a,
+  character_4,
+  character_bt_4,
+  character_bt_4_a,
+  character_5,
+  character_bt_5,
+  character_bt_5_a,
+} from "./image";
 
 export const CHARACTERS: Array<Character> = [
   // Spica
@@ -36,11 +53,11 @@ export const CHARACTERS: Array<Character> = [
     // illustration
     "Na-Ga",
     // image
-    "character_1.png",
+    character_1,
     // thumbnail
-    "character_bt_1.png",
+    character_bt_1,
     // thumbnailActive
-    "character_bt_1_a.png",
+    character_bt_1_a,
     // latinColor
     "#8fdbe9"
   ),
@@ -75,11 +92,11 @@ export const CHARACTERS: Array<Character> = [
     // illustration
     "きみしま青",
     // image
-    "character_2.png",
+    character_2,
     // thumbnail
-    "character_bt_2.png",
+    character_bt_2,
     // thumbnailActive
-    "character_bt_2_a.png",
+    character_bt_2_a,
     // latinColor
     "#ffdc61"
   ),
@@ -116,11 +133,11 @@ export const CHARACTERS: Array<Character> = [
     // illustration
     "ふむゆん",
     // image
-    "character_3.png",
+    character_3,
     // thumbnail
-    "character_bt_3.png",
+    character_bt_3,
     // thumbnailActive
-    "character_bt_3_a.png",
+    character_bt_3_a,
     // latinColor
     "#ffaab7"
   ),
@@ -159,11 +176,11 @@ export const CHARACTERS: Array<Character> = [
     // illustration
     "永山ゆうのん",
     // image
-    "character_4.png",
+    character_4,
     // thumbnail
-    "character_bt_4.png",
+    character_bt_4,
     // thumbnailActive
-    "character_bt_4_a.png",
+    character_bt_4_a,
     // latinColor
     "#ffa555"
   ),
@@ -198,11 +215,11 @@ export const CHARACTERS: Array<Character> = [
     // illustration
     "Na-Ga",
     // image
-    "character_5.png",
+    character_5,
     // thumbnail
-    "character_bt_5.png",
+    character_bt_5,
     // thumbnailActive
-    "character_bt_5_a.png",
+    character_bt_5_a,
     // latinColor
     "#c498d7"
   ),
