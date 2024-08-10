@@ -83,11 +83,12 @@ export default function Movie() {
         <img
           src="src/assets/images/play_bt.png"
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-        pointer-events-none w-[18%]
-        sm:w-[4%]"
+          pointer-events-none w-[18%]
+          sm:w-[4%]"
         />
       </div>
 
+      {/* Embed video */}
       <Backdrop
         sx={{ backgroundColor: "rgba(255,255,255,.5)", zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={backdropOpen}

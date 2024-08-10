@@ -6,6 +6,7 @@ import Story from "./components/story";
 import Character from "./components/character";
 import { createRef, useState } from "react";
 import Movie from "./components/movie";
+import Footer from "./components/footer";
 
 function App() {
   const sections = ["top", "introduction", "story", "character", "movie"];
@@ -32,7 +33,7 @@ function App() {
       <div ref={refs[4]}>
         <Movie />
       </div>
-      <div className="h-52 bg-red-500"></div>
+      <Footer />
     </div>
   );
 }
