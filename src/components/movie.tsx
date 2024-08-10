@@ -31,15 +31,12 @@ export default function Movie() {
 
     for (let i = 0; i < numberOfSlides; i++) {
       slideElements.push(
-        <div
+        <img
           key={i}
+          src={`src/assets/images/movie_thum1${windowWidth < width_sm ? "_sp" : ""}.jpg`}
+          width="100%"
           className={`${currentSlide !== i ? "blur animate-blurInAnime" : "animate-fadeAnime"}`}
-        >
-          <img
-            src={`src/assets/images/movie_thum1${windowWidth < width_sm ? "_sp" : ""}.jpg`}
-            width="100%"
-          />
-        </div>
+        />
       );
     }
 
@@ -65,7 +62,7 @@ export default function Movie() {
         {/* Movie title */}
         <div
           className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-10
-        sm:top-[10%] bm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]"
+          sm:top-[10%] bm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]"
         >
           <div
             className="font-seasons text-5xl font-thin text-center drop-shadow-movie-title text-custom-black-900

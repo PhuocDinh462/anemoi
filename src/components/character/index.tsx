@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import CharacterBox from "./character_box";
 import LeafBox from "../leaf_box";
-import { LeafType } from "@/models/leaf.model";
 
 export default function Character() {
   const componentRef = useRef(null);
