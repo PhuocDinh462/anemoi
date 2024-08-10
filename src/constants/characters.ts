@@ -15,7 +15,7 @@ import {
   character_5,
   character_bt_5,
   character_bt_5_a,
-} from "./image";
+} from "./images";
 
 export const CHARACTERS: Array<Character> = [
   // Spica

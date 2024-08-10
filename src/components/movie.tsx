@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 import { Backdrop } from "@mui/material";
-import { movie_thum1, movie_thum1_sp, play_bt } from "@/constants/image";
+import { movie_thum1, movie_thum1_sp, play_bt } from "@/constants/images";
 import { WIDTH_SM } from "@/constants/size";
 
 export default function Movie() {

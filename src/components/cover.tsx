@@ -1,4 +1,4 @@
-import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from "@/constants/image";
+import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from "@/constants/images";
 import { WIDTH_SM } from "@/constants/size";
 import { Link } from "@mui/material";
 import { useEffect, useRef, useState } from "react";

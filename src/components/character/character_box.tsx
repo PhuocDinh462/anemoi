@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CHARACTERS } from "@/constants/characters";
 import React from "react";
-import { arrow_chara_left, arrow_chara_right } from "@/constants/image";
+import { arrow_chara_left, arrow_chara_right } from "@/constants/images";
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);

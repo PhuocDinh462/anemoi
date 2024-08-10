@@ -9,7 +9,7 @@ import {
   story_leaf_1,
   story_leaf_2,
   story_leaf_3,
-} from "./image";
+} from "./images";
 
 export const Leaves: Array<Leaf> = [
   new Leaf(intro_leaf_1, intro_leaf_2, intro_leaf_3, LeafType.INTRO_LEAF),

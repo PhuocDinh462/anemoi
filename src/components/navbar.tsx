@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import { Drawer } from "@mui/material";
-import { anemoi_logo_bk } from "@/constants/image";
+import { anemoi_logo_bk } from "@/constants/images";
 
 export default function Navbar(props: {
   sections: string[];

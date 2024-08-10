@@ -1,5 +1,5 @@
 import SocialMedia from "@/models/social_media.model";
-import { x_bt, line_bt, github_bt, fb_bt, discord_bt } from "./image";
+import { x_bt, line_bt, github_bt, fb_bt, discord_bt } from "./images";
 
 export const SocialMediaArr: Array<SocialMedia> = [
   new SocialMedia(
