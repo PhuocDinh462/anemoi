@@ -1,10 +1,10 @@
-import { LEAF_HEIGHT } from "@constants/size";
+import { LeafType } from "@/models/leaf.model";
 import { useRef, useEffect, useState } from "react";
+import LeafBox from "./leaf_box";
 
 export default function Story() {
   const componentRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
-  const [bgPositionY, setBgPositionY] = useState(0);
 
   useEffect(() => {
     const currentIntroRef = componentRef.current;
@@ -27,22 +27,6 @@ export default function Story() {
       if (currentIntroRef) {
         observer.unobserve(currentIntroRef);
       }
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercentage = scrollTop / docHeight;
-      const newPositionY = scrollPercentage * LEAF_HEIGHT; // increase from 0 to LEAF_HEIGHT
-      setBgPositionY(newPositionY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -97,22 +81,8 @@ export default function Story() {
         </div>
       </div>
 
-      {/* Leaf */}
-      <div
-        className="bg-story-leaf-1 z-10 size-full absolute
-      bg-repeat-y bg-fixed bg-cover bg-center"
-        style={{ backgroundPositionY: `${bgPositionY}px` }}
-      />
-      <div
-        className="bg-story-leaf-2 z-10 size-full absolute
-      bg-repeat-y bg-fixed bg-cover bg-center"
-        style={{ backgroundPositionY: `${bgPositionY / 2}px` }}
-      />
-      <div
-        className="bg-story-leaf-3 z-10 size-full absolute
-      bg-repeat-y bg-fixed bg-cover bg-center"
-        style={{ backgroundPositionY: `${bgPositionY / 3}px` }}
-      />
+      {/* Leaf box */}
+      <LeafBox type={LeafType.STORY_LEAF} />
     </div>
   );
 }
