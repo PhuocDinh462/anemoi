@@ -35,7 +35,6 @@ export default function Movie() {
         <img
           key={i}
           src={`${windowWidth < WIDTH_SM ? movie_thum1_sp : movie_thum1}`}
-          width="100%"
           className={`${currentSlide !== i ? "blur animate-blurInAnime" : "animate-fadeAnime"}`}
         />
       );
@@ -52,6 +51,10 @@ export default function Movie() {
     centerPadding: `${windowWidth < WIDTH_SM ? 0 : windowWidth / 5}px`,
     afterChange: (current: number) => setCurrentSlide(current),
     arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1000,
   };
 
   return (
