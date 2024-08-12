@@ -2,13 +2,13 @@ import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from "@/co
 import { WIDTH_SM } from "@/constants/size";
 import { Link } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { showLogo, hideLogo } from "@/redux/slices/navbar.reducer";
 
-export default function Cover(props: {
-  setShowHeaderLogo: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
-  const { setShowHeaderLogo } = props;
+export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const blockRef = useRef(null);
+  const dispatch = useDispatch();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -26,9 +26,9 @@ export default function Cover(props: {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setShowHeaderLogo(false);
+            dispatch(hideLogo());
           } else {
-            setShowHeaderLogo(true);
+            dispatch(showLogo());
           }
         });
       },
@@ -46,7 +46,7 @@ export default function Cover(props: {
         observer.unobserve(currentRef);
       }
     };
-  }, [setShowHeaderLogo]);
+  }, [dispatch]);
 
   return (
     <div

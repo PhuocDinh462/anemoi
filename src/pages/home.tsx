@@ -10,15 +10,14 @@ import { createRef, useState } from "react";
 export default function Home() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
-  const [showHeaderLogo, setShowHeaderLogo] = useState(false);
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
       <div className="w-fit fixed z-[99]">
-        <Navbar sections={sections} refs={refs} showHeaderLogo={showHeaderLogo} />
+        <Navbar sections={sections} refs={refs} />
       </div>
       <div ref={refs[0]}>
-        <Cover setShowHeaderLogo={setShowHeaderLogo} />
+        <Cover />
       </div>
       <div ref={refs[1]}>
         <Intro />
