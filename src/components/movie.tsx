@@ -54,7 +54,7 @@ export default function Movie() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    speed: 1000,
+    speed: 700,
   };
 
   return (
