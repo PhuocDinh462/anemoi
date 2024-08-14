@@ -5,13 +5,15 @@ import Intro from "@/components/intro";
 import Movie from "@/components/movie";
 import Navbar from "@/components/navbar";
 import Story from "@/components/story";
-import { createRef, useState } from "react";
+import { createRef } from "react";
+import { Loading } from "@/components/loading";
 
 export default function Home() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
 
   return (
+    // <Loading />
     <div onDragStart={(e) => e.preventDefault()}>
       <div className="w-fit fixed z-[99]">
         <Navbar sections={sections} refs={refs} />

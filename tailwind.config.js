@@ -75,6 +75,7 @@ export default {
         fadeAnime: "fadeAnime 1s",
         blurInAnime: "blurInAnime 1s",
         dropDiagonal: "dropDiagonal .3s",
+        "spin-slow": "spin 5s linear infinite",
       },
     },
     screens: {

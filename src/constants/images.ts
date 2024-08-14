@@ -49,3 +49,6 @@ export const character_bt_5_a = createUrl("character_bt_5_a.png");
 
 export const arrow_chara_right = createUrl("arrow_chara_right.png");
 export const arrow_chara_left = createUrl("arrow_chara_left.png");
+
+export const anemoi_logo_anime1 = createUrl("anemoi_logo_anime1.png");
+export const anemoi_logo_anime2 = createUrl("anemoi_logo_anime2.png");
