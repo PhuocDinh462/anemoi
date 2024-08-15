@@ -3,7 +3,7 @@ import { WIDTH_SM } from "@/constants/size";
 import { Link } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { showLogo, hideLogo } from "@/redux/slices/navbar.reducer";
+import { showLogo, hideLogo } from "@/redux/slices/navbar.slice";
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
