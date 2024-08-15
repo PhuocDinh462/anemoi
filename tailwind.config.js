@@ -65,6 +65,10 @@ export default {
           "0%": { transform: "translate(-200px, -100px)" },
           "100%": { transform: "translate(0, 0)" },
         },
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
       },
       animation: {
         pathMove: "pathMove 2s infinite",
@@ -76,6 +80,7 @@ export default {
         blurInAnime: "blurInAnime 1s",
         dropDiagonal: "dropDiagonal .3s",
         "spin-slow": "spin 5s linear infinite",
+        fadeOut: "fadeOut 3s",
       },
     },
     screens: {
