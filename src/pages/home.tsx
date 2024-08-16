@@ -6,7 +6,7 @@ import Movie from "@/components/movie";
 import Navbar from "@/components/navbar";
 import Story from "@/components/story";
 import { createRef, useEffect, useState } from "react";
-import { Loading } from "@/components/loading";
+import Loading from "@/components/loading";
 import { Backdrop } from "@mui/material";
 
 export default function Home() {

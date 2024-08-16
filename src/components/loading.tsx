@@ -1,6 +1,6 @@
 import { anemoi_logo_anime1, anemoi_logo_anime2 } from "@/constants/images";
 
-export function Loading() {
+export default function Loading() {
   return (
     <div className="w-full h-screen flex items-center justify-center select-none">
       <div className="sm:size-[60%] lg:size-[40%] xl:size-1/2 size-full relative flex items-center justify-center">
