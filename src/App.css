@@ -5,3 +5,7 @@
 .slick-slide {
   overflow: hidden;
 }
+
+img {
+  user-select: none;
+}
