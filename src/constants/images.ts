@@ -1,54 +1,99 @@
-const base = "src/assets/images/";
+import anemoi_logo_bk_img from "@images/anemoi_logo_bk.png";
+import anemoi_logo_img from "@images/anemoi_logo.png";
 
-const createUrl = (path: string) => `${base}${path}`;
+export const anemoi_logo_bk = anemoi_logo_bk_img;
+export const anemoi_logo = anemoi_logo_img;
 
-export const anemoi_logo_bk = createUrl("anemoi_logo_bk.png");
-export const anemoi_logo = createUrl("anemoi_logo.png");
+import x_bt_img from "@images/x_bt.png";
+import line_bt_img from "@images/line_bt.png";
+import github_bt_img from "@images/github_bt.png";
+import fb_bt_img from "@images/fb_bt.png";
+import discord_bt_img from "@images/discord_bt.png";
 
-export const x_bt = createUrl("x_bt.png");
-export const line_bt = createUrl("line_bt.png");
-export const github_bt = createUrl("github_bt.png");
-export const fb_bt = createUrl("fb_bt.png");
-export const discord_bt = createUrl("discord_bt.png");
+export const x_bt = x_bt_img;
+export const line_bt = line_bt_img;
+export const github_bt = github_bt_img;
+export const fb_bt = fb_bt_img;
+export const discord_bt = discord_bt_img;
 
-export const intro_leaf_1 = createUrl("intro_leaf_1.png");
-export const intro_leaf_2 = createUrl("intro_leaf_2.png");
-export const intro_leaf_3 = createUrl("intro_leaf_3.png");
-export const story_leaf_1 = createUrl("story_leaf_1.png");
-export const story_leaf_2 = createUrl("story_leaf_2.png");
-export const story_leaf_3 = createUrl("story_leaf_3.png");
-export const chara_leaf_1 = createUrl("character_leaf_1.png");
-export const chara_leaf_2 = createUrl("character_leaf_2.png");
-export const chara_leaf_3 = createUrl("character_leaf_3.png");
+import intro_leaf_1_img from "@images/intro_leaf_1.png";
+import intro_leaf_2_img from "@images/intro_leaf_2.png";
+import intro_leaf_3_img from "@images/intro_leaf_3.png";
+import story_leaf_1_img from "@images/story_leaf_1.png";
+import story_leaf_2_img from "@images/story_leaf_2.png";
+import story_leaf_3_img from "@images/story_leaf_3.png";
+import chara_leaf_1_img from "@images/character_leaf_1.png";
+import chara_leaf_2_img from "@images/character_leaf_2.png";
+import chara_leaf_3_img from "@images/character_leaf_3.png";
 
-export const fv_main_bg_sp = createUrl("fv_main_bg_sp.jpg");
+export const intro_leaf_1 = intro_leaf_1_img;
+export const intro_leaf_2 = intro_leaf_2_img;
+export const intro_leaf_3 = intro_leaf_3_img;
+export const story_leaf_1 = story_leaf_1_img;
+export const story_leaf_2 = story_leaf_2_img;
+export const story_leaf_3 = story_leaf_3_img;
+export const chara_leaf_1 = chara_leaf_1_img;
+export const chara_leaf_2 = chara_leaf_2_img;
+export const chara_leaf_3 = chara_leaf_3_img;
 
-export const key_logo_black = createUrl("key_logo_black.png");
-export const key_logo_white = createUrl("key_logo_white.png");
+import fv_main_bg_sp_img from "@images/fv_main_bg_sp.jpg";
+export const fv_main_bg_sp = fv_main_bg_sp_img;
 
-export const movie_thum1 = createUrl("movie_thum1.jpg");
-export const movie_thum1_sp = createUrl("movie_thum1_sp.jpg");
+import key_logo_black_img from "@images/key_logo_black.png";
+import key_logo_white_img from "@images/key_logo_white.png";
 
-export const play_bt = createUrl("play_bt.png");
+export const key_logo_black = key_logo_black_img;
+export const key_logo_white = key_logo_white_img;
 
-export const character_1 = createUrl("character_1.png");
-export const character_bt_1 = createUrl("character_bt_1.png");
-export const character_bt_1_a = createUrl("character_bt_1_a.png");
-export const character_2 = createUrl("character_2.png");
-export const character_bt_2 = createUrl("character_bt_2.png");
-export const character_bt_2_a = createUrl("character_bt_2_a.png");
-export const character_3 = createUrl("character_3.png");
-export const character_bt_3 = createUrl("character_bt_3.png");
-export const character_bt_3_a = createUrl("character_bt_3_a.png");
-export const character_4 = createUrl("character_4.png");
-export const character_bt_4 = createUrl("character_bt_4.png");
-export const character_bt_4_a = createUrl("character_bt_4_a.png");
-export const character_5 = createUrl("character_5.png");
-export const character_bt_5 = createUrl("character_bt_5.png");
-export const character_bt_5_a = createUrl("character_bt_5_a.png");
+import movie_thum1_img from "@images/movie_thum1.jpg";
+import movie_thum1_sp_img from "@images/movie_thum1_sp.jpg";
 
-export const arrow_chara_right = createUrl("arrow_chara_right.png");
-export const arrow_chara_left = createUrl("arrow_chara_left.png");
+export const movie_thum1 = movie_thum1_img;
+export const movie_thum1_sp = movie_thum1_sp_img;
 
-export const anemoi_logo_anime1 = createUrl("anemoi_logo_anime1.png");
-export const anemoi_logo_anime2 = createUrl("anemoi_logo_anime2.png");
+import play_bt_img from "@images/play_bt.png";
+export const play_bt = play_bt_img;
+
+import character_1_img from "@images/character_1.png";
+import character_bt_1_img from "@images/character_bt_1.png";
+import character_bt_1_a_img from "@images/character_bt_1_a.png";
+import character_2_img from "@images/character_2.png";
+import character_bt_2_img from "@images/character_bt_2.png";
+import character_bt_2_a_img from "@images/character_bt_2_a.png";
+import character_3_img from "@images/character_3.png";
+import character_bt_3_img from "@images/character_bt_3.png";
+import character_bt_3_a_img from "@images/character_bt_3_a.png";
+import character_4_img from "@images/character_4.png";
+import character_bt_4_img from "@images/character_bt_4.png";
+import character_bt_4_a_img from "@images/character_bt_4_a.png";
+import character_5_img from "@images/character_5.png";
+import character_bt_5_img from "@images/character_bt_5.png";
+import character_bt_5_a_img from "@images/character_bt_5_a.png";
+
+export const character_1 = character_1_img;
+export const character_bt_1 = character_bt_1_img;
+export const character_bt_1_a = character_bt_1_a_img;
+export const character_2 = character_2_img;
+export const character_bt_2 = character_bt_2_img;
+export const character_bt_2_a = character_bt_2_a_img;
+export const character_3 = character_3_img;
+export const character_bt_3 = character_bt_3_img;
+export const character_bt_3_a = character_bt_3_a_img;
+export const character_4 = character_4_img;
+export const character_bt_4 = character_bt_4_img;
+export const character_bt_4_a = character_bt_4_a_img;
+export const character_5 = character_5_img;
+export const character_bt_5 = character_bt_5_img;
+export const character_bt_5_a = character_bt_5_a_img;
+
+import arrow_chara_right_img from "@images/arrow_chara_right.png";
+import arrow_chara_left_img from "@images/arrow_chara_left.png";
+
+export const arrow_chara_right = arrow_chara_right_img;
+export const arrow_chara_left = arrow_chara_left_img;
+
+import anemoi_logo_anime1_img from "@images/anemoi_logo_anime1.png";
+import anemoi_logo_anime2_img from "@images/anemoi_logo_anime2.png";
+
+export const anemoi_logo_anime1 = anemoi_logo_anime1_img;
+export const anemoi_logo_anime2 = anemoi_logo_anime2_img;

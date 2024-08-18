@@ -25,6 +25,8 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
+      "@images/*": ["src/assets/images/*"],
+      "@fonts/*": ["src/assets/fonts/*"],
       "@utils/*": ["src/utils/*"],
       "@constants/*": ["src/constants/*"]
     }
