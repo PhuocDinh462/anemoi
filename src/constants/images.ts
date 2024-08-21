@@ -37,7 +37,9 @@ export const chara_leaf_2 = chara_leaf_2_img;
 export const chara_leaf_3 = chara_leaf_3_img;
 
 import fv_main_bg_sp_img from "@images/fv_main_bg_sp.jpg";
+import fv_main_bg_img from "@images/fv_main_bg.jpg";
 export const fv_main_bg_sp = fv_main_bg_sp_img;
+export const fv_main_bg = fv_main_bg_img;
 
 import key_logo_black_img from "@images/key_logo_black.png";
 import key_logo_white_img from "@images/key_logo_white.png";
@@ -97,3 +99,61 @@ import anemoi_logo_anime2_img from "@images/anemoi_logo_anime2.png";
 
 export const anemoi_logo_anime1 = anemoi_logo_anime1_img;
 export const anemoi_logo_anime2 = anemoi_logo_anime2_img;
+
+import intro_bg from "@images/intro_bg.jpg";
+import story_bg from "@images/story_bg.jpg";
+import character_bg from "@images/character_bg.jpg";
+import character_bg_sp from "@images/character_bg_sp.jpg";
+import character_border from "@images/character_border.png";
+import close_icon from "@images/close_icon.png";
+
+export const IMAGES = [
+  anemoi_logo_bk,
+  anemoi_logo,
+  x_bt,
+  line_bt,
+  github_bt,
+  fb_bt,
+  discord_bt,
+  intro_leaf_1,
+  intro_leaf_2,
+  intro_leaf_3,
+  story_leaf_1,
+  story_leaf_2,
+  story_leaf_3,
+  chara_leaf_1,
+  chara_leaf_2,
+  chara_leaf_3,
+  fv_main_bg,
+  fv_main_bg_sp,
+  key_logo_black,
+  key_logo_white,
+  movie_thum1,
+  movie_thum1_sp,
+  play_bt,
+  character_1,
+  character_bt_1,
+  character_bt_1_a,
+  character_2,
+  character_bt_2,
+  character_bt_2_a,
+  character_3,
+  character_bt_3,
+  character_bt_3_a,
+  character_4,
+  character_bt_4,
+  character_bt_4_a,
+  character_5,
+  character_bt_5,
+  character_bt_5_a,
+  arrow_chara_right,
+  arrow_chara_left,
+  anemoi_logo_anime1,
+  anemoi_logo_anime2,
+  intro_bg,
+  story_bg,
+  character_bg,
+  character_bg_sp,
+  character_border,
+  close_icon,
+];

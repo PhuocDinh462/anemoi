@@ -8,32 +8,50 @@ import Story from "@/components/story";
 import { createRef, useEffect, useState } from "react";
 import Loading from "@/components/loading";
 import { Backdrop } from "@mui/material";
+import { IMAGES } from "@/constants/images";
 
 export default function Home() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
-  const [showLoading, setShowLoading] = useState(true);
-  const loadingMinDuration = 3000;
+
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(false);
-    }, loadingMinDuration);
+    const loadImages = (sources: string[]) => {
+      return Promise.all(
+        sources.map((src) => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve;
+          });
+        })
+      );
+    };
 
-    return () => clearTimeout(timer);
+    const loadFonts = () => {
+      return document.fonts.ready;
+    };
+
+    const loadResources = async () => {
+      await Promise.all([loadImages(IMAGES), loadFonts()]);
+      setLoading(false);
+    };
+
+    loadResources();
   }, []);
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
       <Backdrop
         sx={{ backgroundColor: "white", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-        open={showLoading}
+        open={loading}
         transitionDuration={1000}
       >
         <Loading />
       </Backdrop>
 
-      {!showLoading && (
+      {!loading && (
         <>
           <div className="w-fit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
