@@ -148,8 +148,6 @@ export const IMAGES = [
   character_bt_5_a,
   arrow_chara_right,
   arrow_chara_left,
-  anemoi_logo_anime1,
-  anemoi_logo_anime2,
   intro_bg,
   story_bg,
   character_bg,

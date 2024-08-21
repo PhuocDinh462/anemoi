@@ -8,13 +8,24 @@ import Story from "@/components/story";
 import { createRef, useEffect, useState } from "react";
 import Loading from "@/components/loading";
 import { Backdrop } from "@mui/material";
-import { IMAGES } from "@/constants/images";
+import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from "@/constants/images";
 
 export default function Home() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
 
-  const [loading, setLoading] = useState(true);
+  const [loadingAllComplete, setLoadingAllComplete] = useState(false);
+  const [loadingLogoComplete, setLoadingLogoComplete] = useState(false);
+  const [loadingTimeout, setLoadingTimeout] = useState(false);
+  const loadingMinDuration = 3000;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingTimeout(true);
+    }, loadingMinDuration);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const loadImages = (sources: string[]) => {
@@ -33,25 +44,33 @@ export default function Home() {
       return document.fonts.ready;
     };
 
-    const loadResources = async () => {
-      await Promise.all([loadImages(IMAGES), loadFonts()]);
-      setLoading(false);
+    const loadLogo = async () => {
+      await Promise.all([loadImages([anemoi_logo_anime1, anemoi_logo_anime2])]);
+      setLoadingLogoComplete(true);
     };
 
+    const loadResources = async () => {
+      await Promise.all([loadImages(IMAGES), loadFonts()]);
+      setLoadingAllComplete(true);
+    };
+
+    loadLogo();
     loadResources();
   }, []);
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
-      <Backdrop
-        sx={{ backgroundColor: "white", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-        open={loading}
-        transitionDuration={1000}
-      >
-        <Loading />
-      </Backdrop>
+      {loadingLogoComplete && (
+        <Backdrop
+          sx={{ backgroundColor: "white", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          open={!loadingAllComplete || !loadingTimeout}
+          transitionDuration={1000}
+        >
+          <Loading />
+        </Backdrop>
+      )}
 
-      {!loading && (
+      {loadingAllComplete && loadingTimeout && (
         <>
           <div className="w-fit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
