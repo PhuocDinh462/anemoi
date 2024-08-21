@@ -4,21 +4,21 @@
 
 @font-face {
   font-family: "the-seasons";
-  src: url("./assets/fonts/the-seasons.ttf") format("opentype");
+  src: url("@fonts/the-seasons.ttf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "fot-tsukumin";
-  src: url("./assets/fonts/FOT-TsukuMin Pro L.otf") format("opentype");
+  src: url("@fonts/FOT-TsukuMin Pro L.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "thomasita";
-  src: url("./assets/fonts/Thomasita.otf") format("opentype");
+  src: url("@fonts/Thomasita.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }

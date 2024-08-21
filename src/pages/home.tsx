@@ -14,8 +14,8 @@ export default function Home() {
   const sections = ["top", "introduction", "story", "character", "movie"];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
 
-  const [loadingAllComplete, setLoadingAllComplete] = useState(false);
-  const [loadingLogoComplete, setLoadingLogoComplete] = useState(false);
+  const [loadingResourcesComplete, setLoadingResourcesComplete] = useState(false);
+  const [loadingBackdropComplete, setLoadingBackdropComplete] = useState(false);
   const [loadingTimeout, setLoadingTimeout] = useState(false);
   const loadingMinDuration = 3000;
 
@@ -46,12 +46,12 @@ export default function Home() {
 
     const loadLogo = async () => {
       await Promise.all([loadImages([anemoi_logo_anime1, anemoi_logo_anime2])]);
-      setLoadingLogoComplete(true);
+      setLoadingBackdropComplete(true);
     };
 
     const loadResources = async () => {
       await Promise.all([loadImages(IMAGES), loadFonts()]);
-      setLoadingAllComplete(true);
+      setLoadingResourcesComplete(true);
     };
 
     loadLogo();
@@ -60,17 +60,17 @@ export default function Home() {
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
-      {loadingLogoComplete && (
+      {loadingBackdropComplete && (
         <Backdrop
           sx={{ backgroundColor: "white", zIndex: (theme) => theme.zIndex.drawer + 1 }}
-          open={!loadingAllComplete || !loadingTimeout}
+          open={!loadingResourcesComplete || !loadingTimeout}
           transitionDuration={1000}
         >
           <Loading />
         </Backdrop>
       )}
 
-      {loadingAllComplete && loadingTimeout && (
+      {loadingResourcesComplete && loadingTimeout && (
         <>
           <div className="w-fit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
