@@ -17,4 +17,7 @@ export default defineConfig({
   },
   plugins: [react()],
   base: "/anemoi/",
+  server: {
+    port: 3000,
+  },
 });
