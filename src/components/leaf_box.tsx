@@ -31,7 +31,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
     <>
       <div
         className={`z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-cover bg-center`}
+        bg-repeat-y bg-fixed bg-left`}
         style={{
           backgroundPositionY: `${bgPositionY}px`,
           backgroundImage: `url('${leaf?.leaf1_url}')`,
@@ -39,7 +39,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
       />
       <div
         className="z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-cover bg-center"
+        bg-repeat-y bg-fixed bg-center"
         style={{
           backgroundPositionY: `${bgPositionY / 2}px`,
           backgroundImage: `url('${leaf?.leaf2_url}')`,
@@ -47,7 +47,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
       />
       <div
         className="z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-cover bg-center"
+        bg-repeat-y bg-fixed bg-right"
         style={{
           backgroundPositionY: `${bgPositionY / 3}px`,
           backgroundImage: `url('${leaf?.leaf3_url}')`,
