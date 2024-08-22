@@ -32,9 +32,10 @@ export default function Character() {
 
   return (
     <div
-      className="w-full h-screen sm:min-h-[1050px] bg-character-bg-sp sm:bg-character-bg
+      className="w-full sm:min-h-[1050px] bg-character-bg-sp sm:bg-character-bg
       bg-cover bg-no-repeat bg-bottom relative overflow-hidden min-h-[1250px]
-      md:min-h-[950px]"
+      md:min-h-[950px]
+      xl:h-screen"
       ref={componentRef}
     >
       {/* Text box */}
