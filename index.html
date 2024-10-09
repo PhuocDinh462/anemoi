@@ -7,17 +7,17 @@
     <title>anemoi -アネモイ- | Key</title>
     <script>
       function updateFavicon() {
-        const favicon = document.getElementById("favicon");
+        const favicon = document.getElementById('favicon');
         const isDarkMode =
-          window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        favicon.href = isDarkMode ? "key_logo_white.png" : "key_logo_black.png";
+          window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        favicon.href = isDarkMode ? 'key_logo_white.png' : 'key_logo_black.png';
       }
 
       // Initial check
       updateFavicon();
 
       // Listen for changes in the color scheme
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateFavicon);
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
     </script>
     <script type="module" crossorigin src="/anemoi/assets/index-DBr_Kqqh.js"></script>
     <link rel="stylesheet" crossorigin href="/anemoi/assets/index-CKRoEBrF.css">
