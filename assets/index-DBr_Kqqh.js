@@ -115,7 +115,7 @@ Error generating stack: `+o.message+`
         兄以外の男性には塩対応だが、兄にとって有益となると判断した人へはとても丁寧。
         <br/>
         秘伝の「すき焼きのタレ」を持っていて、これさえあれば何でも作れると信じている。`,158,52,"86/58/88","Na-Ga",Eg,_g,Cg,"#c498d7")];function FS(){const[e,t]=_.useState(0);let n=0,r=0;const i=u=>{n=u.targetTouches[0].clientX},o=u=>{r=u.targetTouches[0].clientX},l=()=>{n-r>50&&s(),r-n>50&&a()},s=()=>t((e+1)%De.length),a=()=>t((e-1+De.length)%De.length);return S.jsxs("div",{className:`w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0\r
-      min-w-[90%] pt-[10%] select-none\r
+      min-w-[90%] pt-[10%]\r
       max-sm:w-full\r
       max-sm:flex max-sm:flex-col`,onTouchStart:i,onTouchMove:o,onTouchEnd:l,children:[S.jsx("div",{className:`flex sm:left-[51%] sm:top-[24%] sm:w-[360px] sm:absolute\r
         md:top-[22%] md:w-[400px]\r
@@ -142,7 +142,7 @@ Error generating stack: `+o.message+`
                     体重：${De[e].weight}kg　
                     B/W/H：${De[e].threeSize}`})]}),S.jsxs("div",{className:`font-tsukumin text-white tracking-[.1em] md:text-base/9\r
                   sm:text-sm/8\r
-                  text-xs/7`,children:[S.jsx("span",{className:"text-xs font-seasons italic",children:"illustration"}),S.jsx("span",{children:`　原画：${De[e].illustration}`})]})]}),S.jsx("div",{className:`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 
+                  text-xs/7`,children:[S.jsx("span",{className:"text-xs font-seasons italic",children:"illustration"}),S.jsx("span",{children:`　原画：${De[e].illustration}`})]})]}),S.jsx("div",{className:`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 select-none
                 sm:bottom-[10%]
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`,style:{color:`${De[e].latinColor}`},children:De[e].latin})]},f)),S.jsx("div",{className:`w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]\r
