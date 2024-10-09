@@ -1,10 +1,10 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useEffect, useState } from "react";
-import { Backdrop } from "@mui/material";
-import { movie_thum1, movie_thum1_sp, play_bt } from "@/constants/images";
-import { WIDTH_SM } from "@/constants/size";
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useEffect, useState } from 'react';
+import { Backdrop } from '@mui/material';
+import { movie_thum1, movie_thum1_sp, play_bt } from '@/constants/images';
+import { WIDTH_SM } from '@/constants/size';
 
 export default function Movie() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -19,9 +19,9 @@ export default function Movie() {
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -35,7 +35,7 @@ export default function Movie() {
         <img
           key={i}
           src={`${windowWidth < WIDTH_SM ? movie_thum1_sp : movie_thum1}`}
-          className={`${currentSlide !== i ? "blur animate-blurInAnime" : "animate-fadeAnime"}`}
+          className={`${currentSlide !== i ? 'blur animate-blurInAnime' : 'animate-fadeAnime'}`}
         />
       );
     }
@@ -54,7 +54,7 @@ export default function Movie() {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    speed: 700,
+    speed: 700
   };
 
   return (
@@ -66,13 +66,11 @@ export default function Movie() {
         {/* Movie title */}
         <div
           className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-10
-          sm:top-[10%] bm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]"
-        >
+          sm:top-[10%] bm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]">
           <div
             className="font-seasons text-5xl font-thin text-center drop-shadow-movie-title text-custom-black-900
           lg:text-5xl md:text-4xl sm:text-3xl
-          max-xs:text-4xl max-2xs:text-3xl"
-          >
+          max-xs:text-4xl max-2xs:text-3xl">
             movie
           </div>
           <div className="font-thomasita text-lg font-semibold text-center drop-shadow-movie-title text-[#4fc69a]">
@@ -91,16 +89,15 @@ export default function Movie() {
 
       {/* Embed video */}
       <Backdrop
-        sx={{ backgroundColor: "rgba(255,255,255,.5)", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{ backgroundColor: 'rgba(255,255,255,.5)', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={backdropOpen}
         transitionDuration={500}
         onClick={() => setBackdropOpen(false)}
-        onExited={() => setVideoOpen(false)}
-      >
+        onExited={() => setVideoOpen(false)}>
         {videoOpen && (
           <div className="relative sm:w-fit w-full max-sm:mx-3">
             <iframe
-              width={windowWidth < WIDTH_SM ? "100%" : windowWidth / 1.5}
+              width={windowWidth < WIDTH_SM ? '100%' : windowWidth / 1.5}
               height={
                 windowWidth < WIDTH_SM ? windowWidth / aspectRatio : windowWidth / 1.5 / aspectRatio
               }

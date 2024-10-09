@@ -1,17 +1,17 @@
-import Character from "@/components/character";
-import Cover from "@/components/cover";
-import Footer from "@/components/footer";
-import Intro from "@/components/intro";
-import Movie from "@/components/movie";
-import Navbar from "@/components/navbar";
-import Story from "@/components/story";
-import { createRef, useEffect, useState } from "react";
-import Loading from "@/components/loading";
-import { Backdrop } from "@mui/material";
-import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from "@/constants/images";
+import Character from '@/components/character';
+import Cover from '@/components/cover';
+import Footer from '@/components/footer';
+import Intro from '@/components/intro';
+import Movie from '@/components/movie';
+import Navbar from '@/components/navbar';
+import Story from '@/components/story';
+import { createRef, useEffect, useState } from 'react';
+import Loading from '@/components/loading';
+import { Backdrop } from '@mui/material';
+import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
 
 export default function Home() {
-  const sections = ["top", "introduction", "story", "character", "movie"];
+  const sections = ['top', 'introduction', 'story', 'character', 'movie'];
   const refs: React.RefObject<HTMLDivElement>[] = sections.map(() => createRef());
 
   const [loadingResourcesComplete, setLoadingResourcesComplete] = useState(false);
@@ -62,10 +62,9 @@ export default function Home() {
     <div onDragStart={(e) => e.preventDefault()}>
       {loadingBackdropComplete && (
         <Backdrop
-          sx={{ backgroundColor: "white", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          sx={{ backgroundColor: 'white', zIndex: (theme) => theme.zIndex.drawer + 1 }}
           open={!loadingResourcesComplete || !loadingTimeout}
-          transitionDuration={1000}
-        >
+          transitionDuration={1000}>
           <Loading />
         </Backdrop>
       )}

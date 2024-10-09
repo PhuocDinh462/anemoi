@@ -1,7 +1,7 @@
 export enum LeafType {
   INTRO_LEAF,
   STORY_LEAF,
-  CHARA_LEAF,
+  CHARA_LEAF
 }
 
 export class Leaf {

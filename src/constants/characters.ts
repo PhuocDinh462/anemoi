@@ -1,4 +1,4 @@
-import Character from "@/models/character.model";
+import Character from '@/models/character.model';
 import {
   character_1,
   character_bt_1,
@@ -14,22 +14,22 @@ import {
   character_bt_4_a,
   character_5,
   character_bt_5,
-  character_bt_5_a,
-} from "./images";
+  character_bt_5_a
+} from './images';
 
 export const CHARACTERS: Array<Character> = [
   // Spica
   new Character(
     // alias
-    "風をまとった少女",
+    '風をまとった少女',
     // kanji
-    "辻倉朱比華",
+    '辻倉朱比華',
     // furigana
-    "つじくら すぴか",
+    'つじくら すぴか',
     // latin
-    "Spica",
+    'Spica',
     // catchphrase,
-    "「私はただ風に吹かれていることにするわ」",
+    '「私はただ風に吹かれていることにするわ」',
     // profile
     `町外れのトレーラーハウスで生活している謎めいた少女。
     <br/>
@@ -49,9 +49,9 @@ export const CHARACTERS: Array<Character> = [
     // weight
     40,
     // threeSize
-    "74/52/75",
+    '74/52/75',
     // illustration
-    "Na-Ga",
+    'Na-Ga',
     // image
     character_1,
     // thumbnail
@@ -59,20 +59,20 @@ export const CHARACTERS: Array<Character> = [
     // thumbnailActive
     character_bt_1_a,
     // latinColor
-    "#8fdbe9"
+    '#8fdbe9'
   ),
   // Aino
   new Character(
     // alias
-    "空を目指すフワフワ少女",
+    '空を目指すフワフワ少女',
     // kanji
-    "総羽愛乃",
+    '総羽愛乃',
     // furigana
-    "ふさば あいの",
+    'ふさば あいの',
     // latin
-    "Aino",
+    'Aino',
     // catchphrase,
-    "「飛んで見れば分かりますよ。この子のすごさが！」",
+    '「飛んで見れば分かりますよ。この子のすごさが！」',
     // profile
     `町外れでまわる風車の修理をしている少女。
     <br/>
@@ -88,9 +88,9 @@ export const CHARACTERS: Array<Character> = [
     // weight
     39,
     // threeSize
-    "73/51/73",
+    '73/51/73',
     // illustration
-    "きみしま青",
+    'きみしま青',
     // image
     character_2,
     // thumbnail
@@ -98,20 +98,20 @@ export const CHARACTERS: Array<Character> = [
     // thumbnailActive
     character_bt_2_a,
     // latinColor
-    "#ffdc61"
+    '#ffdc61'
   ),
   // Hiiro
   new Character(
     // alias
-    "地図を作る少女",
+    '地図を作る少女',
     // kanji
-    "淡雪陽彩",
+    '淡雪陽彩',
     // furigana
-    "あわゆき ひいろ",
+    'あわゆき ひいろ',
     // latin
-    "Hiiro",
+    'Hiiro',
     // catchphrase,
-    "「キミの選択はとてもいいわね」",
+    '「キミの選択はとてもいいわね」',
     // profile
     `天文台に住む少女。
     <br/>
@@ -129,9 +129,9 @@ export const CHARACTERS: Array<Character> = [
     // weight
     56,
     // threeSize
-    "90/60/88",
+    '90/60/88',
     // illustration
-    "ふむゆん",
+    'ふむゆん',
     // image
     character_3,
     // thumbnail
@@ -139,18 +139,18 @@ export const CHARACTERS: Array<Character> = [
     // thumbnailActive
     character_bt_3_a,
     // latinColor
-    "#ffaab7"
+    '#ffaab7'
   ),
   // Koyomi
   new Character(
     // alias
-    "郵便まっしぐらなひたむき少女",
+    '郵便まっしぐらなひたむき少女',
     // kanji
-    "白渡小詠",
+    '白渡小詠',
     // furigana
-    "しらと こよみ",
+    'しらと こよみ',
     // latin
-    "Koyomi",
+    'Koyomi',
     // catchphrase,
     `「大切なお手紙の届け先を探してるんです。
       <br/>
@@ -172,9 +172,9 @@ export const CHARACTERS: Array<Character> = [
     // weight
     44,
     // threeSize
-    "78/56/79",
+    '78/56/79',
     // illustration
-    "永山ゆうのん",
+    '永山ゆうのん',
     // image
     character_4,
     // thumbnail
@@ -182,20 +182,20 @@ export const CHARACTERS: Array<Character> = [
     // thumbnailActive
     character_bt_4_a,
     // latinColor
-    "#ffa555"
+    '#ffa555'
   ),
   // Rikka
   new Character(
     // alias
-    "兄をダメにする万能妹",
+    '兄をダメにする万能妹',
     // kanji
-    "速川六花",
+    '速川六花',
     // furigana
-    "はやかわ りっか",
+    'はやかわ りっか',
     // latin
-    "Rikka",
+    'Rikka',
     // catchphrase,
-    "「兄さん、ご立派です！」",
+    '「兄さん、ご立派です！」',
     // profile
     `主人公の妹で、共に舞台となる町にやってきた少女。
         <br/>
@@ -211,9 +211,9 @@ export const CHARACTERS: Array<Character> = [
     // weight
     52,
     // threeSize
-    "86/58/88",
+    '86/58/88',
     // illustration
-    "Na-Ga",
+    'Na-Ga',
     // image
     character_5,
     // thumbnail
@@ -221,6 +221,6 @@ export const CHARACTERS: Array<Character> = [
     // thumbnailActive
     character_bt_5_a,
     // latinColor
-    "#c498d7"
-  ),
+    '#c498d7'
+  )
 ];

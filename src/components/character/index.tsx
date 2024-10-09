@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState } from "react";
-import CharacterBox from "./character_box";
-import LeafBox from "../leaf_box";
+import { useRef, useEffect, useState } from 'react';
+import CharacterBox from './character_box';
+import LeafBox from '../leaf_box';
 
 export default function Character() {
   const componentRef = useRef(null);
@@ -14,8 +14,8 @@ export default function Character() {
       },
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
+        rootMargin: '0px',
+        threshold: 0.1
       }
     );
 
@@ -36,23 +36,20 @@ export default function Character() {
       bg-cover bg-no-repeat bg-bottom relative overflow-hidden min-h-[1250px]
       md:min-h-[950px]
       xl:h-screen"
-      ref={componentRef}
-    >
+      ref={componentRef}>
       {/* Text box */}
       <div
         className="flex flex-col justify-center items-center z-50 absolute 
-        top-[100px] left-1/2 -translate-x-1/2"
-      >
+        top-[100px] left-1/2 -translate-x-1/2">
         <div
           className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
-        max-sm:text-4xl max-xs:text-3xl"
-        >
+        max-sm:text-4xl max-xs:text-3xl">
           character
         </div>
         <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>
       </div>
 
-      <div className={`absolute size-full z-20 ${isInView && "animate-fadeUp"}`}>
+      <div className={`absolute size-full z-20 ${isInView && 'animate-fadeUp'}`}>
         <CharacterBox />
       </div>
 

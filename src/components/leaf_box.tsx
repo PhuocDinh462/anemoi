@@ -1,7 +1,7 @@
-import { LEAF_HEIGHT } from "@/constants/size";
-import { useEffect, useState } from "react";
-import { Leaves } from "@/constants/leaves";
-import { LeafType } from "@/models/leaf.model";
+import { LEAF_HEIGHT } from '@/constants/size';
+import { useEffect, useState } from 'react';
+import { Leaves } from '@/constants/leaves';
+import { LeafType } from '@/models/leaf.model';
 
 interface props {
   type?: LeafType;
@@ -20,10 +20,10 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
       setBgPositionY(newPositionY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -34,7 +34,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
         bg-repeat-y bg-fixed bg-left bg-cover`}
         style={{
           backgroundPositionY: `${bgPositionY}px`,
-          backgroundImage: `url('${leaf?.leaf1_url}')`,
+          backgroundImage: `url('${leaf?.leaf1_url}')`
         }}
       />
       <div
@@ -42,7 +42,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
         bg-repeat-y bg-fixed bg-center bg-cover"
         style={{
           backgroundPositionY: `${bgPositionY / 2}px`,
-          backgroundImage: `url('${leaf?.leaf2_url}')`,
+          backgroundImage: `url('${leaf?.leaf2_url}')`
         }}
       />
       <div
@@ -50,7 +50,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
         bg-repeat-y bg-fixed bg-right bg-cover"
         style={{
           backgroundPositionY: `${bgPositionY / 3}px`,
-          backgroundImage: `url('${leaf?.leaf3_url}')`,
+          backgroundImage: `url('${leaf?.leaf3_url}')`
         }}
       />
     </>

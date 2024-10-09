@@ -1,4 +1,4 @@
-import { anemoi_logo_anime1, anemoi_logo_anime2 } from "@/constants/images";
+import { anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
 
 export default function Loading() {
   return (

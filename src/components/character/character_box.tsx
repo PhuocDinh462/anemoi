@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { CHARACTERS } from "@/constants/characters";
-import React from "react";
-import { arrow_chara_left, arrow_chara_right } from "@/constants/images";
+import { useState } from 'react';
+import { CHARACTERS } from '@/constants/characters';
+import React from 'react';
+import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);
@@ -33,14 +33,12 @@ export default function CharacterBox() {
       max-sm:flex max-sm:flex-col"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
+      onTouchEnd={handleTouchEnd}>
       {/* Thumbnail box */}
       <div
         className="flex sm:left-[51%] sm:top-[24%] sm:w-[360px] sm:absolute
         md:top-[22%] md:w-[400px]
-        w-full top-[20%] left-1/2 justify-evenly max-sm:mt-40"
-      >
+        w-full top-[20%] left-1/2 justify-evenly max-sm:mt-40">
         {CHARACTERS.map((character, index) => (
           <div
             key={index}
@@ -49,7 +47,7 @@ export default function CharacterBox() {
             style={{
               backgroundImage: `url('${
                 characterIndex === index ? character.thumbnailActive : character.thumbnail
-              }')`,
+              }')`
             }}
             onClick={() => setCharacterIndex(index)}
           />
@@ -68,9 +66,8 @@ export default function CharacterBox() {
                 sm:text-lg sm:top-[25%] sm:absolute
                 max-sm:ml-10 max-sm:mt-10
                 max-xs:text-sm max-xs:ml-5
-                animate-fadeIn"
-              >
-                {CHARACTERS[characterIndex].catchphrase.split("<br/>").map((part, index) => (
+                animate-fadeIn">
+                {CHARACTERS[characterIndex].catchphrase.split('<br/>').map((part, index) => (
                   <React.Fragment key={index}>
                     <span className="size-fit bg-white py-[4px] px-[2px]">
                       {part}
@@ -84,8 +81,7 @@ export default function CharacterBox() {
               <div
                 className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
                 md:w-[54%] md:top-[1%]
-                top-[18%] animate-charaAnime"
-              >
+                top-[18%] animate-charaAnime">
                 <img src={character.image} width="100%" />
               </div>
 
@@ -95,12 +91,10 @@ export default function CharacterBox() {
                 sm:top-[34%] sm:left-[52%] sm:absolute
                 bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
                 max-xs:px-5 max-xs:pb-8
-                animate-fadeIn"
-              >
+                animate-fadeIn">
                 <div
                   className="sm:text-lg/10 font-tsukumin text-white tracking-[.2em]
-                  max-sm:text-xl/10"
-                >
+                  max-sm:text-xl/10">
                   {CHARACTERS[characterIndex].alias}
                 </div>
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
@@ -108,8 +102,7 @@ export default function CharacterBox() {
                 <div
                   className="md:text-4xl/[4rem] font-tsukumin text-white tracking-[.1em] 
                   sm:text-2xl/10
-                  text-3xl/[3.5rem]"
-                >
+                  text-3xl/[3.5rem]">
                   <span className="pr-[10px]">{CHARACTERS[characterIndex].kanji}</span>
                   <span className="text-[.4em] align-[8px] whitespace-nowrap">
                     {CHARACTERS[characterIndex].furigana}
@@ -120,9 +113,8 @@ export default function CharacterBox() {
                 <div
                   className="font-tsukumin text-white tracking-[.1em] md:text-base/9
                   sm:text-sm/8
-                  text-xs/7"
-                >
-                  {CHARACTERS[characterIndex].profile.split("<br/>").map((part, index) => (
+                  text-xs/7">
+                  {CHARACTERS[characterIndex].profile.split('<br/>').map((part, index) => (
                     <React.Fragment key={index}>
                       {part}
                       <br />
@@ -133,8 +125,7 @@ export default function CharacterBox() {
                 <div
                   className="font-tsukumin text-white tracking-[.1em] md:text-base/9
                   sm:text-sm/8
-                  text-xs/7"
-                >
+                  text-xs/7">
                   <span className="text-xs font-seasons italic">spec</span>
                   <span>{`　身長：${CHARACTERS[characterIndex].height}cm　
                     体重：${CHARACTERS[characterIndex].weight}kg　
@@ -144,8 +135,7 @@ export default function CharacterBox() {
                 <div
                   className="font-tsukumin text-white tracking-[.1em] md:text-base/9
                   sm:text-sm/8
-                  text-xs/7"
-                >
+                  text-xs/7">
                   <span className="text-xs font-seasons italic">illustration</span>
                   <span>{`　原画：${CHARACTERS[characterIndex].illustration}`}</span>
                 </div>
@@ -158,9 +148,8 @@ export default function CharacterBox() {
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`}
                 style={{
-                  color: `${CHARACTERS[characterIndex].latinColor}`,
-                }}
-              >
+                  color: `${CHARACTERS[characterIndex].latinColor}`
+                }}>
                 {CHARACTERS[characterIndex].latin}
               </div>
             </React.Fragment>
@@ -171,8 +160,7 @@ export default function CharacterBox() {
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]
         max-sm:hidden"
-        onClick={() => nextChara()}
-      >
+        onClick={() => nextChara()}>
         <img src={arrow_chara_right} />
       </div>
 
@@ -180,8 +168,7 @@ export default function CharacterBox() {
       <div
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -left-[10%]
         max-sm:hidden"
-        onClick={() => prevChara()}
-      >
+        onClick={() => prevChara()}>
         <img src={arrow_chara_left} />
       </div>
     </div>

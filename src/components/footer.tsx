@@ -1,7 +1,7 @@
-import { Link } from "@mui/material";
-import { anemoi_logo_bk } from "@/constants/images";
-import { SocialMediaArr } from "@/constants/social_media";
-import LeafBox from "./leaf_box";
+import { Link } from '@mui/material';
+import { anemoi_logo_bk } from '@/constants/images';
+import { SocialMediaArr } from '@/constants/social_media';
+import LeafBox from './leaf_box';
 
 export default function Footer() {
   return (

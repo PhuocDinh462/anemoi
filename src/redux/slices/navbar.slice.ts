@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const navbarSlice = createSlice({
-  name: "navbar",
+  name: 'navbar',
   initialState: {
-    showLogo: false,
+    showLogo: false
   },
   reducers: {
     showLogo: (state) => {
@@ -11,8 +11,8 @@ export const navbarSlice = createSlice({
     },
     hideLogo: (state) => {
       state.showLogo = false;
-    },
-  },
+    }
+  }
 });
 
 export const { showLogo, hideLogo } = navbarSlice.actions;

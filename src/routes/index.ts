@@ -1,6 +1,6 @@
-import Home from "@/pages/home";
+import Home from '@/pages/home';
 
-const publicRoutes = [{ path: "/", element: Home }];
+const publicRoutes = [{ path: '/', element: Home }];
 
 const privateRoutes = [];
 

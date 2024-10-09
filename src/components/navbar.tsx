@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { Fade as Hamburger } from "hamburger-react";
-import { Drawer } from "@mui/material";
-import { anemoi_logo_bk } from "@/constants/images";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import React, { useEffect, useState } from 'react';
+import { Fade as Hamburger } from 'hamburger-react';
+import { Drawer } from '@mui/material';
+import { anemoi_logo_bk } from '@/constants/images';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store';
 
 export default function Navbar(props: {
   sections: string[];
@@ -13,7 +13,7 @@ export default function Navbar(props: {
   const showLogo = useSelector((state: RootState) => state.navbar.showLogo);
 
   const scrollToSelectedSection = (index: number) => {
-    if (refs[index].current) refs[index].current.scrollIntoView({ behavior: "smooth" });
+    if (refs[index].current) refs[index].current.scrollIntoView({ behavior: 'smooth' });
   };
 
   // For mobile only
@@ -36,8 +36,7 @@ export default function Navbar(props: {
               onClick={() => {
                 setOpen(false);
                 scrollToSelectedSection(refIndex);
-              }}
-            >
+              }}>
               {sections[i]}
             </div>
             |
@@ -57,9 +56,9 @@ export default function Navbar(props: {
 
   useEffect(() => {
     const handleResize = () => setOpen(false);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   ///
@@ -69,8 +68,7 @@ export default function Navbar(props: {
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
-        sm:hidden size-fit absolute top-0 right-0"
-      >
+        sm:hidden size-fit absolute top-0 right-0">
         <Hamburger
           direction="right"
           color="#fff"
@@ -88,18 +86,16 @@ export default function Navbar(props: {
         onClose={() => setOpen(false)}
         PaperProps={{
           sx: {
-            backgroundImage: "linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)",
-            backgroundColor: "transparent",
-            boxShadow: "none",
-          },
+            backgroundImage: 'linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)',
+            backgroundColor: 'transparent',
+            boxShadow: 'none'
+          }
         }}
-        slotProps={{ backdrop: { sx: { backgroundColor: "rgba(255, 255, 255, .5)" } } }}
-      >
+        slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
         <div
           className="flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
           font-seasons text-white font-semibold text-lg 2xs:text-xl xs:text-2xl
-          bg-gradient-to-b from-custom-blue-100 to-transparent"
-        >
+          bg-gradient-to-b from-custom-blue-100 to-transparent">
           {renderSections()}
         </div>
       </Drawer>
@@ -109,13 +105,12 @@ export default function Navbar(props: {
         className="relative size-full max-sm:hidden pt-[.6%] pb-[1.2%]
         bg-gradient-to-b from-custom-blue-100 to-transparent
         flex items-center justify-center select-none text-center font-semibold
-        tracking-widest text-[1em] font-seasons text-white"
-      >
+        tracking-widest text-[1em] font-seasons text-white">
         {/* Header logo */}
         <div
           className={`w-24 lg:w-[6%] h-full absolute left-0 bg-white py-[.4%] px-[.8%] ml-[1%]
           flex justify-center items-center cursor-pointer max-md:invisible
-          ${showLogo ? "opacity-100 visible" : "opacity-0 invisible"}
+          ${showLogo ? 'opacity-100 visible' : 'opacity-0 invisible'}
           transition-all ease-in-out duration-500
           `}
           onClick={() => scrollToSelectedSection(0)} // Scroll to top
@@ -128,8 +123,7 @@ export default function Navbar(props: {
             <React.Fragment key={index}>
               <div
                 className="font-thin px-[30px] cursor-pointer"
-                onClick={() => scrollToSelectedSection(index)}
-              >
+                onClick={() => scrollToSelectedSection(index)}>
                 {section}
               </div>
               |

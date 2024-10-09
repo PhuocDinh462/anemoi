@@ -1,24 +1,24 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @font-face {
-  font-family: "the-seasons";
-  src: url("@fonts/the-seasons.ttf") format("opentype");
+  font-family: 'the-seasons';
+  src: url('@fonts/the-seasons.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "fot-tsukumin";
-  src: url("@fonts/FOT-TsukuMin Pro L.otf") format("opentype");
+  font-family: 'fot-tsukumin';
+  src: url('@fonts/FOT-TsukuMin Pro L.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "thomasita";
-  src: url("@fonts/Thomasita.otf") format("opentype");
+  font-family: 'thomasita';
+  src: url('@fonts/Thomasita.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
