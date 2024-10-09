@@ -28,7 +28,7 @@ export default function CharacterBox() {
   return (
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
-      min-w-[90%] pt-[10%] select-none
+      min-w-[90%] pt-[10%]
       max-sm:w-full
       max-sm:flex max-sm:flex-col"
       onTouchStart={handleTouchStart}
@@ -153,7 +153,7 @@ export default function CharacterBox() {
 
               {/* Character name */}
               <div
-                className={`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 
+                className={`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 select-none
                 sm:bottom-[10%]
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`}
