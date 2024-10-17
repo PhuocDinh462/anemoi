@@ -28,9 +28,10 @@ export default {
         close_icon: "url('@images/close_icon.png')"
       },
       fontFamily: {
-        seasons: ['"the-seasons"', 'sans-serif'],
-        tsukumin: ['"fot-tsukumin"', 'sans-serif'],
-        thomasita: ['"thomasita"', 'sans-serif']
+        seasons: ['the-seasons', 'sans-serif'],
+        tsukumin: ['fot-tsukumin', 'sans-serif'],
+        thomasita: ['thomasita', 'sans-serif'],
+        mongolia: ['mongolia', 'sans-serif']
       },
       keyframes: {
         pathMove: {

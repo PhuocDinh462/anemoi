@@ -5,13 +5,17 @@ import './index.css';
 import { HashRouter } from 'react-router-dom';
 import store from './redux/store.ts';
 import { Provider } from 'react-redux';
+import i18n from '@/languages/i18n.ts';
+import { I18nextProvider } from 'react-i18next';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </Provider>
+    <I18nextProvider i18n={i18n}>
+      <Provider store={store}>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </Provider>
+    </I18nextProvider>
   </React.StrictMode>
 );

@@ -72,8 +72,15 @@ export default function Cover() {
           <span className="tracking-normal"> ――</span>
         </div>
 
-        <div className="bm:mr-32 min-w-64 w-1/2 md:w-100 sm:w-2/5">
+        <div
+          className="bm:mr-32 min-w-64 w-1/2 md:w-100 sm:w-2/5
+          flex flex-col justify-center items-center">
           <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
+          <div
+            className="drop-shadow-slogan text-white font-mongolia tracking-widest
+            md:text-6xl bm:text-5xl text-4xl">
+            Lời hứa trong gió
+          </div>
         </div>
       </div>
 
