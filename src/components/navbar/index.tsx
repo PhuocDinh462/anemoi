@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Fade as Hamburger } from 'hamburger-react';
-import { alpha, Drawer, IconButton, styled } from '@mui/material';
+import { Drawer } from '@mui/material';
 import { anemoi_logo_bk, language_ic } from '@/constants/images';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
-
-import Menu, { MenuProps } from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { anemoi_logo_anime1 } from '@/constants/images';
+import LanguageMenu from './language_menu';
 
 export default function Navbar(props: {
   sections: string[];
@@ -66,53 +63,6 @@ export default function Navbar(props: {
     };
   }, []);
   /// End for mobile only
-
-  // MUI menu
-  const StyledMenu = styled((props: MenuProps) => (
-    <Menu
-      elevation={0}
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'center'
-      }}
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right'
-      }}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    '& .MuiPaper-root': {
-      borderRadius: 6,
-      marginTop: theme.spacing(1),
-      color: 'rgb(55, 65, 81)',
-      boxShadow:
-        'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-      '& .MuiMenu-list': {
-        padding: '4px 0'
-      },
-      ...theme.applyStyles('dark', {
-        color: theme.palette.grey[300]
-      })
-    }
-  }));
-
-  const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      backgroundColor: theme.palette.action.hover
-    }
-  }));
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const openLanguageMenu = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  /// End MUI menu
 
   return (
     <div className="w-screen max-bm:relative">
@@ -188,36 +138,8 @@ export default function Navbar(props: {
           ))}
         </div>
 
-        <div className="absolute right-3">
-          <IconButton id="change-language-button" sx={{ p: 0 }} size="small" onClick={handleClick}>
-            <img
-              className="cursor-pointer py-4 size-14
-              hover:scale-110 transition-all duration-300"
-              src={language_ic}
-            />
-          </IconButton>
-          <StyledMenu
-            id="change-language-menu"
-            MenuListProps={{
-              'aria-labelledby': 'change-language-button'
-            }}
-            disableScrollLock
-            anchorEl={anchorEl}
-            open={openLanguageMenu}
-            onClose={handleClose}>
-            <StyledMenuItem onClick={handleClose} disableRipple>
-              <div className="flex items-center justify-between w-full">
-                <div className="font-tsukumin">日本語</div>
-                <img className="ml-5" src={anemoi_logo_anime1} width={24} />
-              </div>
-            </StyledMenuItem>
-            <StyledMenuItem onClick={handleClose} disableRipple>
-              <div className="flex items-center justify-between w-full">
-                <div className="font-beau-sans text-custom-blue-100">Tiếng Việt</div>
-                <img className="ml-5" src={anemoi_logo_anime1} width={24} />
-              </div>
-            </StyledMenuItem>
-          </StyledMenu>
+        <div className="absolute right-4">
+          <LanguageMenu />
         </div>
       </div>
     </div>

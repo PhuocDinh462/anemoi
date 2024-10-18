@@ -29,7 +29,7 @@ export default {
       },
       fontFamily: {
         seasons: ['the-seasons', 'sans-serif'],
-        tsukumin: ['fot-tsukumin', 'sans-serif'],
+        tsukumin: ['tsukumin', 'sans-serif'],
         thomasita: ['thomasita', 'sans-serif'],
         mongolia: ['mongolia', 'sans-serif'],
         'beau-sans': ['beau-sans', 'sans-serif']
