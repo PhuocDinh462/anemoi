@@ -53,6 +53,12 @@ export default function Cover() {
   const currentLanguage = i18n.language;
   const { t } = useTranslation();
 
+  const logoComponent = (
+    <div className={`${currentLanguage === 'jp' && 'bm:mr-32'} min-w-64 w-1/2 md:w-100 sm:w-2/5`}>
+      <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
+    </div>
+  );
+
   return (
     <div
       className="relative overflow-hidden h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
@@ -78,31 +84,24 @@ export default function Cover() {
           </div>
         )}
 
-        <div className="flex flex-col justify-center items-center">
-          <div
-            className={`${
-              currentLanguage === 'jp' && 'bm:mr-32'
-            } min-w-64 w-1/2 md:w-100 sm:w-2/5`}>
-            <img
-              src={anemoi_logo}
-              alt="anemoi アネモイ"
-              className="object-cover drop-shadow-logo"
-            />
-          </div>
-          {currentLanguage !== 'jp' && (
+        {currentLanguage === 'jp' ? (
+          logoComponent
+        ) : (
+          <div className="flex flex-col justify-center items-center">
+            {logoComponent}
             <div
               className="drop-shadow-slogan text-white font-mongolia tracking-widest
-            md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
+              md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
               {t('title')}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       {/* Coming 2025 */}
       <div
         className="absolute bottom-[14%] sm:bottom-[22.5%] left-1/2 
-      -translate-x-1/2 text-4xl text-[#7ca0d1] font-thomasita">
+        -translate-x-1/2 text-4xl text-[#7ca0d1] font-thomasita">
         Coming
       </div>
       <div
