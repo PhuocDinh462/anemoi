@@ -5,6 +5,8 @@ import { anemoi_logo_bk, language_ic } from '@/constants/images';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import LanguageMenu from './language_menu';
+import LANGUAGES from '@/constants/languages';
+import i18n from '@/languages/i18n';
 
 export default function Navbar(props: {
   sections: string[];
@@ -18,7 +20,8 @@ export default function Navbar(props: {
   };
 
   // For mobile only
-  const [openNavbar, setOpenNavbar] = useState(false);
+  const [openNavbarDrawer, setOpenNavbarDrawer] = useState(false);
+  const [openLanguageMenuDrawer, setOpenLanguageMenuDrawer] = useState(false);
   const numberOfRows = 2;
   const itemsPerRow = Math.ceil(sections.length / numberOfRows);
 
@@ -35,7 +38,7 @@ export default function Navbar(props: {
             <div
               className="font-thin px-[14px] cursor-pointer"
               onClick={() => {
-                setOpenNavbar(false);
+                setAllDrawers(false);
                 scrollToSelectedSection(refIndex);
               }}>
               {sections[i]}
@@ -56,12 +59,17 @@ export default function Navbar(props: {
   };
 
   useEffect(() => {
-    const handleResize = () => setOpenNavbar(false);
+    const handleResize = () => setAllDrawers(false);
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const setAllDrawers = (value: boolean) => {
+    setOpenNavbarDrawer(value);
+    setOpenLanguageMenuDrawer(value);
+  };
   /// End for mobile only
 
   return (
@@ -75,16 +83,17 @@ export default function Navbar(props: {
           color="#fff"
           size={26}
           distance="lg"
-          toggled={openNavbar}
-          toggle={setOpenNavbar}
+          toggled={openNavbarDrawer || openLanguageMenuDrawer}
+          toggle={setOpenNavbarDrawer}
+          onToggle={() => setOpenLanguageMenuDrawer(false)}
         />
       </div>
 
       <Drawer
         anchor="top"
-        open={openNavbar}
-        style={{ zIndex: 50 }}
-        onClose={() => setOpenNavbar(false)}
+        open={openNavbarDrawer}
+        style={{ zIndex: 51 }}
+        onClose={() => setOpenNavbarDrawer(false)}
         PaperProps={{
           sx: {
             backgroundImage: 'linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)',
@@ -101,9 +110,45 @@ export default function Navbar(props: {
           <img
             className="absolute top-4 right-12 cursor-pointer size-[26px] mr-3 animate-dropDown"
             src={language_ic}
+            onClick={() => {
+              setOpenNavbarDrawer(false);
+              setOpenLanguageMenuDrawer(true);
+            }}
           />
           {/* Sections */}
           {renderSections()}
+        </div>
+      </Drawer>
+
+      <Drawer
+        anchor="top"
+        open={openLanguageMenuDrawer}
+        style={{ zIndex: 50 }}
+        onClose={() => setOpenLanguageMenuDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundImage: 'linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)',
+            backgroundColor: 'transparent',
+            boxShadow: 'none'
+          }
+        }}
+        slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
+        <div
+          className="relative flex flex-col space-y-3 items-center justify-center w-full pt-[16%] pb-[20%]
+          font-seasons text-white text-lg 2xs:text-xl xs:text-2xl
+          bg-gradient-to-b from-custom-blue-100 to-transparent">
+          {/* Language items */}
+          {LANGUAGES.map((lng, index) => (
+            <div
+              key={index}
+              style={{ fontFamily: lng.font }}
+              onClick={() => {
+                i18n.changeLanguage(lng.code);
+                setOpenLanguageMenuDrawer(false);
+              }}>
+              {lng.name}
+            </div>
+          ))}
         </div>
       </Drawer>
 
