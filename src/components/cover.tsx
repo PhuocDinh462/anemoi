@@ -4,6 +4,8 @@ import { Link } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
+import i18n from '@/languages/i18n';
+import { useTranslation } from 'react-i18next';
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -48,6 +50,9 @@ export default function Cover() {
     };
   }, [dispatch]);
 
+  const currentLanguage = i18n.language;
+  const { t } = useTranslation();
+
   return (
     <div
       className="relative overflow-hidden h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
@@ -62,25 +67,35 @@ export default function Cover() {
       <div
         className="absolute 2xs:top-11 top-5 w-full flex items-center justify-center 
         max-bm:flex-col-reverse animate-fadeDown">
-        <div
-          className="bm:mr-14 xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
-        text-white tracking-[0.25em] drop-shadow-slogan font-tsukumin">
-          約束は
-          <span>、</span>
-          <br />
-          風のなかに
-          <span className="tracking-normal"> ――</span>
-        </div>
-
-        <div
-          className="bm:mr-32 min-w-64 w-1/2 md:w-100 sm:w-2/5
-          flex flex-col justify-center items-center">
-          <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
+        {currentLanguage === 'jp' && (
           <div
-            className="drop-shadow-slogan text-white font-mongolia tracking-widest
-            md:text-6xl bm:text-5xl text-4xl">
-            Lời hứa trong gió
+            className="bm:mr-14 xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
+          text-white tracking-[0.25em] drop-shadow-slogan font-tsukumin">
+            約束は、
+            <br />
+            風のなかに
+            <span className="tracking-normal"> ――</span>
           </div>
+        )}
+
+        <div className="flex flex-col justify-center items-center">
+          <div
+            className={`${
+              currentLanguage === 'jp' && 'bm:mr-32'
+            } min-w-64 w-1/2 md:w-100 sm:w-2/5`}>
+            <img
+              src={anemoi_logo}
+              alt="anemoi アネモイ"
+              className="object-cover drop-shadow-logo"
+            />
+          </div>
+          {currentLanguage !== 'jp' && (
+            <div
+              className="drop-shadow-slogan text-white font-mongolia tracking-widest
+            md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
+              {t('title')}
+            </div>
+          )}
         </div>
       </div>
 
