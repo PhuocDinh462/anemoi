@@ -67,6 +67,7 @@ export default function Navbar(props: {
   }, []);
   /// End for mobile only
 
+  // MUI menu
   const StyledMenu = styled((props: MenuProps) => (
     <Menu
       elevation={0}
@@ -90,19 +91,16 @@ export default function Navbar(props: {
       '& .MuiMenu-list': {
         padding: '4px 0'
       },
-      '& .MuiMenuItem-root': {
-        '& .MuiSvgIcon-root': {
-          fontSize: 18,
-          color: theme.palette.text.secondary,
-          marginRight: theme.spacing(1.5)
-        },
-        '&:active': {
-          backgroundColor: alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
-        }
-      },
       ...theme.applyStyles('dark', {
         color: theme.palette.grey[300]
       })
+    }
+  }));
+
+  const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      backgroundColor: theme.palette.action.hover
     }
   }));
 
@@ -114,6 +112,7 @@ export default function Navbar(props: {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  /// End MUI menu
 
   return (
     <div className="w-screen max-bm:relative">
@@ -206,18 +205,18 @@ export default function Navbar(props: {
             anchorEl={anchorEl}
             open={openLanguageMenu}
             onClose={handleClose}>
-            <MenuItem onClick={handleClose} disableRipple>
+            <StyledMenuItem onClick={handleClose} disableRipple>
               <div className="flex items-center justify-between w-full">
                 <div className="font-tsukumin">日本語</div>
                 <img className="ml-5" src={anemoi_logo_anime1} width={24} />
               </div>
-            </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
+            </StyledMenuItem>
+            <StyledMenuItem onClick={handleClose} disableRipple>
               <div className="flex items-center justify-between w-full">
-                <div className="">Tiếng Việt</div>
+                <div className="font-beau-sans text-custom-blue-100">Tiếng Việt</div>
                 <img className="ml-5" src={anemoi_logo_anime1} width={24} />
               </div>
-            </MenuItem>
+            </StyledMenuItem>
           </StyledMenu>
         </div>
       </div>

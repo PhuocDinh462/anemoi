@@ -31,7 +31,8 @@ export default {
         seasons: ['the-seasons', 'sans-serif'],
         tsukumin: ['fot-tsukumin', 'sans-serif'],
         thomasita: ['thomasita', 'sans-serif'],
-        mongolia: ['mongolia', 'sans-serif']
+        mongolia: ['mongolia', 'sans-serif'],
+        'beau-sans': ['beau-sans', 'sans-serif']
       },
       keyframes: {
         pathMove: {

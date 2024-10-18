@@ -29,3 +29,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'beau-sans';
+  src: url('@fonts/BT-BeauSans-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
