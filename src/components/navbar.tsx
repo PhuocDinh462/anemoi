@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Fade as Hamburger } from 'hamburger-react';
 import { Drawer } from '@mui/material';
-import { anemoi_logo_bk } from '@/constants/images';
+import { anemoi_logo_bk, language_ic } from '@/constants/images';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 
@@ -17,7 +17,7 @@ export default function Navbar(props: {
   };
 
   // For mobile only
-  const [open, setOpen] = useState(false);
+  const [openNavbar, setOpenNavbar] = useState(false);
   const numberOfRows = 2;
   const itemsPerRow = Math.ceil(sections.length / numberOfRows);
 
@@ -34,7 +34,7 @@ export default function Navbar(props: {
             <div
               className="font-thin px-[14px] cursor-pointer"
               onClick={() => {
-                setOpen(false);
+                setOpenNavbar(false);
                 scrollToSelectedSection(refIndex);
               }}>
               {sections[i]}
@@ -55,7 +55,7 @@ export default function Navbar(props: {
   };
 
   useEffect(() => {
-    const handleResize = () => setOpen(false);
+    const handleResize = () => setOpenNavbar(false);
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -64,26 +64,34 @@ export default function Navbar(props: {
   ///
 
   return (
-    <div className="w-screen max-sm:relative">
+    <div className="w-screen max-bm:relative">
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
-        sm:hidden size-fit absolute top-0 right-0">
-        <Hamburger
-          direction="right"
-          color="#fff"
-          size={26}
-          distance="lg"
-          toggled={open}
-          toggle={setOpen}
-        />
+        bm:hidden size-fit absolute top-0 right-0">
+        <div className="flex justify-center items-center">
+          <img
+            className={`${
+              !openNavbar && 'hidden'
+            } cursor-pointer size-[26px] mr-3 animate-dropDown`}
+            src={language_ic}
+          />
+          <Hamburger
+            direction="right"
+            color="#fff"
+            size={26}
+            distance="lg"
+            toggled={openNavbar}
+            toggle={setOpenNavbar}
+          />
+        </div>
       </div>
 
       <Drawer
         anchor="top"
-        open={open}
+        open={openNavbar}
         style={{ zIndex: 50 }}
-        onClose={() => setOpen(false)}
+        onClose={() => setOpenNavbar(false)}
         PaperProps={{
           sx: {
             backgroundImage: 'linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)',
@@ -102,7 +110,7 @@ export default function Navbar(props: {
 
       {/* PC case */}
       <div
-        className="relative size-full max-sm:hidden pt-[.6%] pb-[1.2%]
+        className="relative size-full max-bm:hidden pt-[.6%] pb-[1.2%]
         bg-gradient-to-b from-custom-blue-100 to-transparent
         flex items-center justify-center select-none text-center font-semibold
         tracking-widest text-[1em] font-seasons text-white">
@@ -130,6 +138,8 @@ export default function Navbar(props: {
             </React.Fragment>
           ))}
         </div>
+
+        <img className="cursor-pointer py-3 size-14 absolute right-3" src={language_ic} />
       </div>
     </div>
   );

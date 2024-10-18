@@ -107,6 +107,9 @@ import character_bg_sp from '@images/character_bg_sp.jpg';
 import character_border from '@images/character_border.png';
 import close_icon from '@images/close_icon.png';
 
+import language_icon from '@images/language.svg';
+export const language_ic = language_icon;
+
 export const IMAGES = [
   anemoi_logo_bk,
   anemoi_logo,
@@ -153,5 +156,6 @@ export const IMAGES = [
   character_bg,
   character_bg_sp,
   character_border,
-  close_icon
+  close_icon,
+  language_icon
 ];

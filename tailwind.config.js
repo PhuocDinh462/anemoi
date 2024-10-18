@@ -65,6 +65,10 @@ export default {
         dropDiagonal: {
           '0%': { transform: 'translate(-200px, -100px)' },
           '100%': { transform: 'translate(0, 0)' }
+        },
+        dropDown: {
+          '0%': { transform: 'translate(0, -100px)' },
+          '100%': { transform: 'translate(0, 0)' }
         }
       },
       animation: {
@@ -76,7 +80,8 @@ export default {
         fadeAnime: 'fadeAnime 1s',
         blurInAnime: 'blurInAnime 1s',
         dropDiagonal: 'dropDiagonal .3s',
-        'spin-slow': 'spin 5s linear infinite'
+        'spin-slow': 'spin 5s linear infinite',
+        dropDown: 'dropDown .25s'
       }
     },
     screens: {
