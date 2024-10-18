@@ -69,22 +69,14 @@ export default function Navbar(props: {
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
         bm:hidden size-fit absolute top-0 right-0">
-        <div className="flex justify-center items-center">
-          <img
-            className={`${
-              !openNavbar && 'hidden'
-            } cursor-pointer size-[26px] mr-3 animate-dropDown`}
-            src={language_ic}
-          />
-          <Hamburger
-            direction="right"
-            color="#fff"
-            size={26}
-            distance="lg"
-            toggled={openNavbar}
-            toggle={setOpenNavbar}
-          />
-        </div>
+        <Hamburger
+          direction="right"
+          color="#fff"
+          size={26}
+          distance="lg"
+          toggled={openNavbar}
+          toggle={setOpenNavbar}
+        />
       </div>
 
       <Drawer
@@ -101,16 +93,22 @@ export default function Navbar(props: {
         }}
         slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
         <div
-          className="flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
+          className="relative flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
           font-seasons text-white font-semibold text-lg 2xs:text-xl xs:text-2xl
           bg-gradient-to-b from-custom-blue-100 to-transparent">
+          {/* Change language button */}
+          <img
+            className="absolute top-4 right-12 cursor-pointer size-[26px] mr-3 animate-dropDown"
+            src={language_ic}
+          />
+          {/* Sections */}
           {renderSections()}
         </div>
       </Drawer>
 
       {/* PC case */}
       <div
-        className="relative size-full max-bm:hidden pt-[.6%] pb-[1.2%]
+        className="relative size-full max-bm:hidden pt-[10px] pb-[15px]
         bg-gradient-to-b from-custom-blue-100 to-transparent
         flex items-center justify-center select-none text-center font-semibold
         tracking-widest text-[1em] font-seasons text-white">
@@ -139,7 +137,11 @@ export default function Navbar(props: {
           ))}
         </div>
 
-        <img className="cursor-pointer py-3 size-14 absolute right-3" src={language_ic} />
+        <img
+          className="cursor-pointer py-4 size-14 absolute right-3
+          hover:scale-110 transition-all duration-300"
+          src={language_ic}
+        />
       </div>
     </div>
   );
