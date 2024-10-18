@@ -119,7 +119,11 @@ export default function Navbar(props: {
         </div>
       </Drawer>
 
-      <LanguageDrawer open={openLanguageDrawer} setOpen={setOpenLanguageDrawer} />
+      <LanguageDrawer
+        open={openLanguageDrawer}
+        setOpen={setOpenLanguageDrawer}
+        setOpenNavbarDrawer={setOpenNavbarDrawer}
+      />
 
       {/* PC case */}
       <div
