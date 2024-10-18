@@ -86,7 +86,7 @@ export default function LanguageMenu() {
                 {lng.name}
               </div>
               {currentLanguage === lng.code && (
-                <img className="ml-5" src={anemoi_logo_anime1} width={24} />
+                <img className="ml-5 animate-spin" src={anemoi_logo_anime1} width={26} />
               )}
             </div>
           </StyledMenuItem>
