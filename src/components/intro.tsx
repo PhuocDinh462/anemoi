@@ -1,6 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
 import LeafBox from './leaf_box';
 import { LeafType } from '@/models/leaf.model';
+import { useTranslation } from 'react-i18next';
+import i18n from '@/languages/i18n';
+import LANGUAGES from '@/constants/languages';
 
 export default function Intro() {
   const componentRef = useRef(null);
@@ -30,6 +33,10 @@ export default function Intro() {
     };
   }, []);
 
+  const { t } = useTranslation();
+  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
+  const currentFont = currentLanguage?.font ?? 'sans-serif';
+
   return (
     <div
       className="w-full h-screen min-h-[800px] bg-intro-bg bg-cover bg-no-repeat bg-center
@@ -48,30 +55,36 @@ export default function Intro() {
         <div className="font-thomasita text-[#d7a732] font-semibold text-lg">anemoi</div>
 
         <div
-          className="py-[30px] text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem]/8">
-          {'黄金色の海がそよいだ'}
+          className="py-[30px] text-center leading-10 
+          max-sm:text-[.875rem]/8"
+          style={{ fontFamily: currentFont }}>
+          {t('intro1')}
           <br />
-          {'ゆるりと過ぎゆく時間に包まれながら'}
+          {t('intro2')}
           <br />
-          {'懐かしいささめきに包まれながら'}
+          {t('intro3')}
           <br />
-          {'約束は、風のなかに ――'}
+          {t('intro4')}
         </div>
 
         <div className="font-thomasita font-semibold text-sm">staff</div>
         <div
-          className="text-center font-tsukumin leading-10 
-        max-sm:text-[.875rem]/8">
-          {'［ 原画 ］Na-Ga ／ ふむゆん ／ 永山ゆうのん ／ きみしま青'}
+          className="text-center leading-10 
+          max-sm:text-[.875rem]/8"
+          style={{ fontFamily: currentFont }}>
+          {`［ ${t('original artwork')} ］Na-Ga ／ ${t('fumuyun')} ／ ${t(
+            'nagayama yuunon'
+          )} ／ ${t('kimishima ao')}`}
           <br />
-          {'［ シナリオ ］魁 ／ 新島 夕 ／ ハサマ ／ 佐雪 隼'}
+          {`［ ${t('scenario')} ］${t('kai')} ／ ${t('niijima yuu')} ／ ${t('hasama')} ／ ${t(
+            'sayuki shun'
+          )}`}
           <br />
-          {'［ 音楽プロデューサー ］折戸伸治　［ ディレクター ］魁'}
+          {`［ ${t('music producer')} ］${t('orito shinji')}　［ ${t('director')}］ ${t('kai')}`}
           <br />
-          {'［ プロデューサー ］丘野塔也'}
+          {`［ ${t('producer')} ］${t('okano touya')}`}
           <br />
-          {'［ ジャンル ］恋愛アドベンチャーゲーム'}
+          {`［ ${t('genre')} ］${t('romance adventure game')}`}
         </div>
       </div>
 
