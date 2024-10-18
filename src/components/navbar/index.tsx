@@ -5,8 +5,7 @@ import { anemoi_logo_bk, language_ic } from '@/constants/images';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import LanguageMenu from './language_menu';
-import LANGUAGES from '@/constants/languages';
-import i18n from '@/languages/i18n';
+import LanguageDrawer from './language_drawer';
 
 export default function Navbar(props: {
   sections: string[];
@@ -21,7 +20,7 @@ export default function Navbar(props: {
 
   // For mobile only
   const [openNavbarDrawer, setOpenNavbarDrawer] = useState(false);
-  const [openLanguageMenuDrawer, setOpenLanguageMenuDrawer] = useState(false);
+  const [openLanguageDrawer, setOpenLanguageDrawer] = useState(false);
   const numberOfRows = 2;
   const itemsPerRow = Math.ceil(sections.length / numberOfRows);
 
@@ -68,7 +67,7 @@ export default function Navbar(props: {
 
   const setAllDrawers = (value: boolean) => {
     setOpenNavbarDrawer(value);
-    setOpenLanguageMenuDrawer(value);
+    setOpenLanguageDrawer(value);
   };
   /// End for mobile only
 
@@ -83,9 +82,9 @@ export default function Navbar(props: {
           color="#fff"
           size={26}
           distance="lg"
-          toggled={openNavbarDrawer || openLanguageMenuDrawer}
+          toggled={openNavbarDrawer || openLanguageDrawer}
           toggle={setOpenNavbarDrawer}
-          onToggle={() => setOpenLanguageMenuDrawer(false)}
+          onToggle={() => setOpenLanguageDrawer(false)}
         />
       </div>
 
@@ -112,7 +111,7 @@ export default function Navbar(props: {
             src={language_ic}
             onClick={() => {
               setOpenNavbarDrawer(false);
-              setOpenLanguageMenuDrawer(true);
+              setOpenLanguageDrawer(true);
             }}
           />
           {/* Sections */}
@@ -120,37 +119,7 @@ export default function Navbar(props: {
         </div>
       </Drawer>
 
-      <Drawer
-        anchor="top"
-        open={openLanguageMenuDrawer}
-        style={{ zIndex: 50 }}
-        onClose={() => setOpenLanguageMenuDrawer(false)}
-        PaperProps={{
-          sx: {
-            backgroundImage: 'linear-gradient(to bottom, rgba(40, 178, 230, 1), 70%, transparent)',
-            backgroundColor: 'transparent',
-            boxShadow: 'none'
-          }
-        }}
-        slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
-        <div
-          className="relative flex flex-col space-y-3 items-center justify-center w-full pt-[16%] pb-[20%]
-          font-seasons text-white text-lg 2xs:text-xl xs:text-2xl
-          bg-gradient-to-b from-custom-blue-100 to-transparent">
-          {/* Language items */}
-          {LANGUAGES.map((lng, index) => (
-            <div
-              key={index}
-              style={{ fontFamily: lng.font }}
-              onClick={() => {
-                i18n.changeLanguage(lng.code);
-                setOpenLanguageMenuDrawer(false);
-              }}>
-              {lng.name}
-            </div>
-          ))}
-        </div>
-      </Drawer>
+      <LanguageDrawer open={openLanguageDrawer} setOpen={setOpenLanguageDrawer} />
 
       {/* PC case */}
       <div
