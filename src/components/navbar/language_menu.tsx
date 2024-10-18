@@ -2,7 +2,7 @@ import { IconButton, styled } from '@mui/material';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { anemoi_logo_anime1, language_ic } from '@/constants/images';
-import React from 'react';
+import React, { useEffect } from 'react';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/languages/i18n';
 import Language from '@/models/language.model';
@@ -58,6 +58,14 @@ export default function LanguageMenu() {
     setAnchorEl(null);
   };
   /// End MUI menu
+
+  useEffect(() => {
+    const handleResize = () => setAnchorEl(null);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
