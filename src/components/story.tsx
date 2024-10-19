@@ -1,6 +1,8 @@
 import { LeafType } from '@/models/leaf.model';
 import { useRef, useEffect, useState } from 'react';
 import LeafBox from './leaf_box';
+import { CURRENT_LANGUAGE } from '@/constants/languages';
+import { useTranslation } from 'react-i18next';
 
 export default function Story() {
   const componentRef = useRef(null);
@@ -30,6 +32,9 @@ export default function Story() {
     };
   }, []);
 
+  const { t } = useTranslation();
+  const currentFont = CURRENT_LANGUAGE?.font ?? 'sans-serif';
+
   return (
     <div
       className="w-full h-screen min-h-[800px] bg-story-bg bg-cover bg-no-repeat bg-center
@@ -48,31 +53,32 @@ export default function Story() {
         <div className="font-thomasita text-[#cc719c] font-semibold text-lg">anemoi</div>
 
         <div
-          className="py-[30px] text-center font-tsukumin leading-8 text-white
-          max-xs:text-[.875rem]/7">
-          {'10年前に埋めた'}
+          className="py-[30px] text-center leading-8 text-white
+          max-xs:text-[.875rem]/7"
+          style={{ fontFamily: currentFont }}>
+          {t('story1')}
           <br />
-          {'タイムカプセルを開ける日が近づいていた。'}
-          <br />
-          <br />
-          {'主人公の速川 麦は、妹の六花とともに'}
-          <br />
-          {'ふたりで北の地、真澄町へ訪れる。'}
+          {t('story2')}
           <br />
           <br />
-          {'都会の喧噪を忘れさせてくれる町は、'}
+          {t('story3')}
           <br />
-          {'強く吹く風の中でゆっくりとした時間が流れていた。'}
-          <br />
-          <br />
-          {'大きな風車の恩恵を受けながら、'}
-          <br />
-          {'経験と知恵と人のつながりで築かれる生活。'}
+          {t('story4')}
           <br />
           <br />
-          {'約束の時間まで、麦は人々と交流を重ねながら'}
+          {t('story5')}
           <br />
-          {'町でスローライフを送ることにする。'}
+          {t('story6')}
+          <br />
+          <br />
+          {t('story7')}
+          <br />
+          {t('story8')}
+          <br />
+          <br />
+          {t('story9')}
+          <br />
+          {t('story10')}
           <br />
         </div>
       </div>

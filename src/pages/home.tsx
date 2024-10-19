@@ -50,7 +50,7 @@ export default function Home() {
     };
 
     const loadResources = async () => {
-      await Promise.all([loadImages(IMAGES), loadFonts()]);
+      await Promise.all([loadFonts(), loadImages(IMAGES)]);
       setLoadingResourcesComplete(true);
     };
 
