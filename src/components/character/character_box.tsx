@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { CHARACTERS } from '@/constants/characters';
 import React from 'react';
 import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
+import { useTranslation } from 'react-i18next';
+import LANGUAGES from '@/constants/languages';
+import i18n from '@/languages/i18n';
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);
@@ -24,6 +27,10 @@ export default function CharacterBox() {
   const nextChara = () => setCharacterIndex((characterIndex + 1) % CHARACTERS.length);
   const prevChara = () =>
     setCharacterIndex((characterIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
+
+  const { t } = useTranslation();
+  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
+  const currentFont = currentLanguage?.font ?? 'sans-serif';
 
   return (
     <div
@@ -93,9 +100,10 @@ export default function CharacterBox() {
                 max-xs:px-5 max-xs:pb-8
                 animate-fadeIn">
                 <div
-                  className="sm:text-lg/10 font-tsukumin text-white tracking-[.2em]
-                  max-sm:text-xl/10">
-                  {CHARACTERS[characterIndex].alias}
+                  className="sm:text-lg/10 text-white tracking-[.2em]
+                  max-sm:text-xl/10"
+                  style={{ fontFamily: currentFont }}>
+                  {t(CHARACTERS[characterIndex].alias)}
                 </div>
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
 

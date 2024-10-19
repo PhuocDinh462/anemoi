@@ -1,8 +1,9 @@
 import { LeafType } from '@/models/leaf.model';
 import { useRef, useEffect, useState } from 'react';
 import LeafBox from './leaf_box';
-import { CURRENT_LANGUAGE } from '@/constants/languages';
 import { useTranslation } from 'react-i18next';
+import LANGUAGES from '@/constants/languages';
+import i18n from '@/languages/i18n';
 
 export default function Story() {
   const componentRef = useRef(null);
@@ -33,7 +34,8 @@ export default function Story() {
   }, []);
 
   const { t } = useTranslation();
-  const currentFont = CURRENT_LANGUAGE?.font ?? 'sans-serif';
+  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
+  const currentFont = currentLanguage?.font ?? 'sans-serif';
 
   return (
     <div

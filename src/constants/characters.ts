@@ -21,7 +21,7 @@ export const CHARACTERS: Array<Character> = [
   // Spica
   new Character(
     // alias
-    '風をまとった少女',
+    'spica alias',
     // kanji
     '辻倉朱比華',
     // furigana

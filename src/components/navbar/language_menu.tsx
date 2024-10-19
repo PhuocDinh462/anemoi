@@ -3,7 +3,7 @@ import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { anemoi_logo_anime1, language_ic } from '@/constants/images';
 import React, { useEffect } from 'react';
-import { LANGUAGES } from '@/constants/languages';
+import LANGUAGES from '@/constants/languages';
 import i18n from '@/languages/i18n';
 import Language from '@/models/language.model';
 

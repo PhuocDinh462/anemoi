@@ -1,4 +1,4 @@
-import { LANGUAGES } from '@/constants/languages';
+import LANGUAGES from '@/constants/languages';
 import i18n from '@/languages/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
