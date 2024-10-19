@@ -32,8 +32,6 @@ export const CHARACTERS: Array<Character> = [
     40,
     // threeSize
     '74/52/75',
-    // illustration
-    'Na-Ga',
     // image
     character_1,
     // thumbnail
@@ -57,8 +55,6 @@ export const CHARACTERS: Array<Character> = [
     39,
     // threeSize
     '73/51/73',
-    // illustration
-    'きみしま青',
     // image
     character_2,
     // thumbnail
@@ -82,8 +78,6 @@ export const CHARACTERS: Array<Character> = [
     56,
     // threeSize
     '90/60/88',
-    // illustration
-    'ふむゆん',
     // image
     character_3,
     // thumbnail
@@ -107,8 +101,6 @@ export const CHARACTERS: Array<Character> = [
     44,
     // threeSize
     '78/56/79',
-    // illustration
-    '永山ゆうのん',
     // image
     character_4,
     // thumbnail
@@ -132,8 +124,6 @@ export const CHARACTERS: Array<Character> = [
     52,
     // threeSize
     '86/58/88',
-    // illustration
-    'Na-Ga',
     // image
     character_5,
     // thumbnail

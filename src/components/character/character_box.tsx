@@ -157,7 +157,7 @@ export default function CharacterBox() {
                   <span className="text-xs font-seasons italic">illustration</span>
                   <span className={textStyle} style={{ fontFamily: currentFont }}>{`　${t(
                     'original artwork'
-                  )}：${CHARACTERS[characterIndex].illustration}`}</span>
+                  )}：${t(`${CHARACTERS[characterIndex].id}.artwork`)}`}</span>
                 </div>
               </div>
 
