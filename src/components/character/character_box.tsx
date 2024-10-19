@@ -32,6 +32,10 @@ export default function CharacterBox() {
   const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
   const currentFont = currentLanguage?.font ?? 'sans-serif';
 
+  const textStyle =
+    'text-white tracking-[.1em] sm:text-sm/8 text-xs/7 ' +
+    (currentLanguage?.code === 'jp' && 'md:text-base/9');
+
   return (
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
@@ -66,23 +70,27 @@ export default function CharacterBox() {
         (character, index) =>
           index === characterIndex && (
             <React.Fragment key={index}>
-              {/* Character catchphrase */}
-              <div
-                className="md:top-[16%] left-[4%] -z-[1]
-                [writing-mode:vertical-rl] font-tsukumin size-fit
-                sm:text-lg sm:top-[25%] sm:absolute
-                max-sm:ml-10 max-sm:mt-10
-                max-xs:text-sm max-xs:ml-5
-                animate-fadeIn">
-                {CHARACTERS[characterIndex].catchphrase.split('<br/>').map((part, index) => (
-                  <React.Fragment key={index}>
-                    <span className="size-fit bg-white py-[4px] px-[2px]">
-                      {part}
-                      <br className="sm:hidden" />
-                    </span>
-                  </React.Fragment>
-                ))}
-              </div>
+              {/* Vertical catchphrase */}
+              {currentLanguage?.code === 'jp' && (
+                <div
+                  className="md:top-[16%] left-[4%] -z-[1]
+                  [writing-mode:vertical-rl] font-tsukumin size-fit
+                  sm:text-lg sm:top-[25%] sm:absolute
+                  max-sm:ml-10 max-sm:mt-10
+                  max-xs:text-sm max-xs:ml-5
+                  animate-fadeIn">
+                  {t(`${CHARACTERS[characterIndex].id}.catchphrase`)
+                    .split('\n')
+                    .map((part, index) => (
+                      <React.Fragment key={index}>
+                        <span className="size-fit bg-white py-[4px] px-[2px]">
+                          {part}
+                          <br className="sm:hidden" />
+                        </span>
+                      </React.Fragment>
+                    ))}
+                </div>
+              )}
 
               {/* Character image */}
               <div
@@ -103,49 +111,53 @@ export default function CharacterBox() {
                   className="sm:text-lg/10 text-white tracking-[.2em]
                   max-sm:text-xl/10"
                   style={{ fontFamily: currentFont }}>
-                  {t(CHARACTERS[characterIndex].alias)}
+                  {t(`${CHARACTERS[characterIndex].id}.alias`)}
                 </div>
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
 
                 <div
-                  className="md:text-4xl/[4rem] font-tsukumin text-white tracking-[.1em] 
+                  className="md:text-4xl/[4rem] text-white tracking-[.1em] 
                   sm:text-2xl/10
                   text-3xl/[3.5rem]">
-                  <span className="pr-[10px]">{CHARACTERS[characterIndex].kanji}</span>
-                  <span className="text-[.4em] align-[8px] whitespace-nowrap">
-                    {CHARACTERS[characterIndex].furigana}
+                  <span className="pr-[10px]" style={{ fontFamily: currentFont }}>
+                    {t(`${CHARACTERS[characterIndex].id}.name`)}
                   </span>
+                  {currentLanguage?.code === 'jp' && (
+                    <span className="text-[.4em] align-[8px] whitespace-nowrap font-tsukumin">
+                      {CHARACTERS[characterIndex].furigana}
+                    </span>
+                  )}
                 </div>
 
                 <div className="text-xs font-seasons text-white italic pt-8">profile</div>
-                <div
-                  className="font-tsukumin text-white tracking-[.1em] md:text-base/9
-                  sm:text-sm/8
-                  text-xs/7">
-                  {CHARACTERS[characterIndex].profile.split('<br/>').map((part, index) => (
-                    <React.Fragment key={index}>
-                      {part}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                <div className={textStyle} style={{ fontFamily: currentFont }}>
+                  {t(`${CHARACTERS[characterIndex].id}.profile`)
+                    .split('\n')
+                    .map((part, index) => (
+                      <React.Fragment key={index}>
+                        {part}
+                        <br />
+                      </React.Fragment>
+                    ))}
                 </div>
 
-                <div
-                  className="font-tsukumin text-white tracking-[.1em] md:text-base/9
-                  sm:text-sm/8
-                  text-xs/7">
+                <div className={`font-tsukumin ${textStyle}`}>
                   <span className="text-xs font-seasons italic">spec</span>
-                  <span>{`　身長：${CHARACTERS[characterIndex].height}cm　
-                    体重：${CHARACTERS[characterIndex].weight}kg　
+                  <span style={{ fontFamily: currentFont }}>{`　${t('height')}：${
+                    CHARACTERS[characterIndex].height
+                  }cm　
+                    ${t('weight')}：${CHARACTERS[characterIndex].weight}kg　
                     B/W/H：${CHARACTERS[characterIndex].threeSize}`}</span>
                 </div>
 
                 <div
-                  className="font-tsukumin text-white tracking-[.1em] md:text-base/9
+                  className="text-white tracking-[.1em] md:text-base/9
                   sm:text-sm/8
                   text-xs/7">
                   <span className="text-xs font-seasons italic">illustration</span>
-                  <span>{`　原画：${CHARACTERS[characterIndex].illustration}`}</span>
+                  <span className={textStyle} style={{ fontFamily: currentFont }}>{`　${t(
+                    'original artwork'
+                  )}：${CHARACTERS[characterIndex].illustration}`}</span>
                 </div>
               </div>
 
