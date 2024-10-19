@@ -20,7 +20,7 @@ import {
 export const CHARACTERS: Array<Character> = [
   // Spica
   new Character(
-    // key
+    // id
     'spica',
     // furigana
     'つじくら すぴか',
@@ -45,7 +45,7 @@ export const CHARACTERS: Array<Character> = [
   ),
   // Aino
   new Character(
-    // key
+    // id
     'aino',
     // furigana
     'ふさば あいの',
@@ -70,7 +70,7 @@ export const CHARACTERS: Array<Character> = [
   ),
   // Hiiro
   new Character(
-    // key
+    // id
     'hiiro',
     // furigana
     'あわゆき ひいろ',
@@ -95,7 +95,7 @@ export const CHARACTERS: Array<Character> = [
   ),
   // Koyomi
   new Character(
-    // key
+    // id
     'koyomi',
     // furigana
     'しらと こよみ',
@@ -120,7 +120,7 @@ export const CHARACTERS: Array<Character> = [
   ),
   // Rikka
   new Character(
-    // key
+    // id
     'rikka',
     // furigana
     'はやかわ りっか',

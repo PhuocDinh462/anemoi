@@ -4,7 +4,7 @@ import React from 'react';
 import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
-import i18n from '@/languages/i18n';
+import i18n from '@/i18n';
 
 export default function CharacterBox() {
   const [characterIndex, setCharacterIndex] = useState(0);

@@ -4,7 +4,7 @@ import { Link } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
-import i18n from '@/languages/i18n';
+import i18n from '@/i18n';
 import { useTranslation } from 'react-i18next';
 
 export default function Cover() {

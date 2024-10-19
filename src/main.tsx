@@ -5,7 +5,7 @@ import './index.css';
 import { HashRouter } from 'react-router-dom';
 import store from './redux/store.ts';
 import { Provider } from 'react-redux';
-import i18n from '@/languages/i18n.ts';
+import i18n from '@/i18n/index.ts';
 import { I18nextProvider } from 'react-i18next';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

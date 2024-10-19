@@ -1,5 +1,5 @@
 import LANGUAGES from '@/constants/languages';
-import i18n from '@/languages/i18n';
+import i18n from '@/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Drawer } from '@mui/material';

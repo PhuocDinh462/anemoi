@@ -3,7 +3,7 @@ import LeafBox from './leaf_box';
 import { LeafType } from '@/models/leaf.model';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
-import i18n from '@/languages/i18n';
+import i18n from '@/i18n';
 
 export default function Intro() {
   const componentRef = useRef(null);

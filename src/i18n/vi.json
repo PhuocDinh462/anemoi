@@ -1,0 +1,82 @@
+{
+  "title": "Lời hẹn ước trong gió",
+
+  "intro1": "Biển vàng nhấp nhô",
+  "intro2": "Thời gian lặng lẽ trôi qua",
+  "intro3": "Những lời thì thầm thân thương",
+  "intro4": "Lời hẹn ước ấy đã tan theo gió...",
+
+  "original artwork": "Minh họa gốc",
+  "fumuyun": "Fumuyun",
+  "nagayama yuunon": "Nagayama Yuunon",
+  "kimishima ao": "Kimishima Ao",
+
+  "scenario": "Kịch bản",
+  "kai": "Kai",
+  "niijima yuu": "Niijima Yuu",
+  "hasama": "Hasama",
+  "sayuki shun": "Sayuki Shun",
+
+  "music producer": "Âm nhạc",
+  "orito shinji": "Orito Shinji",
+  "director": "Đạo diễn",
+
+  "producer": "Nhà sản xuất",
+  "okano touya": "Okano Touya",
+
+  "genre": "Thể loại",
+  "romance adventure game": "Nakige",
+
+  "story1": "10 năm trước, chiếc hộp ấy đã được chôn xuống đất.",
+  "story2": "Giờ đây, thời khắc khám phá những điều ẩn chứa bên trong nó đang đến gần.",
+
+  "story3": "Nhân vật chính Hayakawa Mugi cùng em gái Rikka",
+  "story4": "đến thăm thị trấn Masumi ở phía bắc.",
+
+  "story5": "Một thị trấn nhỏ nơi thời gian trôi chầm chậm như những cơn gió,",
+  "story6": "khiến người ta quên đi sự hối hả và phồn hoa chốn đô thị.",
+
+  "story7": "Cuộc sống làng quê bình dị",
+  "story8": "gắn liền với kinh nghiệm khai thác cối xay gió từ xa xưa.",
+
+  "story9": "Mugi quyết định rằng cậu sẽ tận hưởng giây phút bình yên này",
+  "story10": "cho đến thời khắc quyết định đó.",
+
+  "height": "Chiều cao",
+  "weight": "Cân nặng",
+
+  "spica": {
+    "alias": "Đứa con của gió",
+    "name": "Tsujikura Spica",
+    "catchphrase": "Thân xác tôi sẽ bay theo cơn gió.",
+    "profile": "Cô gái bí ẩn sống ẩn dật trong một chiếc cabin ở ngoại ô thị trấn.\nCông việc của cô là chăm sóc cánh đồng lúa mì, dùng nguyên liệu thu hoạch được để làm ra những chiếc bánh pizza tuyệt ngon mà ai cũng phải khen ngợi. Dù vậy, rất ít người có cơ hội được thưởng thức bánh của cô ấy.\nTuy ít nói nhưng cô lại rất dịu dàng với vật nuôi và lễ phép với người lớn.\nHằng đêm, người ta thường thấy cô ấy ngân nga giai điệu bằng chiếc kèn lá trong khi hòa mình vào cơn gió."
+  },
+
+  "aino": {
+    "alias": "Phi công trẻ",
+    "name": "Fusaba Aino",
+    "catchphrase": "Thử đi. Chiếc máy bay này tuyệt lắm đó!",
+    "profile": "Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.\nLà một người giỏi về cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình với ước mơ được bay vút lên bầu trời.\nĐôi khi cô ấy tiếp đất bằng cách sử dụng một chiếc ô.\nCô sống cùng với cha ở tầng 2 tại một công xưởng."
+  },
+
+  "hiiro": {
+    "alias": "Nhà thiết kế bản đồ",
+    "name": "Awayuki Hiiro",
+    "catchphrase": "Lựa chọn sáng suốt đấy",
+    "profile": "Một cô gái sống ở đài thiên văn.\nCô luôn khao khát tìm kiếm những điều tốt đẹp, như là ý nghĩa của cuộc sống, và ghi chép chúng xuống một tấm bản đồ.\nMặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô ấy vì tính cách lập dị và tò mò quá mức.\nThỉnh thoảng cô ấy thốt lên \"Qua nhà hàng xóm chơi thôi\" rồi lẩn đi đâu mất.\nMón ăn ưa thích của cô là konpeito."
+  },
+
+  "koyomi": {
+    "alias": "Cô đưa thư nhiệt thành",
+    "name": "Shirato Koyomi",
+    "catchphrase": "Có một bức thư quan trọng mà tôi đã luôn tìm kiếm địa chỉ của nó. ...từ rất rất lâu rồi",
+    "profile": "Người điều hành bưu điện duy nhất trong thị trấn.\nDù được mọi người quý mến nhưng bản thân cô lại không mấy ý thức được điều đó.\nCô luôn làm việc một cách cực kỳ tận tâm, coi việc đưa thư là sứ mệnh mà mình được giao phó.\nĐược ông nội nuôi dạy từ nhỏ. Sau khi người ông mất, cô luôn đến thăm mộ ông trước khi đi làm.\nDù thiếu kỹ năng xã hội và rất dễ tin vào lời nói của người khác, nhưng sự ngây thơ và tính cách ngọt ngào đã khiến cô trở thành người được quý mến trong thị trấn."
+  },
+
+  "rikka": {
+    "alias": "Em gái \"hư\"",
+    "name": "Shirato Koyomi",
+    "catchphrase": "Nii-san, anh làm tốt lắm!",
+    "profile": "Em gái của nhân vật chính. Cô đến thị trấn cùng với anh trai.\nLà một brocon chính hiệu, cô luôn ủng hộ anh trai dù cho \"hắn ta\" có nói hay làm gì.\nTrong thời gian ở lại thị trấn, cô vừa làm công việc bán thời gian tại một nhà trẻ, vừa cầm trên tay cuốn sổ \"kiểm định cô dâu\" để tìm kiếm người vợ tương lai cho anh.\nCô khá lạnh lùng với các chàng trai khác, nhưng lại rất lịch sự với những ai giúp đỡ anh trai mình.\nCô còn giữ bí quyết làm nước xốt \"sukiyaki\" - thứ mà cô tin rằng có thể dùng để chế biến ra bất kỳ món ăn nào."
+  }
+}
