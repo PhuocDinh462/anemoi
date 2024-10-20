@@ -58,13 +58,13 @@ export default function Intro() {
           className="py-[30px] text-center leading-10 
           max-sm:text-[.875rem]/8"
           style={{ fontFamily: currentFont }}>
-          {t('intro1')}
+          {t('intro.line1')}
           <br />
-          {t('intro2')}
+          {t('intro.line2')}
           <br />
-          {t('intro3')}
+          {t('intro.line3')}
           <br />
-          {t('intro4')}
+          {t('intro.line4')}
         </div>
 
         <div className="font-thomasita font-semibold text-sm">staff</div>

@@ -1,10 +1,12 @@
 {
   "title": "Lời hẹn ước trong gió",
 
-  "intro1": "Biển vàng nhấp nhô",
-  "intro2": "Thời gian lặng lẽ trôi qua",
-  "intro3": "Những lời thì thầm thân thương",
-  "intro4": "Lời hẹn ước ấy đã tan theo gió...",
+  "intro": {
+    "line1": "Biển vàng nhấp nhô",
+    "line2": "Thời gian lặng lẽ trôi qua",
+    "line3": "Những lời thì thầm thân thương",
+    "line4": "Lời hẹn ước ấy đã tan theo gió..."
+  },
 
   "original artwork": "Minh họa gốc",
   "fumuyun": "Fumuyun",
@@ -27,20 +29,22 @@
   "genre": "Thể loại",
   "romance adventure game": "Nakige",
 
-  "story1": "10 năm trước, chiếc hộp ấy đã được chôn xuống đất.",
-  "story2": "Giờ đây, thời khắc khám phá những điều ẩn chứa bên trong nó đang đến gần.",
+  "story": {
+    "line1": "10 năm trước, chiếc hộp ấy đã được chôn xuống đất.",
+    "line2": "Giờ đây, thời khắc khám phá những điều ẩn chứa bên trong nó đang đến gần.",
 
-  "story3": "Nhân vật chính Hayakawa Mugi cùng em gái Rikka",
-  "story4": "đến thăm thị trấn Masumi ở phía bắc.",
+    "line3": "Nhân vật chính Hayakawa Mugi cùng em gái Rikka",
+    "line4": "đến thăm thị trấn Masumi ở phía bắc.",
 
-  "story5": "Một thị trấn nhỏ nơi thời gian trôi chầm chậm như những cơn gió,",
-  "story6": "khiến người ta quên đi sự hối hả và phồn hoa chốn đô thị.",
+    "line5": "Một thị trấn nhỏ nơi thời gian trôi chầm chậm như những cơn gió,",
+    "line6": "khiến người ta quên đi sự hối hả và phồn hoa chốn đô thị.",
 
-  "story7": "Cuộc sống làng quê bình dị",
-  "story8": "gắn liền với kinh nghiệm khai thác cối xay gió từ xa xưa.",
+    "line7": "Cuộc sống làng quê bình dị",
+    "line8": "gắn liền với kinh nghiệm khai thác cối xay gió từ xa xưa.",
 
-  "story9": "Mugi quyết định rằng cậu sẽ tận hưởng giây phút bình yên này",
-  "story10": "cho đến thời khắc quyết định đó.",
+    "line9": "Mugi quyết định rằng cậu sẽ tận hưởng giây phút bình yên này",
+    "line10": "cho đến thời khắc quyết định đó."
+  },
 
   "height": "Chiều cao",
   "weight": "Cân nặng",

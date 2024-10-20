@@ -58,29 +58,29 @@ export default function Story() {
           className="py-[30px] text-center leading-8 text-white
           max-xs:text-[.875rem]/7"
           style={{ fontFamily: currentFont }}>
-          {t('story1')}
+          {t('story.line1')}
           <br />
-          {t('story2')}
-          <br />
-          <br />
-          {t('story3')}
-          <br />
-          {t('story4')}
+          {t('story.line2')}
           <br />
           <br />
-          {t('story5')}
+          {t('story.line3')}
           <br />
-          {t('story6')}
-          <br />
-          <br />
-          {t('story7')}
-          <br />
-          {t('story8')}
+          {t('story.line4')}
           <br />
           <br />
-          {t('story9')}
+          {t('story.line5')}
           <br />
-          {t('story10')}
+          {t('story.line6')}
+          <br />
+          <br />
+          {t('story.line7')}
+          <br />
+          {t('story.line8')}
+          <br />
+          <br />
+          {t('story.line9')}
+          <br />
+          {t('story.line10')}
           <br />
         </div>
       </div>

@@ -4,7 +4,6 @@ import { Link } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
-import i18n from '@/i18n';
 import { useTranslation } from 'react-i18next';
 
 export default function Cover() {
@@ -50,8 +49,8 @@ export default function Cover() {
     };
   }, [dispatch]);
 
+  const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
-  const { t } = useTranslation();
 
   const logoComponent = (
     <div className={`${currentLanguage === 'jp' && 'bm:mr-32'} min-w-64 w-1/2 md:w-100 sm:w-2/5`}>
@@ -92,7 +91,7 @@ export default function Cover() {
             <div
               className="drop-shadow-slogan text-white font-mongolia tracking-widest
               md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
-              {t('title')}
+              Lời hẹn ước trong gió
             </div>
           </div>
         )}
