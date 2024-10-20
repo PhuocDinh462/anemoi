@@ -5,6 +5,7 @@ import { anemoi_logo_anime1, language_ic } from '@/constants/images';
 import React, { useEffect } from 'react';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
+import { changeLanguage } from '@/i18n';
 import Language from '@/models/language.model';
 
 export default function LanguageMenu() {
@@ -54,7 +55,7 @@ export default function LanguageMenu() {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = (lng: Language) => {
-    i18n.changeLanguage(lng.code);
+    changeLanguage(lng.code);
     setAnchorEl(null);
   };
   /// End MUI menu

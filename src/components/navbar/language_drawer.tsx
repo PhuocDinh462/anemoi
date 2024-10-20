@@ -1,5 +1,5 @@
 import LANGUAGES from '@/constants/languages';
-import i18n from '@/i18n';
+import { changeLanguage } from '@/i18n';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Drawer } from '@mui/material';
@@ -48,7 +48,7 @@ export default function LanguageDrawer(props: {
             key={index}
             style={{ fontFamily: lng.font }}
             onClick={() => {
-              i18n.changeLanguage(lng.code);
+              changeLanguage(lng.code);
               setOpenLanguageDrawer(false);
             }}>
             {lng.name}
