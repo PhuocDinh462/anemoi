@@ -7,7 +7,9 @@ import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
 
 export default function CharacterBox() {
-  const [characterIndex, setCharacterIndex] = useState(0);
+  const [charaIndex, setCharaIndex] = useState(0);
+  const currentChara = CHARACTERS[charaIndex];
+
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -24,9 +26,8 @@ export default function CharacterBox() {
     if (touchEndX - touchStartX > 50) prevChara();
   };
 
-  const nextChara = () => setCharacterIndex((characterIndex + 1) % CHARACTERS.length);
-  const prevChara = () =>
-    setCharacterIndex((characterIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
+  const nextChara = () => setCharaIndex((charaIndex + 1) % CHARACTERS.length);
+  const prevChara = () => setCharaIndex((charaIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
 
   const { t } = useTranslation();
   const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
@@ -57,10 +58,10 @@ export default function CharacterBox() {
             hover:opacity-70 transition-opacity duration-300`}
             style={{
               backgroundImage: `url('${
-                characterIndex === index ? character.thumbnailActive : character.thumbnail
+                charaIndex === index ? character.thumbnailActive : character.thumbnail
               }')`
             }}
-            onClick={() => setCharacterIndex(index)}
+            onClick={() => setCharaIndex(index)}
           />
         ))}
       </div>
@@ -68,7 +69,7 @@ export default function CharacterBox() {
       {/* Animated block */}
       {CHARACTERS.map(
         (character, index) =>
-          index === characterIndex && (
+          index === charaIndex && (
             <React.Fragment key={index}>
               {/* Vertical catchphrase */}
               {currentLanguage?.code === 'jp' && (
@@ -79,7 +80,7 @@ export default function CharacterBox() {
                   max-sm:ml-10 max-sm:mt-10
                   max-xs:text-sm max-xs:ml-5
                   animate-fadeIn">
-                  {t(`${CHARACTERS[characterIndex].id}.catchphrase`)
+                  {t(`${currentChara.id}.catchphrase`)
                     .split('\n')
                     .map((part, index) => (
                       <React.Fragment key={index}>
@@ -111,7 +112,7 @@ export default function CharacterBox() {
                   className="sm:text-lg/10 text-white tracking-[.2em]
                   max-sm:text-xl/10"
                   style={{ fontFamily: currentFont }}>
-                  {t(`${CHARACTERS[characterIndex].id}.alias`)}
+                  {t(`${currentChara.id}.alias`)}
                 </div>
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
 
@@ -120,18 +121,18 @@ export default function CharacterBox() {
                   sm:text-2xl/10
                   text-3xl/[3.5rem]">
                   <span className="pr-[10px]" style={{ fontFamily: currentFont }}>
-                    {t(`${CHARACTERS[characterIndex].id}.name`)}
+                    {t(`${currentChara.id}.name`)}
                   </span>
                   {currentLanguage?.code === 'jp' && (
                     <span className="text-[.4em] align-[8px] whitespace-nowrap font-tsukumin">
-                      {CHARACTERS[characterIndex].furigana}
+                      {currentChara.furigana}
                     </span>
                   )}
                 </div>
 
                 <div className="text-xs font-seasons text-white italic pt-8">profile</div>
                 <div className={textStyle} style={{ fontFamily: currentFont }}>
-                  {t(`${CHARACTERS[characterIndex].id}.profile`)
+                  {t(`${currentChara.id}.profile`)
                     .split('\n')
                     .map((part, index) => (
                       <React.Fragment key={index}>
@@ -141,13 +142,13 @@ export default function CharacterBox() {
                     ))}
                 </div>
 
-                <div className={`font-tsukumin ${textStyle}`}>
+                <div className={textStyle}>
                   <span className="text-xs font-seasons italic">spec</span>
-                  <span style={{ fontFamily: currentFont }}>{`　${t('height')}：${
-                    CHARACTERS[characterIndex].height
+                  <span style={{ fontFamily: currentFont }}>{`　${t('height')}${t('colon')}${
+                    currentChara.height
                   }cm　
-                    ${t('weight')}：${CHARACTERS[characterIndex].weight}kg　
-                    B/W/H：${CHARACTERS[characterIndex].threeSize}`}</span>
+                    ${t('weight')}${t('colon')}${currentChara.weight}kg　
+                    ${t('b/w/h')}${t('colon')}${currentChara.threeSize}`}</span>
                 </div>
 
                 <div
@@ -157,7 +158,7 @@ export default function CharacterBox() {
                   <span className="text-xs font-seasons italic">illustration</span>
                   <span className={textStyle} style={{ fontFamily: currentFont }}>{`　${t(
                     'original artwork'
-                  )}：${t(`${CHARACTERS[characterIndex].id}.artwork`)}`}</span>
+                  )}${t('colon')}${t(`${currentChara.id}.artwork`)}`}</span>
                 </div>
               </div>
 
@@ -168,9 +169,9 @@ export default function CharacterBox() {
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`}
                 style={{
-                  color: `${CHARACTERS[characterIndex].latinColor}`
+                  color: `${currentChara.latinColor}`
                 }}>
-                {CHARACTERS[characterIndex].latin}
+                {currentChara.latin}
               </div>
             </React.Fragment>
           )

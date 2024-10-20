@@ -44,13 +44,15 @@
 
   "height": "Chiều cao",
   "weight": "Cân nặng",
+  "b/w/h": "B/W/H",
+  "colon": ": ",
 
   "spica": {
     "alias": "Đứa con của gió",
     "name": "Tsujikura Spica",
     "catchphrase": "Thân xác tôi sẽ bay theo cơn gió.",
     "artwork": "Na-Ga",
-    "profile": "Cô gái bí ẩn sống ẩn dật trong một chiếc cabin ở ngoại ô thị trấn.\nCông việc của cô là chăm sóc cánh đồng lúa mì, dùng nguyên liệu thu hoạch được để làm ra những chiếc bánh pizza tuyệt ngon mà ai cũng phải khen ngợi. Dù vậy, rất ít người có cơ hội được thưởng thức bánh của cô ấy.\nTuy ít nói nhưng cô lại rất dịu dàng với vật nuôi và lễ phép với người lớn.\nHằng đêm, người ta thường thấy cô ấy ngân nga giai điệu nhẹ nhàng bằng chiếc kèn lá trong khi hòa mình vào cơn gió."
+    "profile": "Cô gái bí ẩn sống ẩn dật trong một chiếc cabin ở ngoại ô thị trấn.\nCông việc của cô là chăm sóc cánh đồng lúa mì, dùng nguyên liệu thu hoạch được để làm ra những chiếc bánh pizza tuyệt ngon mà ai cũng phải khen ngợi. Dù vậy, rất ít người có cơ hội được thưởng thức bánh của cô ấy.\nTuy ít nói nhưng cô lại rất dịu dàng với vật nuôi và lễ phép với người lớn.\nHằng đêm, người ta thường thấy cô nhẹ nhàng ngân nga giai điệu bằng chiếc kèn lá trong khi hòa mình vào cơn gió."
   },
 
   "aino": {
@@ -58,7 +60,7 @@
     "name": "Fusaba Aino",
     "catchphrase": "Thử đi. Chiếc máy bay này tuyệt lắm đó!",
     "artwork": "Kimishima Ao",
-    "profile": "Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.\nLà một người giỏi về cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.\nĐôi khi cô ấy hạ cánh khẩn cấp bằng cách sử dụng một chiếc ô.\nCô sống cùng với cha ở tầng 2 tại một công xưởng."
+    "profile": "Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.\nLà một người giỏi về cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.\nĐôi khi cô ấy hạ cánh khẩn cấp bằng cách sử dụng một chiếc ô.\nNgoại hình nhỏ nhắn và giọng nói dịu dàng là những gì mà người khác nhận xét về cô.\nCô sống cùng với cha ở tầng 2 tại một công xưởng."
   },
 
   "hiiro": {
@@ -66,7 +68,7 @@
     "name": "Awayuki Hiiro",
     "catchphrase": "Lựa chọn sáng suốt đấy",
     "artwork": "Fumuyun",
-    "profile": "Một cô gái sống ở đài thiên văn.\nCô luôn khao khát tìm kiếm những điều tốt đẹp, chẳng hạn như là ý nghĩa của cuộc đời, và ghi chép xuống một tấm bản đồ.\nMặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô ấy vì tính cách lập dị và tò mò quá mức.\nThỉnh thoảng cô ấy thốt lên \"qua nhà hàng xóm chơi thôi\" rồi lẩn đi đâu mất.\nMón ăn ưa thích của cô là Konpeitō."
+    "profile": "Một cô gái sống ở đài thiên văn.\nCô luôn khao khát tìm kiếm những điều tốt đẹp, chẳng hạn như là ý nghĩa của cuộc đời, và ghi chép xuống một tấm bản đồ.\nMặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô vì tính cách lập dị và tò mò quá mức.\nThỉnh thoảng cô ấy thốt lên \"qua nhà hàng xóm chơi thôi\" rồi lẩn đi đâu mất.\nMón ăn ưa thích của cô là Konpeitō."
   },
 
   "koyomi": {
