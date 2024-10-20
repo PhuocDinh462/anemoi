@@ -142,13 +142,17 @@ export default function CharacterBox() {
                     ))}
                 </div>
 
-                <div className={textStyle}>
-                  <span className="text-xs font-seasons italic">spec</span>
-                  <span style={{ fontFamily: currentFont }}>{`　${t('height')}${t('colon')}${
-                    currentChara.height
-                  }cm　
-                    ${t('weight')}${t('colon')}${currentChara.weight}kg　
-                    ${t('b/w/h')}${t('colon')}${currentChara.threeSize}`}</span>
+                <div className={`${textStyle} flex gap-x-4 flex-wrap`}>
+                  <div style={{ fontFamily: currentFont }}>
+                    <span className="text-xs font-seasons italic mr-4">spec</span>
+                    {`${t('height')}${t('colon')}${currentChara.height}cm`}
+                  </div>
+                  <div style={{ fontFamily: currentFont }}>{`${t('weight')}${t('colon')}${
+                    currentChara.weight
+                  }kg`}</div>
+                  <div style={{ fontFamily: currentFont }}>{`${t('b/w/h')}${t('colon')}${
+                    currentChara.threeSize
+                  }`}</div>
                 </div>
 
                 <div
