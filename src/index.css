@@ -36,3 +36,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'jura-bold';
+  src: url('@fonts/Jura-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -32,7 +32,8 @@ export default {
         tsukumin: ['tsukumin', 'sans-serif'],
         thomasita: ['thomasita', 'sans-serif'],
         mongolia: ['mongolia', 'sans-serif'],
-        jura: ['jura', 'sans-serif']
+        jura: ['jura', 'sans-serif'],
+        'jura-bold': ['jura-bold', 'sans-serif']
       },
       keyframes: {
         pathMove: {

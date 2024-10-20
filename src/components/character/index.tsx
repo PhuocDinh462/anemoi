@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import CharacterBox from './character_box';
 import LeafBox from '../leaf_box';
+import { useTranslation } from 'react-i18next';
 
 export default function Character() {
   const componentRef = useRef(null);
@@ -30,12 +31,17 @@ export default function Character() {
     };
   }, []);
 
+  const { i18n } = useTranslation();
+  const componentHeight =
+    i18n.language === 'jp'
+      ? 'md:min-h-[950px] sm:min-h-[1050px]'
+      : 'md:min-h-[1100px] sm:min-h-[1400px]';
+
   return (
     <div
-      className="w-full sm:min-h-[1050px] bg-character-bg-sp sm:bg-character-bg
-      bg-cover bg-no-repeat bg-bottom relative overflow-hidden min-h-[1250px]
-      md:min-h-[950px]
-      xl:h-screen"
+      className={`w-full bg-character-bg-sp sm:bg-character-bg
+      bg-cover bg-no-repeat bg-bottom relative overflow-hidden
+      ${componentHeight} min-h-[1250px] xl:h-screen`}
       ref={componentRef}>
       {/* Text box */}
       <div
@@ -43,7 +49,7 @@ export default function Character() {
         top-[100px] left-1/2 -translate-x-1/2">
         <div
           className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
-        max-sm:text-4xl max-xs:text-3xl">
+          max-sm:text-4xl max-xs:text-3xl">
           character
         </div>
         <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>

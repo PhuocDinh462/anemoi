@@ -130,7 +130,18 @@ export default function CharacterBox() {
                   )}
                 </div>
 
-                <div className="text-xs font-seasons text-white italic pt-8">profile</div>
+                {/* Horizontal catchphrase */}
+                {currentLanguage?.code !== 'jp' && (
+                  <div
+                    className="mt-3 py-3 px-5 size-fit text-white font-jura-bold relative
+                    md:text-xl bm:text-lg sm:text-base xs:text-xl text-base">
+                    {t(`${currentChara.id}.catchphrase`)}
+                    <div className="h-10 w-5 border-t-2 border-l-2 border-white absolute top-0 left-0" />
+                    <div className="h-10 w-5 border-b-2 border-r-2 border-white absolute bottom-0 right-0" />
+                  </div>
+                )}
+
+                <div className="text-xs font-seasons text-white italic mt-6">profile</div>
                 <div className={textStyle} style={{ fontFamily: currentFont }}>
                   {t(`${currentChara.id}.profile`)
                     .split('\n')
