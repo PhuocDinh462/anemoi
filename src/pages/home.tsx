@@ -17,7 +17,7 @@ export default function Home() {
   const [loadingResourcesComplete, setLoadingResourcesComplete] = useState(false);
   const [loadingBackdropComplete, setLoadingBackdropComplete] = useState(false);
   const [loadingTimeout, setLoadingTimeout] = useState(false);
-  const loadingMinDuration = 0;
+  const loadingMinDuration = 3000;
 
   useEffect(() => {
     const timer = setTimeout(() => {
