@@ -31,15 +31,8 @@
 }
 
 @font-face {
-  font-family: 'jura';
-  src: url('@fonts/Jura-SemiBold.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'jura-bold';
-  src: url('@fonts/Jura-Bold.ttf') format('opentype');
+  font-family: 'voyage';
+  src: url('@fonts/SVN-BonVoyage-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

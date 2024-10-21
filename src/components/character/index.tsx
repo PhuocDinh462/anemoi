@@ -35,7 +35,7 @@ export default function Character() {
   const componentHeight =
     i18n.language === 'jp'
       ? 'md:min-h-[950px] sm:min-h-[1050px]'
-      : 'md:min-h-[1100px] sm:min-h-[1400px]';
+      : 'md:min-h-[950px] bm:min-h-[1150px] sm:min-h-[1250px]';
 
   return (
     <div

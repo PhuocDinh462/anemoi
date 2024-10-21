@@ -22,8 +22,9 @@ export default function CharacterBox() {
   };
 
   const handleTouchEnd = () => {
+    if (touchStartX === 0 || touchEndX === 0) return;
     if (touchStartX - touchEndX > 50) nextChara();
-    if (touchEndX - touchStartX > 50) prevChara();
+    else if (touchEndX - touchStartX > 50) prevChara();
   };
 
   const nextChara = () => setCharaIndex((charaIndex + 1) % CHARACTERS.length);
@@ -34,7 +35,7 @@ export default function CharacterBox() {
   const currentFont = currentLanguage?.font ?? 'sans-serif';
 
   const textStyle =
-    'text-white tracking-[.1em] sm:text-sm/8 text-xs/7 ' +
+    'text-white tracking-[.1em] md:text-sm/8 sm:text-xs/8 text-xs/7 ' +
     (currentLanguage?.code === 'jp' && 'md:text-base/9');
 
   return (
@@ -133,7 +134,7 @@ export default function CharacterBox() {
                 {/* Horizontal catchphrase */}
                 {currentLanguage?.code !== 'jp' && (
                   <div
-                    className="mt-3 py-3 px-5 size-fit text-white font-jura-bold relative
+                    className="mt-3 py-3 px-5 size-fit text-white font-voyage relative
                     md:text-xl bm:text-lg sm:text-base xs:text-xl text-base">
                     {t(`${currentChara.id}.catchphrase`)}
                     <div className="h-10 w-5 border-t-2 border-l-2 border-white absolute top-0 left-0" />

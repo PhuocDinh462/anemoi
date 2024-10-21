@@ -53,7 +53,7 @@ export default function Movie() {
     arrows: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 10000,
     speed: 700
   };
 
