@@ -22,7 +22,7 @@ export default function CharacterBox() {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX === 0 || touchEndX === 0) return;
+    if (touchEndX === 0) return;
     if (touchStartX - touchEndX > 50) nextChara();
     else if (touchEndX - touchStartX > 50) prevChara();
   };
