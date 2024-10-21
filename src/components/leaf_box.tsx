@@ -2,7 +2,6 @@ import { LEAF_HEIGHT } from '@/constants/size';
 import { useEffect, useState } from 'react';
 import { Leaves } from '@/constants/leaves';
 import { LeafType } from '@/models/leaf.model';
-import { WIDTH_SM } from '@/constants/size';
 
 interface props {
   type?: LeafType;
@@ -12,19 +11,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
   const leaf = Leaves.find((leaf) => leaf.type === type);
   const [bgPositionY, setBgPositionY] = useState(0);
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (windowWidth < WIDTH_SM) return; // disable parallax effect on mobile
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -38,29 +25,28 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [windowWidth]);
+  }, []);
+
+  const leafStyle = `z-10 size-full absolute bg-repeat-y bg-fixed bg-cover`;
 
   return (
     <>
       <div
-        className={`z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-left bg-cover`}
+        className={`${leafStyle} bg-left`}
         style={{
           backgroundPositionY: `${bgPositionY}px`,
           backgroundImage: `url('${leaf?.leaf1_url}')`
         }}
       />
       <div
-        className="z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-center bg-cover"
+        className={`${leafStyle} bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY / 2}px`,
           backgroundImage: `url('${leaf?.leaf2_url}')`
         }}
       />
       <div
-        className="z-10 size-full absolute
-        bg-repeat-y bg-fixed bg-right bg-cover"
+        className={`${leafStyle} bg-right`}
         style={{
           backgroundPositionY: `${bgPositionY / 3}px`,
           backgroundImage: `url('${leaf?.leaf3_url}')`
