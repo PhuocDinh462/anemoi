@@ -72,7 +72,7 @@ export default function CharacterBox() {
         (character, index) =>
           index === charaIndex && (
             <React.Fragment key={index}>
-              {/* Vertical catchphrase */}
+              {/* Vertical quote */}
               {currentLanguage?.code === 'jp' && (
                 <div
                   className="md:top-[16%] left-[4%] -z-[1]
@@ -81,7 +81,7 @@ export default function CharacterBox() {
                   max-sm:ml-10 max-sm:mt-10
                   max-xs:text-sm max-xs:ml-5
                   animate-fadeIn">
-                  {t(`${currentChara.id}.catchphrase`)
+                  {t(`${currentChara.id}.quote`)
                     .split('\n')
                     .map((part, index) => (
                       <React.Fragment key={index}>
@@ -131,12 +131,12 @@ export default function CharacterBox() {
                   )}
                 </div>
 
-                {/* Horizontal catchphrase */}
+                {/* Horizontal quote */}
                 {currentLanguage?.code !== 'jp' && (
                   <div
                     className="mt-3 py-3 px-5 size-fit text-white font-voyage relative
                     md:text-xl bm:text-lg sm:text-base xs:text-xl text-base">
-                    {t(`${currentChara.id}.catchphrase`)}
+                    {t(`${currentChara.id}.quote`)}
                     <div className="h-10 w-5 border-t-2 border-l-2 border-white absolute top-0 left-0" />
                     <div className="h-10 w-5 border-b-2 border-r-2 border-white absolute bottom-0 right-0" />
                   </div>
