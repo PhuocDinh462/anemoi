@@ -1,5 +1,4 @@
 ## 1. Installation
-Install the package
 ```
 $ npm i
 ```
