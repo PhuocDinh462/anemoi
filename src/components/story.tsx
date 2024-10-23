@@ -4,10 +4,21 @@ import LeafBox from './leaf_box';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
+import { WIDTH_XS } from '@/constants/size';
+import React from 'react';
 
 export default function Story() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const componentRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const currentIntroRef = componentRef.current;
@@ -37,6 +48,9 @@ export default function Story() {
   const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
   const currentFont = currentLanguage?.font ?? 'sans-serif';
 
+  const numberOfLines = 10;
+  const lines = Array.from({ length: numberOfLines }, (_, index) => t(`story.line${index + 1}`));
+
   return (
     <div
       className="w-full h-screen min-h-[800px] bg-story-bg bg-cover bg-no-repeat bg-center
@@ -58,30 +72,21 @@ export default function Story() {
           className="py-[30px] text-center leading-8 text-white
           max-xs:text-[.875rem]/7"
           style={{ fontFamily: currentFont }}>
-          {t('story.line1')}
-          <br />
-          {t('story.line2')}
-          <br />
-          <br />
-          {t('story.line3')}
-          <br />
-          {t('story.line4')}
-          <br />
-          <br />
-          {t('story.line5')}
-          <br />
-          {t('story.line6')}
-          <br />
-          <br />
-          {t('story.line7')}
-          <br />
-          {t('story.line8')}
-          <br />
-          <br />
-          {t('story.line9')}
-          <br />
-          {t('story.line10')}
-          <br />
+          {lines.map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index % 2 !== 0 ? (
+                <>
+                  <br />
+                  <br />
+                </>
+              ) : currentLanguage?.code !== 'jp' && windowWidth < WIDTH_XS ? (
+                ' '
+              ) : (
+                <br />
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
