@@ -54,7 +54,11 @@ export default function LanguageMenu() {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = (lng: Language) => {
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleChange = (lng: Language) => {
     changeLanguage(lng.code);
     setAnchorEl(null);
   };
@@ -87,7 +91,7 @@ export default function LanguageMenu() {
         open={openLanguageMenu}
         onClose={handleClose}>
         {LANGUAGES.map((lng, index) => (
-          <StyledMenuItem key={index} onClick={() => handleClose(lng)} disableRipple>
+          <StyledMenuItem key={index} onClick={() => handleChange(lng)} disableRipple>
             <div className="flex items-center justify-between w-full">
               <div
                 className={`${currentLanguage === lng.code && 'text-custom-blue-100'}`}
