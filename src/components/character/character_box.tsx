@@ -142,7 +142,9 @@ export default function CharacterBox() {
                   </div>
                 )}
 
-                <div className="text-xs font-seasons text-white italic mt-6">profile</div>
+                <div className="text-xs font-seasons text-white italic mt-6 mb-[.35rem]">
+                  profile
+                </div>
                 <div className={textStyle} style={{ fontFamily: currentFont }}>
                   {t(`${currentChara.id}.profile`)
                     .split('\n')
