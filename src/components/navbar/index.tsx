@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import LanguageMenu from './language_menu';
 import LanguageDrawer from './language_drawer';
+import { WIDTH_MIN } from '@/constants/size';
 
 export default function Navbar(props: {
   sections: string[];
@@ -72,7 +73,7 @@ export default function Navbar(props: {
   /// End for mobile only
 
   return (
-    <div className="w-screen max-bm:relative">
+    <div className={`w-screen min-w-[${WIDTH_MIN}px] max-bm:relative`}>
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent

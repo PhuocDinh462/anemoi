@@ -65,7 +65,7 @@ export default function Cover() {
       ref={blockRef}>
       {/* BG */}
       <div className="-z-50 sm:hidden">
-        <img src={fv_main_bg_sp} alt="fv_main_bg_sp" className="w-screen object-cover object-top" />
+        <img src={fv_main_bg_sp} alt="fv_main_bg_sp" className="object-cover object-top" />
       </div>
 
       {/* Slogan & Logo */}

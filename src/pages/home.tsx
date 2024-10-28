@@ -9,6 +9,7 @@ import { createRef, useEffect, useState } from 'react';
 import Loading from '@/components/loading';
 import { Backdrop } from '@mui/material';
 import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
+import { WIDTH_MIN } from '@/constants/size';
 
 export default function Home() {
   const sections = ['top', 'introduction', 'story', 'character', 'movie'];
@@ -70,7 +71,7 @@ export default function Home() {
       )}
 
       {loadingResourcesComplete && loadingTimeout && (
-        <>
+        <div className={`min-w-[${WIDTH_MIN}px]`}>
           <div className="w-fit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
           </div>
@@ -90,7 +91,7 @@ export default function Home() {
             <Movie />
           </div>
           <Footer />
-        </>
+        </div>
       )}
     </div>
   );
