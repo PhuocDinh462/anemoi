@@ -42,19 +42,20 @@ export default function Home() {
       );
     };
 
-    const loadFonts = () => {
+    const loadFonts = async () => {
+      const timeout = 30000;
       const fontTheSeasons = new FontFaceObserver('the-seasons');
       const fontTsukumin = new FontFaceObserver('tsukumin');
       const fontThomasita = new FontFaceObserver('thomasita');
       const fontMongolia = new FontFaceObserver('mongolia');
       const fontVoyage = new FontFaceObserver('voyage');
       return Promise.all([
-        fontTheSeasons.load(),
-        fontTsukumin.load(),
-        fontThomasita.load(),
-        fontMongolia.load(),
-        fontVoyage.load()
-      ]);
+        fontTheSeasons.load(null, timeout),
+        fontTsukumin.load(null, timeout),
+        fontThomasita.load(null, timeout),
+        fontMongolia.load(null, timeout),
+        fontVoyage.load(null, timeout)
+      ]).catch((e) => console.error('Error loading fonts:', e));
     };
 
     const loadLogo = async () => {
@@ -64,7 +65,7 @@ export default function Home() {
     };
 
     const loadResources = async () => {
-      await Promise.all([loadFonts(), loadImages(IMAGES)])
+      await Promise.all([loadImages(IMAGES), loadFonts()])
         .catch((e) => console.error('Error loading resources:', e))
         .finally(() => setLoadingResourcesComplete(true));
     };
