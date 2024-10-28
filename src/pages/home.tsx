@@ -58,13 +58,23 @@ export default function Home() {
     };
 
     const loadLogo = async () => {
-      await Promise.all([loadImages([anemoi_logo_anime1, anemoi_logo_anime2])]);
-      setLoadingBackdropComplete(true);
+      try {
+        await Promise.all([loadImages([anemoi_logo_anime1, anemoi_logo_anime2])]);
+      } catch (error) {
+        console.error('Error loading logo:', error);
+      } finally {
+        setLoadingBackdropComplete(true);
+      }
     };
 
     const loadResources = async () => {
-      await Promise.all([loadFonts(), loadImages(IMAGES)]);
-      setLoadingResourcesComplete(true);
+      try {
+        await Promise.all([loadFonts(), loadImages(IMAGES)]);
+      } catch (error) {
+        console.error('Error loading resources:', error);
+      } finally {
+        setLoadingResourcesComplete(true);
+      }
     };
 
     loadLogo();
