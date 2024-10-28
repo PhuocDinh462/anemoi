@@ -71,7 +71,7 @@ export default function Home() {
       )}
 
       {loadingResourcesComplete && loadingTimeout && (
-        <div className={`min-w-[${WIDTH_MIN}px]`}>
+        <div style={{ minWidth: WIDTH_MIN }}>
           <div className="w-fit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
           </div>

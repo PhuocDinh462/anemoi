@@ -73,7 +73,7 @@ export default function Navbar(props: {
   /// End for mobile only
 
   return (
-    <div className={`w-screen min-w-[${WIDTH_MIN}px] max-bm:relative`}>
+    <div className="w-screen max-bm:relative" style={{ minWidth: WIDTH_MIN }}>
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
