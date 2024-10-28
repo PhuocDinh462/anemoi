@@ -10,6 +10,7 @@ import Loading from '@/components/loading';
 import { Backdrop } from '@mui/material';
 import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
 import { WIDTH_MIN } from '@/constants/size';
+import FontFaceObserver from 'fontfaceobserver';
 
 export default function Home() {
   const sections = ['top', 'introduction', 'story', 'character', 'movie'];
@@ -42,7 +43,18 @@ export default function Home() {
     };
 
     const loadFonts = () => {
-      return document.fonts.ready;
+      const fontTheSeasons = new FontFaceObserver('the-seasons');
+      const fontTsukumin = new FontFaceObserver('tsukumin');
+      const fontThomasita = new FontFaceObserver('thomasita');
+      const fontMongolia = new FontFaceObserver('mongolia');
+      const fontVoyage = new FontFaceObserver('voyage');
+      return Promise.all([
+        fontTheSeasons.load(),
+        fontTsukumin.load(),
+        fontThomasita.load(),
+        fontMongolia.load(),
+        fontVoyage.load()
+      ]);
     };
 
     const loadLogo = async () => {
