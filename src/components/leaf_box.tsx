@@ -27,7 +27,7 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
     };
   }, []);
 
-  const leafStyle = `z-10 size-full absolute bg-repeat-y bg-fixed bg-cover`;
+  const leafStyle = 'z-10 size-full absolute bg-repeat-y bg-fixed bg-auto xl:bg-contain';
 
   return (
     <>
