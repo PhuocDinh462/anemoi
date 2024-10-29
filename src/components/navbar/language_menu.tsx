@@ -51,12 +51,10 @@ export default function LanguageMenu() {
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const openLanguageMenu = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
+
+  const handleClose = () => setAnchorEl(null);
 
   const handleChange = (lng: Language) => {
     changeLanguage(lng.code);
@@ -65,11 +63,13 @@ export default function LanguageMenu() {
   /// End MUI menu
 
   useEffect(() => {
-    const handleResize = () => setAnchorEl(null);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    window.addEventListener('resize', handleClose);
+    return () => window.removeEventListener('resize', handleClose);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleClose);
+    return () => window.removeEventListener('scroll', handleClose);
   }, []);
 
   return (
