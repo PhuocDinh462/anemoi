@@ -137,8 +137,16 @@ export default function CharacterBox() {
                     className="mt-3 py-3 px-5 size-fit text-white font-voyage relative
                     md:text-xl bm:text-lg sm:text-base xs:text-xl text-base">
                     {t(`${currentChara.id}.quote`)}
-                    <div className="h-10 w-5 border-t-2 border-l-2 border-white absolute top-0 left-0" />
-                    <div className="h-10 w-5 border-b-2 border-r-2 border-white absolute bottom-0 right-0" />
+                    <div
+                      className="h-10 w-5 border-white absolute top-0 left-0
+                      border-t xs:border-t-2
+                      border-l xs:border-l-2"
+                    />
+                    <div
+                      className="h-10 w-5 border-white absolute bottom-0 right-0
+                      border-b xs:border-b-2
+                      border-r xs:border-r-2"
+                    />
                   </div>
                 )}
 
@@ -173,8 +181,8 @@ export default function CharacterBox() {
                   className="text-white tracking-[.1em] md:text-base/9
                   sm:text-sm/8
                   text-xs/7">
-                  <span className="text-xs font-seasons italic">illustration</span>
-                  <span className={textStyle} style={{ fontFamily: currentFont }}>{`　${t(
+                  <span className="text-xs font-seasons italic mr-4">illustration</span>
+                  <span className={textStyle} style={{ fontFamily: currentFont }}>{`${t(
                     'original artwork'
                   )}${t('colon')}${t(`${currentChara.id}.artwork`)}`}</span>
                 </div>
