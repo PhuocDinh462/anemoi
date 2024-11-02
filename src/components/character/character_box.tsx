@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { CHARACTERS } from '@/constants/characters';
 import React from 'react';
 import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
@@ -38,6 +38,26 @@ export default function CharacterBox() {
     'text-white tracking-[.1em] md:text-sm/8 sm:text-xs/8 text-xs/7 ' +
     (currentLanguage?.code === 'jp' && 'md:text-base/9');
 
+  // Preload images
+  const preloadedImages = useRef<HTMLImageElement[]>([]);
+
+  const preloadImage = () => {
+    CHARACTERS.forEach((character) => {
+      const img = new Image();
+      img.src = character.image;
+
+      const thumbnail = new Image();
+      thumbnail.src = character.thumbnail;
+
+      const thumbnailActive = new Image();
+      thumbnailActive.src = character.thumbnailActive;
+
+      preloadedImages.current.push(img);
+      preloadedImages.current.push(thumbnail);
+      preloadedImages.current.push(thumbnailActive);
+    });
+  };
+
   return (
     <div
       className="w-[70%] md:min-w-[950px] h-full m-auto relative z-10 md:pt-0
@@ -62,7 +82,10 @@ export default function CharacterBox() {
                 charaIndex === index ? character.thumbnailActive : character.thumbnail
               }')`
             }}
-            onClick={() => setCharaIndex(index)}
+            onClick={() => {
+              preloadImage();
+              setCharaIndex(index);
+            }}
           />
         ))}
       </div>
