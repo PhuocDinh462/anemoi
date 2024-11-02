@@ -52,6 +52,7 @@ export default function Home() {
       const fontThomasita = new FontFaceObserver('thomasita');
       const fontMongolia = new FontFaceObserver('mongolia');
       const fontVoyage = new FontFaceObserver('voyage');
+
       return Promise.all([
         fontTheSeasons.load(null, timeout),
         fontTsukumin.load(null, timeout),

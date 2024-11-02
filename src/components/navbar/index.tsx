@@ -128,7 +128,7 @@ export default function Navbar(props: {
 
       {/* PC case */}
       <div
-        className="relative size-full max-bm:hidden pt-[15px] pb-[20px]
+        className="relative size-full max-bm:hidden pt-[16px] pb-[20px]
         bg-gradient-to-b from-custom-blue-100 to-transparent
         flex items-center justify-center select-none text-center font-semibold
         tracking-widest text-[1em] font-seasons text-white">
