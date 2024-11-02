@@ -41,21 +41,25 @@ export default function CharacterBox() {
   // Preload images
   const preloadedImages = useRef<HTMLImageElement[]>([]);
 
-  const preloadImage = () => {
-    CHARACTERS.forEach((character) => {
-      const img = new Image();
-      img.src = character.image;
+  /* Use this function to prevent the images from being preloaded multiple times
+  when open/close toggle device toolbar in browser's DevTools */
+  const loadCharaImages = () => {
+    const charaImages = CHARACTERS.map((chara) => [
+      chara.image,
+      chara.thumbnail,
+      chara.thumbnailActive
+    ]).flat();
 
-      const thumbnail = new Image();
-      thumbnail.src = character.thumbnail;
-
-      const thumbnailActive = new Image();
-      thumbnailActive.src = character.thumbnailActive;
-
-      preloadedImages.current.push(img);
-      preloadedImages.current.push(thumbnail);
-      preloadedImages.current.push(thumbnailActive);
-    });
+    return Promise.all(
+      charaImages.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+          preloadedImages.current.push(img);
+        });
+      })
+    );
   };
 
   return (
@@ -82,9 +86,12 @@ export default function CharacterBox() {
                 charaIndex === index ? character.thumbnailActive : character.thumbnail
               }')`
             }}
-            onClick={() => {
-              preloadImage();
-              setCharaIndex(index);
+            onClick={async () => {
+              document.body.style.cursor = 'wait';
+              await loadCharaImages()
+                .then(() => setCharaIndex(index))
+                .catch((e) => console.error('Error loading images:', e))
+                .finally(() => (document.body.style.cursor = 'auto'));
             }}
           />
         ))}
