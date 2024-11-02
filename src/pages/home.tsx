@@ -5,7 +5,7 @@ import Intro from '@/components/intro';
 import Movie from '@/components/movie';
 import Navbar from '@/components/navbar';
 import Story from '@/components/story';
-import { createRef, useEffect, useState } from 'react';
+import { createRef, useEffect, useState, useRef } from 'react';
 import Loading from '@/components/loading';
 import { Backdrop } from '@mui/material';
 import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
@@ -29,6 +29,8 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  const preloadedImages = useRef<HTMLImageElement[]>([]);
+
   useEffect(() => {
     const loadImages = (sources: string[]) => {
       return Promise.all(
@@ -37,6 +39,7 @@ export default function Home() {
             const img = new Image();
             img.src = src;
             img.onload = resolve;
+            preloadedImages.current.push(img);
           });
         })
       );
