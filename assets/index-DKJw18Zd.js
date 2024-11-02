@@ -93,8 +93,8 @@ Error generating stack: `+o.message+`
 Công việc của cô là chăm sóc cánh đồng lúa mì, dùng nguyên liệu thu hoạch được để làm ra những chiếc bánh pizza tuyệt ngon mà ai cũng phải khen ngợi. Dù vậy, rất ít người có cơ hội được thưởng thức bánh của cô ấy.
 Tuy ít nói nhưng cô lại rất dịu dàng với vật nuôi và lễ phép với người lớn.
 Hằng đêm, người ta thường thấy cô nhẹ nhàng ngân nga chiếc kèn lá trong khi hòa mình vào cơn gió.`},UO={alias:"Phi công trẻ",name:"Fusaba Aino",quote:"Thử đi. Cỗ máy này có thể bay được đấy!",artwork:"Kimishima Ao",profile:`Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.
-Là một người giỏi về cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.
-Đôi khi cô ấy hạ cánh khẩn cấp bằng cách sử dụng một chiếc ô.
+Là một người có hiểu biết sâu rộng về lĩnh vực cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.
+Trong trường hợp khẩn cấp, cô nắm chặt lấy chiếc ô và "hạ cánh an toàn" mà không một chút sợ hãi hay do dự nào.
 Ngoại hình nhỏ nhắn và giọng nói dịu dàng là những gì mà người khác nhận xét về cô.
 Cô sống cùng cha ở tầng 2 tại một công xưởng.`},BO={alias:"Nhà thiết kế bản đồ",name:"Awayuki Hiiro",quote:"Lựa chọn sáng suốt đấy.",artwork:"Fumuyun",profile:`Một cô gái sống ở đài thiên văn.
 Cô luôn khao khát tìm kiếm những điều tốt đẹp, chẳng hạn như là ý nghĩa của cuộc đời, và ghi chép xuống một tấm bản đồ.
