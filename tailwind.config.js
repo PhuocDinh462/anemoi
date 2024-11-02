@@ -9,9 +9,9 @@ export default {
         'custom-black-900': '#231815'
       },
       dropShadow: {
-        logo: ['0px 0px 30px rgba(18, 146, 214, 1)', '0px 0px 30px rgba(18, 146, 214, 1)'],
+        logo: ['0 0 30px rgba(18, 146, 214, 1)', '0 0 30px rgba(18, 146, 214, 1)'],
         slogan: ['0 0 20px #1191d6', '0 0 20px #1191d6', '0 0 20px #1191d6'],
-        'chara-text-box': ['0px 0px 4px #1688ca'],
+        'chara-text-box': ['0 0 4px #1688ca'],
         'movie-title': ['0 0 50px #fff', '0 0 50px #fff', '0 0 50px #fff']
       },
       width: {
