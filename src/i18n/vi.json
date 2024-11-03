@@ -64,15 +64,15 @@
     "name": "Fusaba Aino",
     "quote": "Thử đi. Cỗ máy này có thể bay được đấy!",
     "artwork": "Kimishima Ao",
-    "profile": "Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.\nLà một người có hiểu biết sâu rộng về lĩnh vực cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.\nTrong trường hợp khẩn cấp, cô nắm chặt lấy chiếc ô và \"hạ cánh an toàn\" mà không một chút sợ hãi hay do dự nào.\nNgoại hình nhỏ nhắn và giọng nói dịu dàng là những gì mà người khác nhận xét về cô.\nCô sống cùng cha ở tầng 2 tại một công xưởng."
+    "profile": "Một cô gái làm nghề sửa chữa tua-bin gió ở ngoại ô thị trấn.\nLà người có hiểu biết sâu rộng về lĩnh vực cơ khí, cô thường thực hiện các thí nghiệm nguy hiểm với chiếc máy bay tự chế của mình nhằm hiện thực hóa ước mơ được bay vút lên bầu trời.\nTrong trường hợp khẩn cấp, cô nắm chặt lấy chiếc ô và \"hạ cánh an toàn\" mà không một chút sợ hãi hay do dự nào.\nNgoại hình nhỏ nhắn và giọng nói dịu dàng là những gì mà người khác nhận xét về cô.\nCô sống cùng cha ở tầng 2 tại một công xưởng."
   },
 
   "hiiro": {
-    "alias": "Nhà thiết kế bản đồ",
+    "alias": "Địa đồ sư",
     "name": "Awayuki Hiiro",
     "quote": "Lựa chọn sáng suốt đấy.",
     "artwork": "Fumuyun",
-    "profile": "Một cô gái sống ở đài thiên văn.\nCô luôn khao khát tìm kiếm những điều tốt đẹp, chẳng hạn như là ý nghĩa của cuộc đời, và ghi chép xuống một tấm bản đồ.\nMặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô vì tính cách lập dị và tò mò quá mức.\nThỉnh thoảng cô ấy thốt lên \"qua nhà hàng xóm chơi thôi\" rồi lẩn đi đâu mất.\nMón ăn ưa thích của cô là Konpeitō."
+    "profile": "Một cô gái sống ở đài thiên văn.\nCô luôn khao khát tìm kiếm những điều tốt đẹp, luôn tự đặt ra những câu hỏi lớn lao, khó để mà có câu trả lời chính xác, chẳng hạn như \"ý nghĩa của cuộc đời này là gì?\", và ghi chép xuống một tấm bản đồ.\nMặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô vì tính cách lập dị và tò mò quá mức.\nThỉnh thoảng cô ấy thốt lên \"qua nhà hàng xóm chơi thôi\" rồi lẩn đi đâu mất.\nMón ăn ưa thích của cô là Konpeitō."
   },
 
   "koyomi": {
@@ -80,7 +80,7 @@
     "name": "Shirato Koyomi",
     "quote": "Có một bức thư vô cùng quan trọng mà tôi đã luôn tìm kiếm địa chỉ người nhận nó...từ rất lâu rồi.",
     "artwork": "Nagayama Yuunon",
-    "profile": "Người điều hành bưu điện duy nhất trong thị trấn.\nTuy được mọi người quý mến nhưng bản thân cô lại không mấy ý thức được điều đó.\nCô luôn làm việc một cách cực kỳ tận tâm, coi việc đưa thư là sứ mệnh mà mình được giao phó.\nĐược ông nội nuôi dạy từ nhỏ. Sau khi người ông mất, cô luôn đến thăm mộ ông trước khi đi làm.\nDù thiếu kỹ năng xã hội và rất dễ tin vào lời nói của người khác, nhưng sự ngây thơ và tính cách ngọt ngào đã khiến cô trở thành người được quý mến trong thị trấn."
+    "profile": "Người điều hành bưu điện duy nhất trong thị trấn.\nTuy được mọi người quý mến nhưng bản thân cô lại không mấy ý thức được điều đó.\nCô luôn làm việc một cách cực kỳ tận tâm, coi việc đưa thư là sứ mệnh mà mình được giao phó.\nĐược ông nội nuôi dạy từ nhỏ. Sau khi người ông mất, cô luôn đến thăm mộ ông trước mỗi khi đi làm.\nDù thiếu kỹ năng xã hội và rất dễ tin vào lời nói của người khác, nhưng sự ngây thơ và tính cách ngọt ngào đã khiến cô trở thành người được quý mến trong thị trấn."
   },
 
   "rikka": {
@@ -88,6 +88,6 @@
     "name": "Hayakawa Rikka",
     "quote": "Nii-san, anh làm tốt lắm!",
     "artwork": "Na-Ga",
-    "profile": "Em gái của nhân vật chính. Cô đến thị trấn cùng anh trai.\nLà một brocon chính hiệu, cô luôn đứng về phía anh trai dù cho \"hắn ta\" có nói hay làm gì.\nTrong thời gian ở lại thị trấn, cô vừa làm công việc bán thời gian tại một nhà trẻ, vừa cầm trên tay cuốn sổ \"kiểm định cô dâu\" để tìm kiếm người vợ tương lai cho anh.\nCô khá lạnh lùng với các chàng trai khác, nhưng lại rất lịch sự với những ai giúp đỡ anh trai mình.\nCô còn giữ bí quyết làm nước xốt \"sukiyaki\" - thứ mà cô tin rằng có thể dùng để chế biến ra bất kỳ món ăn nào."
+    "profile": "Em gái của nhân vật chính. Cô đến thị trấn cùng anh trai.\nLà một brocon chính hiệu, cô luôn đứng về phía anh trai dù cho \"hắn ta\" có nói hay làm gì.\nTrong thời gian ở lại thị trấn, cô vừa làm công việc bán thời gian tại một nhà trẻ, vừa cầm trên tay cuốn sổ \"kiểm định cô dâu\" nhằm tìm kiếm những cô gái có tiềm năng trở thành người vợ tương lai cho anh.\nCô khá lạnh lùng với các chàng trai khác, nhưng lại rất lịch sự với những ai giúp đỡ anh trai mình.\nCô còn giữ bí quyết làm nước xốt \"sukiyaki\" - thứ mà cô tin rằng có thể dùng để chế biến ra bất kỳ món ăn nào."
   }
 }

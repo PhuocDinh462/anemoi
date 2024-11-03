@@ -34,10 +34,6 @@ export default function CharacterBox() {
   const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
   const currentFont = currentLanguage?.font ?? 'sans-serif';
 
-  const textStyle =
-    'text-white tracking-[.1em] md:text-sm/8 sm:text-xs/8 text-xs/7 ' +
-    (currentLanguage?.code === 'jp' && 'md:text-base/9');
-
   // Preload images
   const preloadedImages = useRef<HTMLImageElement[]>([]);
 
@@ -61,6 +57,12 @@ export default function CharacterBox() {
       })
     );
   };
+
+  const textStyle =
+    'text-white ' +
+    (currentLanguage?.code === 'jp'
+      ? 'md:text-base/8 text-xs/7'
+      : 'md:text-sm/7 text-xs/7 tracking-[.1em]');
 
   return (
     <div
@@ -208,9 +210,9 @@ export default function CharacterBox() {
                 </div>
 
                 <div
-                  className="text-white tracking-[.1em] md:text-base/9
-                  sm:text-sm/8
-                  text-xs/7">
+                  className="text-white tracking-[.1em] md:text-base
+                  sm:text-sm
+                  text-xs">
                   <span className="text-xs font-seasons italic mr-4">illustration</span>
                   <span className={textStyle} style={{ fontFamily: currentFont }}>{`${t(
                     'original artwork'
