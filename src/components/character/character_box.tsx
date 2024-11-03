@@ -62,7 +62,7 @@ export default function CharacterBox() {
     'text-white ' +
     (currentLanguage?.code === 'jp'
       ? 'md:text-base/8 text-xs/7'
-      : 'md:text-sm/7 text-xs/7 tracking-[.1em]');
+      : 'md:text-sm/[1.85rem] text-xs/7 tracking-[.1em]');
 
   return (
     <div
