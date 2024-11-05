@@ -47,6 +47,7 @@ export default function LanguageDrawer(props: {
           <div
             key={index}
             style={{ fontFamily: lng.font }}
+            className="cursor-pointer"
             onClick={() => {
               changeLanguage(lng.code);
               setOpenLanguageDrawer(false);
