@@ -18,14 +18,14 @@ export default {
         100: '25rem'
       },
       backgroundImage: {
-        'main-bg': "url('@images/fv_main_bg.jpg')",
-        'main-bg-sp': "url('@images/fv_main_bg_sp.jpg')",
-        'intro-bg': "url('@images/intro_bg.jpg')",
-        'story-bg': "url('@images/story_bg.jpg')",
-        'character-bg': "url('@images/character_bg.jpg')",
-        'character-bg-sp': "url('@images/character_bg_sp.jpg')",
-        character_border: "url('@images/character_border.png')",
-        close_icon: "url('@images/close_icon.png')"
+        'main-bg': "url('@images/fv_main_bg.webp')",
+        'main-bg-sp': "url('@images/fv_main_bg_sp.webp')",
+        'intro-bg': "url('@images/intro_bg.webp')",
+        'story-bg': "url('@images/story_bg.webp')",
+        'character-bg': "url('@images/character_bg.webp')",
+        'character-bg-sp': "url('@images/character_bg_sp.webp')",
+        character_border: "url('@images/character_border.webp')",
+        close_icon: "url('@images/close_icon.webp')"
       },
       fontFamily: {
         seasons: ['the-seasons', 'sans-serif'],

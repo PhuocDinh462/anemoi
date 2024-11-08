@@ -5,3 +5,4 @@ export const WIDTH_MIN = 300;
 
 export const WIDTH_XS = 499;
 export const WIDTH_SM = 699;
+export const WIDTH_MD = 899;

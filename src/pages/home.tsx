@@ -8,8 +8,16 @@ import Story from '@/components/story';
 import { createRef, useEffect, useState, useRef } from 'react';
 import Loading from '@/components/loading';
 import { Backdrop } from '@mui/material';
-import { IMAGES, anemoi_logo_anime1, anemoi_logo_anime2 } from '@/constants/images';
-import { WIDTH_MIN } from '@/constants/size';
+import {
+  IMAGES_COMMON,
+  anemoi_logo_anime1,
+  anemoi_logo_anime2,
+  IMAGES_MD,
+  IMAGES_MAX_MD,
+  IMAGES_SM,
+  IMAGES_MAX_SM
+} from '@/constants/images';
+import { WIDTH_MIN, WIDTH_MD, WIDTH_SM } from '@/constants/size';
 import FontFaceObserver from 'fontfaceobserver';
 
 export default function Home() {
@@ -69,7 +77,14 @@ export default function Home() {
     };
 
     const loadResources = async () => {
-      await Promise.all([loadImages(IMAGES), loadFonts()])
+      await Promise.all([
+        loadImages([
+          ...IMAGES_COMMON,
+          ...(screen.width >= WIDTH_MD ? IMAGES_MD : IMAGES_MAX_MD),
+          ...(screen.width >= WIDTH_SM ? IMAGES_SM : IMAGES_MAX_SM)
+        ]),
+        loadFonts()
+      ])
         .catch((e) => console.error('Error loading resources:', e))
         .finally(() => setLoadingResourcesComplete(true));
     };
