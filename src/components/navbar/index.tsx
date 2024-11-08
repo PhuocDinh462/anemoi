@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Fade as Hamburger } from 'hamburger-react';
 import { Drawer } from '@mui/material';
 import { anemoi_logo_bk, language_ic } from '@/constants/images';
-import { useSelector } from 'react-redux';
-import { RootState } from '@/redux/store';
 import LanguageMenu from './language_menu';
 import LanguageDrawer from './language_drawer';
 import { WIDTH_MIN } from '@/constants/size';
+import { selectLogoStatus } from '@/redux/slices/navbar.slice';
+import { useSelector } from 'react-redux';
 
 export default function Navbar(props: {
   sections: string[];
   refs: React.RefObject<HTMLDivElement>[];
 }) {
   const { sections, refs } = props;
-  const showLogo = useSelector((state: RootState) => state.navbar.showLogo);
+  const logoStatus = useSelector(selectLogoStatus);
 
   const scrollToSelectedSection = (index: number) => {
     if (refs[index].current) refs[index].current.scrollIntoView({ behavior: 'smooth' });
@@ -136,7 +136,7 @@ export default function Navbar(props: {
         <div
           className={`w-24 lg:w-[6%] h-full absolute left-0 bg-white py-[.4%] px-[.8%] ml-[1%]
           flex justify-center items-center cursor-pointer max-md:invisible
-          ${showLogo ? 'opacity-100 visible' : 'opacity-0 invisible'}
+          ${logoStatus ? 'opacity-100 visible' : 'opacity-0 invisible'}
           transition-all ease-in-out duration-500
           `}
           onClick={() => scrollToSelectedSection(0)} // Scroll to top
