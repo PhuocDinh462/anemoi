@@ -105,7 +105,7 @@ import story_bg from '@images/story_bg.webp';
 import character_bg from '@images/character_bg.webp';
 import character_bg_sp from '@images/character_bg_sp.webp';
 import character_border from '@images/character_border.webp';
-import close_icon from '@images/close_icon.webp';
+import close_ic from '@images/close_icon.webp';
 
 import language_icon from '@images/language.svg';
 export const language_ic = language_icon;
@@ -127,8 +127,6 @@ export const IMAGES_COMMON = [
   chara_leaf_1,
   chara_leaf_2,
   chara_leaf_3,
-  key_logo_black,
-  key_logo_white,
   play_bt,
   character_1,
   character_bt_1,
@@ -152,12 +150,12 @@ export const IMAGES_COMMON = [
   character_bg,
   character_bg_sp,
   character_border,
-  close_icon,
-  language_icon
+  close_ic,
+  language_ic
 ];
 
 export const IMAGES_MD = [fv_main_bg];
 export const IMAGES_MAX_MD = [fv_main_bg_sp];
 
-export const IMAGES_SM = [movie_thum1];
-export const IMAGES_MAX_SM = [movie_thum1_sp];
+export const IMAGES_SM = [movie_thum1, key_logo_white];
+export const IMAGES_MAX_SM = [movie_thum1_sp, key_logo_black];
