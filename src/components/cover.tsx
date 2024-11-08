@@ -1,5 +1,5 @@
 import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from '@/constants/images';
-import { WIDTH_MD, WIDTH_SM } from '@/constants/size';
+import { WIDTH_SM } from '@/constants/size';
 import { Link } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -64,7 +64,7 @@ export default function Cover() {
       sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]"
       ref={blockRef}>
       {/* BG */}
-      {windowWidth < WIDTH_MD && (
+      {windowWidth < WIDTH_SM && (
         <div className="-z-50">
           <img src={fv_main_bg_sp} alt="fv_main_bg_sp" className="object-cover object-top" />
         </div>
