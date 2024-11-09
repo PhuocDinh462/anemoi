@@ -36,6 +36,7 @@ export default function Movie() {
           key={i}
           src={`${windowWidth < WIDTH_SM ? movie_thum1_sp : movie_thum1}`}
           className={`${currentSlide !== i ? 'blur animate-blurInAnime' : 'animate-fadeAnime'}`}
+          alt="movie_thum1"
         />
       );
     }
@@ -84,6 +85,7 @@ export default function Movie() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
           pointer-events-none w-[18%]
           sm:w-[4%]"
+          alt="play_bt"
         />
       </div>
 

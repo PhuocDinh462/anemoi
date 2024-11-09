@@ -131,7 +131,7 @@ export default function CharacterBox() {
                 className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
                 md:w-[54%] md:top-[1%]
                 top-[18%] animate-charaAnime">
-                <img src={character.image} width="100%" />
+                <img src={character.image} width="100%" alt={character.id} />
               </div>
 
               {/* Text box */}
@@ -240,7 +240,7 @@ export default function CharacterBox() {
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -right-[10%]
         max-sm:hidden"
         onClick={() => nextChara()}>
-        <img src={arrow_chara_right} />
+        <img src={arrow_chara_right} alt="arrow_chara_right" />
       </div>
 
       {/* Arrow left */}
@@ -248,7 +248,7 @@ export default function CharacterBox() {
         className="w-[69px] cursor-pointer absolute top-1/2 -translate-y-1/2  -left-[10%]
         max-sm:hidden"
         onClick={() => prevChara()}>
-        <img src={arrow_chara_left} />
+        <img src={arrow_chara_left} alt="arrow_chara_left" />
       </div>
     </div>
   );

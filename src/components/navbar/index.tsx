@@ -80,6 +80,7 @@ export default function Navbar(props: {
         bm:hidden size-fit absolute top-0 right-0">
         <Hamburger
           direction="right"
+          label="Show menu"
           color="#fff"
           size={26}
           distance="lg"
@@ -110,6 +111,7 @@ export default function Navbar(props: {
           <img
             className="absolute top-4 right-12 cursor-pointer size-[26px] mr-3 animate-dropDown"
             src={language_ic}
+            alt="language_ic"
             onClick={() => {
               setOpenNavbarDrawer(false);
               setOpenLanguageDrawer(true);
@@ -141,7 +143,7 @@ export default function Navbar(props: {
           `}
           onClick={() => scrollToSelectedSection(0)} // Scroll to top
         >
-          <img src={anemoi_logo_bk} sizes="100%" />
+          <img src={anemoi_logo_bk} sizes="100%" alt="anemoi_logo_bk" />
         </div>
         <div className="flex items-center justify-center w-full">
           |

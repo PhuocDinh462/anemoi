@@ -7,13 +7,18 @@ export default function Footer() {
   return (
     <footer className="py-6 flex flex-col items-center justify-center relative">
       {/* Logo */}
-      <img src={anemoi_logo_bk} className="md:w-[15%] sm:w-[30%] w-1/2" />
+      <img src={anemoi_logo_bk} alt="anemoi_logo_bk" className="md:w-[15%] sm:w-[30%] w-1/2" />
 
       {/* Social media */}
       <div className="flex items-center justify-center mt-10 md:space-x-3 space-x-5">
         {SocialMediaArr.map((socialMedia, index) => (
-          <Link key={index} href={socialMedia.href} target="_blank" rel="noopener noreferrer">
-            <img src={socialMedia.icon} className="w-7" />
+          <Link
+            aria-label={`Go to ${socialMedia.label}`}
+            key={index}
+            href={socialMedia.href}
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src={socialMedia.icon} className="w-7" alt={socialMedia.label} />
           </Link>
         ))}
       </div>

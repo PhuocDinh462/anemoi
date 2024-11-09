@@ -74,10 +74,16 @@ export default function LanguageMenu() {
 
   return (
     <>
-      <IconButton id="change-language-button" sx={{ p: 0 }} size="small" onClick={handleClick}>
+      <IconButton
+        id="change-language-button"
+        aria-label="Change language"
+        sx={{ p: 0 }}
+        size="small"
+        onClick={handleClick}>
         <img
           className="cursor-pointer py-4 size-14
-        hover:scale-110 transition-all duration-300"
+          hover:scale-110 transition-all duration-300"
+          alt="language_ic"
           src={language_ic}
         />
       </IconButton>
@@ -99,7 +105,12 @@ export default function LanguageMenu() {
                 {lng.name}
               </div>
               {currentLanguage === lng.code && (
-                <img className="ml-5 animate-spin" src={anemoi_logo_anime1} width={26} />
+                <img
+                  className="ml-5 animate-spin"
+                  src={anemoi_logo_anime1}
+                  width={26}
+                  alt="anemoi_logo_anime1"
+                />
               )}
             </div>
           </StyledMenuItem>
