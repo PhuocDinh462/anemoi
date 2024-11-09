@@ -56,14 +56,14 @@ export default function Home() {
     const loadFonts = async () => {
       const timeout = 30000;
       const fontTheSeasons = new FontFaceObserver('the-seasons');
-      const fontTsukumin = new FontFaceObserver('tsukumin');
+      const fontMincho = new FontFaceObserver('Shippori Mincho');
       const fontThomasita = new FontFaceObserver('thomasita');
       const fontMongolia = new FontFaceObserver('mongolia');
       const fontVoyage = new FontFaceObserver('voyage');
 
       return Promise.all([
         fontTheSeasons.load(null, timeout),
-        fontTsukumin.load(null, timeout),
+        fontMincho.load(null, timeout),
         fontThomasita.load(null, timeout),
         fontMongolia.load(null, timeout),
         fontVoyage.load(null, timeout)

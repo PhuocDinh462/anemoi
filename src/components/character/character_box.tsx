@@ -108,7 +108,7 @@ export default function CharacterBox() {
               {currentLanguage?.code === 'jp' && (
                 <div
                   className="md:top-[16%] left-[4%] -z-[1]
-                  [writing-mode:vertical-rl] font-tsukumin size-fit
+                  [writing-mode:vertical-rl] font-mincho size-fit
                   sm:text-lg sm:top-[25%] sm:absolute
                   max-sm:ml-10 max-sm:mt-10
                   max-xs:text-sm max-xs:ml-5
@@ -157,7 +157,7 @@ export default function CharacterBox() {
                     {t(`${currentChara.id}.name`)}
                   </span>
                   {currentLanguage?.code === 'jp' && (
-                    <span className="text-[.4em] align-[8px] whitespace-nowrap font-tsukumin">
+                    <span className="text-[.4em] align-[8px] whitespace-nowrap font-mincho">
                       {currentChara.furigana}
                     </span>
                   )}
@@ -220,7 +220,7 @@ export default function CharacterBox() {
                 </div>
               </div>
 
-              {/* Character name */}
+              {/* Character latin */}
               <div
                 className={`absolute left-[44%] md:bottom-[20%] font-thomasita sm:text-8xl -z-10 select-none
                 sm:bottom-[10%]

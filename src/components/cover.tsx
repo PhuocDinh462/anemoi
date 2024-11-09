@@ -77,11 +77,11 @@ export default function Cover() {
         {currentLanguage === 'jp' && (
           <div
             className="bm:mr-14 xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
-          text-white tracking-[0.25em] drop-shadow-slogan font-tsukumin">
+          text-white tracking-[0.25em] drop-shadow-slogan font-mincho">
             約束は、
             <br />
             風のなかに
-            <span className="tracking-normal"> ――</span>
+            <span className="tracking-wider"> ――</span>
           </div>
         )}
 

@@ -29,7 +29,7 @@ export default {
       },
       fontFamily: {
         seasons: ['the-seasons', 'sans-serif'],
-        tsukumin: ['tsukumin', 'sans-serif'],
+        mincho: ['Shippori Mincho', 'sans-serif'],
         thomasita: ['thomasita', 'sans-serif'],
         mongolia: ['mongolia', 'sans-serif'],
         voyage: ['voyage', 'sans-serif']

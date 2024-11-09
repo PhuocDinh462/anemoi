@@ -2,37 +2,36 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@font-face {
-  font-family: 'the-seasons';
-  src: url('@fonts/the-seasons.ttf') format('opentype');
-  font-weight: normal;
+.shippori-mincho-regular {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'tsukumin';
-  src: url('@fonts/FOT-TsukuMin Pro L.otf') format('opentype');
+  font-family: 'the-seasons';
+  src: url('@fonts/the-seasons.woff2') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'thomasita';
-  src: url('@fonts/Thomasita.otf') format('opentype');
+  src: url('@fonts/Thomasita.woff2') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'mongolia';
-  src: url('@fonts/TKSouthMongolia-Regular.ttf') format('opentype');
+  src: url('@fonts/TKSouthMongolia-Regular.woff2') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'voyage';
-  src: url('@fonts/SVN-BonVoyage-Regular.otf') format('opentype');
+  src: url('@fonts/SVN-BonVoyage-Regular.woff2') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
