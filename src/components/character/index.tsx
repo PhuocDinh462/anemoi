@@ -34,14 +34,14 @@ export default function Character() {
   const { i18n } = useTranslation();
   const componentHeight =
     i18n.language === 'jp'
-      ? 'md:min-h-[950px] sm:min-h-[950px]'
-      : 'lg:min-h-[950px] md:min-h-[1000px] bm:min-h-[1050px] sm:min-h-[1150px]';
+      ? 'md:min-h-[950px] sm:min-h-[950px] min-h-[1250px]'
+      : 'lg:min-h-[950px] md:min-h-[1000px] bm:min-h-[1050px] sm:min-h-[1150px] min-h-[1450px]';
 
   return (
     <div
       className={`w-full bg-character-bg-sp sm:bg-character-bg
       bg-cover bg-no-repeat bg-bottom relative overflow-hidden
-      ${componentHeight} min-h-[1250px] xl:h-screen`}
+      ${componentHeight} xl:h-screen`}
       ref={componentRef}>
       {/* Text box */}
       <div
