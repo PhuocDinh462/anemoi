@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" name="anemoi" content="Implemented by PhuocDinh462" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Anemoi - A beautiful and engaging visual novel game by Key. Explore the story, characters, and more. This website is implemented by PhuocDinh462"
+    />
     <link id="favicon" rel="icon" type="image/svg+xml" href="key_logo_black.webp" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +14,6 @@
       href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
       rel="stylesheet"
     />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>anemoi -アネモイ- | Key</title>
     <script>
@@ -21,10 +23,8 @@
           window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         favicon.href = isDarkMode ? 'key_logo_white.webp' : 'key_logo_black.webp';
       }
-
       // Initial check
       updateFavicon();
-
       // Listen for changes in the color scheme
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
     </script>

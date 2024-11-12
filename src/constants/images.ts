@@ -147,8 +147,6 @@ export const IMAGES_COMMON = [
   arrow_chara_left,
   intro_bg,
   story_bg,
-  character_bg,
-  character_bg_sp,
   character_border,
   close_ic,
   language_ic
@@ -157,5 +155,5 @@ export const IMAGES_COMMON = [
 export const IMAGES_MD = [fv_main_bg];
 export const IMAGES_MAX_MD = [fv_main_bg_sp];
 
-export const IMAGES_SM = [movie_thum1, key_logo_white];
-export const IMAGES_MAX_SM = [movie_thum1_sp, key_logo_black];
+export const IMAGES_SM = [movie_thum1, key_logo_white, character_bg];
+export const IMAGES_MAX_SM = [movie_thum1_sp, key_logo_black, character_bg_sp];
