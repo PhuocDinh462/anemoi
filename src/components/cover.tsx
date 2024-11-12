@@ -1,5 +1,5 @@
 import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from '@/constants/images';
-import { WIDTH_SM } from '@/constants/size';
+import { WIDTH_MD, WIDTH_SM } from '@/constants/size';
 import { Link } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -122,7 +122,7 @@ export default function Cover() {
           md:w-[4%] md:bottom-[30px]
           sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]">
           <img
-            src={`${windowWidth >= WIDTH_SM ? key_logo_white : key_logo_black}`}
+            src={`${windowWidth >= WIDTH_MD ? key_logo_white : key_logo_black}`}
             alt="Key"
             className="align-bottom"
           />
