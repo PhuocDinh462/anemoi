@@ -97,7 +97,7 @@ Là người có hiểu biết sâu rộng về lĩnh vực cơ khí, cô thư�
 Trong trường hợp khẩn cấp, cô nắm chặt lấy chiếc ô và "hạ cánh an toàn" mà không một chút sợ hãi hay do dự nào.
 Ngoại hình nhỏ nhắn và giọng nói dịu dàng là những gì mà người khác nhận xét về cô.
 Cô sống cùng cha ở tầng 2 tại một công xưởng.`},QC={alias:"Địa đồ thiếu nữ",name:"Awayuki Hiiro",quote:"Lựa chọn sáng suốt đấy.",artwork:"Fumuyun",profile:`Một cô gái sống ở đài thiên văn.
-Cô luôn khao khát tìm kiếm những điều tốt đẹp, luôn tự đặt ra những câu hỏi lớn lao, khó để mà có câu trả lời chính xác, chẳng hạn như "ý nghĩa của cuộc đời này là gì?", và ghi chép xuống một tấm bản đồ.
+Cô luôn khao khát tìm kiếm những điều tốt đẹp, luôn tự đặt ra những câu hỏi lớn lao, khó để mà có câu trả lời chính xác, chẳng hạn như "ý nghĩa của cuộc đời này là gì?", rồi ghi chép xuống một tấm bản đồ.
 Mặc dù là một thiên tài và hoa hậu tự xưng, rất ít người giao du với cô vì tính cách lập dị và tò mò quá mức.
 Thỉnh thoảng cô ấy thốt lên "qua nhà hàng xóm chơi thôi" rồi lẩn đi đâu mất.
 Món ăn ưa thích của cô là Konpeitō.`},YC={alias:"Cô đưa thư nhiệt thành",name:"Shirato Koyomi",quote:"Có một bức thư vô cùng quan trọng mà tôi đã luôn tìm kiếm địa chỉ người nhận nó...từ rất lâu rồi.",artwork:"Nagayama Yuunon",profile:`Người điều hành bưu điện duy nhất trong thị trấn.
