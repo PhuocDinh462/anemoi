@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
 import { useTranslation } from 'react-i18next';
+import React from 'react';
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -50,6 +51,7 @@ export default function Cover() {
   }, [dispatch]);
 
   const { i18n } = useTranslation();
+  const t = i18n.t;
   const currentLanguage = i18n.language;
 
   const logoComponent = (
@@ -78,9 +80,14 @@ export default function Cover() {
           <div
             className="bm:mr-14 xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
           text-white tracking-[0.25em] drop-shadow-slogan font-mincho">
-            約束は、
-            <br />
-            風のなかに
+            {t('title')
+              .split('\n')
+              .map((value, index) => (
+                <React.Fragment key={index}>
+                  {index !== 0 && <br />}
+                  {value}
+                </React.Fragment>
+              ))}
             <span className="tracking-wider"> ――</span>
           </div>
         )}
@@ -93,7 +100,7 @@ export default function Cover() {
             <div
               className="drop-shadow-slogan text-white font-mongolia tracking-widest
               md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
-              Lời hẹn ước trong gió
+              {t('title')}
             </div>
           </div>
         )}

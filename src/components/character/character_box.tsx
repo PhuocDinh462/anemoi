@@ -115,10 +115,10 @@ export default function CharacterBox() {
                   animate-fadeIn">
                   {t(`${currentChara.id}.quote`)
                     .split('\n')
-                    .map((part, index) => (
+                    .map((value, index) => (
                       <React.Fragment key={index}>
                         <span className="size-fit bg-white py-[4px] px-[2px]">
-                          {part}
+                          {value}
                           <br className="sm:hidden" />
                         </span>
                       </React.Fragment>
@@ -188,9 +188,9 @@ export default function CharacterBox() {
                 <div className={textStyle} style={{ fontFamily: currentFont }}>
                   {t(`${currentChara.id}.profile`)
                     .split('\n')
-                    .map((part, index) => (
+                    .map((value, index) => (
                       <React.Fragment key={index}>
-                        {part}
+                        {value}
                         <br />
                       </React.Fragment>
                     ))}
