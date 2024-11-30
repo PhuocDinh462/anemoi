@@ -98,7 +98,7 @@ export default function Home() {
 
     loadLogo();
     loadResources();
-  }, []);
+  }, [tabletMode]);
 
   return (
     <div onDragStart={(e) => e.preventDefault()}>
