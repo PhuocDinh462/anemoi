@@ -73,7 +73,7 @@ export default function Cover() {
     <div
       className={`relative overflow-hidden md:h-screen bg-cover bg-no-repeat
       sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]
-      ${!mobileMode && 'md:bg-top md:bg-main-bg'}`}
+      ${!tabletMode && 'md:bg-top md:bg-main-bg'}`}
       ref={blockRef}>
       {/* BG */}
       {windowWidth < WIDTH_SM && (

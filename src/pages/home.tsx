@@ -15,7 +15,8 @@ import {
   IMAGES_MD,
   IMAGES_MAX_MD,
   IMAGES_SM,
-  IMAGES_MAX_SM
+  IMAGES_MAX_SM,
+  IMAGES_TABLET
 } from '@/constants/images';
 import { WIDTH_MIN, WIDTH_MD, WIDTH_SM } from '@/constants/size';
 import FontFaceObserver from 'fontfaceobserver';
@@ -28,6 +29,8 @@ export default function Home() {
   const [loadingBackdropComplete, setLoadingBackdropComplete] = useState(false);
   const [loadingTimeout, setLoadingTimeout] = useState(false);
   const loadingMinDuration = 3000;
+
+  const tabletMode = window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -80,8 +83,12 @@ export default function Home() {
       await Promise.all([
         loadImages([
           ...IMAGES_COMMON,
-          ...(screen.width >= WIDTH_MD ? IMAGES_MD : IMAGES_MAX_MD),
-          ...(screen.width >= WIDTH_SM ? IMAGES_SM : IMAGES_MAX_SM)
+          ...(tabletMode
+            ? IMAGES_TABLET
+            : window.innerWidth >= WIDTH_MD
+              ? IMAGES_MD
+              : IMAGES_MAX_MD),
+          ...(window.innerWidth >= WIDTH_SM ? IMAGES_SM : IMAGES_MAX_SM)
         ]),
         loadFonts()
       ])

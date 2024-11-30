@@ -157,3 +157,5 @@ export const IMAGES_MAX_MD = [fv_main_bg_sp, key_logo_black];
 
 export const IMAGES_SM = [movie_thum1, character_bg];
 export const IMAGES_MAX_SM = [movie_thum1_sp, character_bg_sp];
+
+export const IMAGES_TABLET = [fv_main_bg_sp, key_logo_black];

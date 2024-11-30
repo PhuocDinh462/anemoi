@@ -1,10 +1,11 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { CHARACTERS } from '@/constants/characters';
 import React from 'react';
 import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
+import { WIDTH_MD } from '@/constants/size';
 
 export default function CharacterBox() {
   const [charaIndex, setCharaIndex] = useState(0);
@@ -57,6 +58,18 @@ export default function CharacterBox() {
       })
     );
   };
+
+  const [tabletMode, setTabletMode] = useState(false);
+
+  const handleResize = () => {
+    setTabletMode(window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const textStyle =
     'text-white ' +
@@ -128,9 +141,11 @@ export default function CharacterBox() {
 
               {/* Character image */}
               <div
-                className="absolute align-top sm:w-[70%] mt-2 -z-20 sm:top-[10%]
+                className={`absolute align-top sm:w-[70%] mt-2 -z-20
                 md:w-[54%] md:top-[1%]
-                top-[18%] animate-charaAnime">
+                ${currentLanguage?.code === 'jp' ? 'bm:top-[5%] sm:top-[12%]' : 'bm:top-[14%] sm:top-[22%]'}
+                top-[18%] animate-charaAnime
+                ${tabletMode && '!top-[10%]'}`}>
                 <img src={character.image} width="100%" alt={character.id} />
               </div>
 
