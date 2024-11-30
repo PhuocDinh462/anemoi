@@ -9,16 +9,19 @@ import React from 'react';
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [tabletMode, setTabletMode] = useState(false);
+  const [mobileMode, setMobileMode] = useState(false);
   const blockRef = useRef(null);
   const dispatch = useDispatch();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+    setTabletMode(window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD);
+    setMobileMode(window.innerWidth < window.innerHeight);
   };
 
   useEffect(() => {
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -57,7 +60,11 @@ export default function Cover() {
   const currentLanguage = i18n.language;
 
   const logoComponent = (
-    <div className={`${currentLanguage === 'jp' && 'bm:mr-32'} min-w-64 w-1/2 md:w-100 sm:w-2/5`}>
+    <div
+      className={`min-w-64
+      ${currentLanguage === 'jp' && !mobileMode && 'bm:mr-32'}
+      ${tabletMode ? 'w-1/2' : 'md:w-100 w-1/2 sm:w-2/5'}
+      ${currentLanguage !== 'jp' && tabletMode && '!size-3/4'}`}>
       <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
     </div>
   );
@@ -66,7 +73,7 @@ export default function Cover() {
     <div
       className={`relative overflow-hidden md:h-screen bg-cover bg-no-repeat
       sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]
-      ${windowWidth > windowHeight && 'md:bg-top md:bg-main-bg'}`}
+      ${!mobileMode && 'md:bg-top md:bg-main-bg'}`}
       ref={blockRef}>
       {/* BG */}
       {windowWidth < WIDTH_SM && (
@@ -77,12 +84,13 @@ export default function Cover() {
 
       {/* Slogan & Logo */}
       <div
-        className="absolute 2xs:top-11 top-5 w-full flex items-center justify-center 
-        max-bm:flex-col-reverse animate-fadeDown">
+        className={`absolute 2xs:top-11 top-5 w-full flex items-center justify-center animate-fadeDown
+        ${mobileMode && 'flex-col-reverse'}`}>
         {currentLanguage === 'jp' && (
           <div
-            className="bm:mr-14 xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
-          text-white tracking-[0.25em] drop-shadow-slogan font-mincho">
+            className={`xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
+          text-white tracking-[0.25em] drop-shadow-slogan font-mincho
+            ${!mobileMode && 'mr-14'} ${tabletMode && '!text-2xl/10'}`}>
             {t('title')
               .split('\n')
               .map((value, index) => (
@@ -98,11 +106,12 @@ export default function Cover() {
         {currentLanguage === 'jp' ? (
           logoComponent
         ) : (
-          <div className="flex flex-col justify-center items-center">
+          <div className={`flex flex-col justify-center items-center`}>
             {logoComponent}
             <div
-              className="drop-shadow-slogan text-white font-mongolia tracking-widest
-              md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl">
+              className={`drop-shadow-slogan text-white font-mongolia tracking-widest
+              md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl
+              ${tabletMode && '!text-7xl'}`}>
               {t('title')}
             </div>
           </div>
@@ -128,11 +137,12 @@ export default function Cover() {
           href="https://key.visualarts.gr.jp/"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative w-[12%]
+          className={`relative w-[12%]
           md:w-[4%] md:bottom-[30px]
-          sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]">
+          sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]
+          ${tabletMode && '!w-[8%]'}`}>
           <img
-            src={`${windowWidth >= WIDTH_MD && windowWidth > windowHeight ? key_logo_white : key_logo_black}`}
+            src={`${tabletMode ? key_logo_black : windowWidth < WIDTH_MD ? key_logo_black : key_logo_white}`}
             alt="Key"
             className="align-bottom"
           />
