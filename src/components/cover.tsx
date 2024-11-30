@@ -9,11 +9,13 @@ import React from 'react';
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const blockRef = useRef(null);
   const dispatch = useDispatch();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
   };
 
   useEffect(() => {
@@ -62,8 +64,9 @@ export default function Cover() {
 
   return (
     <div
-      className="relative overflow-hidden h-[auto] md:h-screen min-h-[auto] bg-cover bg-no-repeat md:bg-top md:bg-main-bg
-      sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]"
+      className={`relative overflow-hidden md:h-screen bg-cover bg-no-repeat
+      sm:bg-bottom sm:bg-main-bg-sp sm:min-h-[900px]
+      ${windowWidth > windowHeight && 'md:bg-top md:bg-main-bg'}`}
       ref={blockRef}>
       {/* BG */}
       {windowWidth < WIDTH_SM && (
@@ -129,7 +132,7 @@ export default function Cover() {
           md:w-[4%] md:bottom-[30px]
           sm:absolute sm:w-[8%] sm:bottom-[10%] sm:right-[50px]">
           <img
-            src={`${windowWidth >= WIDTH_MD ? key_logo_white : key_logo_black}`}
+            src={`${windowWidth >= WIDTH_MD && windowWidth > windowHeight ? key_logo_white : key_logo_black}`}
             alt="Key"
             className="align-bottom"
           />
