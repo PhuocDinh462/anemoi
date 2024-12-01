@@ -120,7 +120,7 @@ export default function CharacterBox() {
               {/* Vertical quote */}
               {currentLanguage?.code === 'jp' && (
                 <div
-                  className="md:top-[16%] left-[4%] -z-[1]
+                  className="md:top-[20%] left-[4%] -z-[1]
                   [writing-mode:vertical-rl] font-mincho size-fit
                   sm:text-lg sm:top-[25%] sm:absolute
                   max-sm:ml-10 max-sm:mt-10
@@ -142,7 +142,7 @@ export default function CharacterBox() {
               {/* Character image */}
               <div
                 className={`absolute align-top sm:w-[70%] mt-2 -z-20
-                md:w-[54%] md:top-[1%]
+                md:w-[54%] md:top-[5%]
                 ${currentLanguage?.code === 'jp' ? 'bm:top-[5%] sm:top-[12%]' : 'bm:top-[14%] sm:top-[22%]'}
                 top-[18%] animate-charaAnime
                 ${tabletMode && '!top-[10%]'}`}>

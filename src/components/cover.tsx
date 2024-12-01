@@ -11,13 +11,16 @@ export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [tabletMode, setTabletMode] = useState(false);
   const [mobileMode, setMobileMode] = useState(false);
+  const mobileModeRatio = 0.9; // A certain ratio by to determine mobile mode
   const blockRef = useRef(null);
   const dispatch = useDispatch();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
     setTabletMode(window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD);
-    setMobileMode(window.innerWidth < window.innerHeight);
+    setMobileMode(
+      window.innerWidth / window.innerHeight < mobileModeRatio || window.innerWidth <= WIDTH_SM
+    );
   };
 
   useEffect(() => {
@@ -59,13 +62,29 @@ export default function Cover() {
   const t = i18n.t;
   const currentLanguage = i18n.language;
 
-  const logoComponent = (
+  const logo = (
     <div
-      className={`min-w-64
-      ${currentLanguage === 'jp' && !mobileMode && 'bm:mr-32'}
+      className={`min-w-64 mx-14
       ${tabletMode ? 'w-1/2' : 'md:w-100 w-1/2 sm:w-2/5'}
-      ${currentLanguage !== 'jp' && tabletMode && '!size-3/4'}`}>
+      ${currentLanguage !== 'jp' && tabletMode && '!size-[60%]'}`}>
       <img src={anemoi_logo} alt="anemoi アネモイ" className="object-cover drop-shadow-logo" />
+    </div>
+  );
+
+  const sloganJp = (
+    <div
+      className={`xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
+    text-white tracking-[0.25em] drop-shadow-slogan font-mincho
+      ${tabletMode && '!text-2xl/10'}`}>
+      {t('title')
+        .split('\n')
+        .map((value, index) => (
+          <React.Fragment key={index}>
+            {index !== 0 && <br />}
+            {value}
+          </React.Fragment>
+        ))}
+      <span className="tracking-wider"> ――</span>
     </div>
   );
 
@@ -86,28 +105,13 @@ export default function Cover() {
       <div
         className={`absolute 2xs:top-11 top-5 w-full flex items-center justify-center animate-fadeDown
         ${mobileMode && 'flex-col-reverse'}`}>
-        {currentLanguage === 'jp' && (
-          <div
-            className={`xs:text-lg/9 2xs:text-base/7 text-sm/6 2xs:mt-6 mt-2 [writing-mode:vertical-rl] font-light
-          text-white tracking-[0.25em] drop-shadow-slogan font-mincho
-            ${!mobileMode && 'mr-14'} ${tabletMode && '!text-2xl/10'}`}>
-            {t('title')
-              .split('\n')
-              .map((value, index) => (
-                <React.Fragment key={index}>
-                  {index !== 0 && <br />}
-                  {value}
-                </React.Fragment>
-              ))}
-            <span className="tracking-wider"> ――</span>
-          </div>
-        )}
+        {currentLanguage === 'jp' && sloganJp}
 
         {currentLanguage === 'jp' ? (
-          logoComponent
+          logo
         ) : (
           <div className={`flex flex-col justify-center items-center`}>
-            {logoComponent}
+            {logo}
             <div
               className={`drop-shadow-slogan text-white font-mongolia tracking-widest
               md:text-5xl xs:text-6xl 2xs:text-5xl text-4xl
@@ -115,6 +119,11 @@ export default function Cover() {
               {t('title')}
             </div>
           </div>
+        )}
+
+        {/* Dummy component for logo's alignment */}
+        {currentLanguage === 'jp' && (
+          <div className={`${mobileMode ? 'hidden' : 'invisible'}`}>{sloganJp}</div>
         )}
       </div>
 
