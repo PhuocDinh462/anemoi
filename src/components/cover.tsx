@@ -11,7 +11,7 @@ export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [tabletMode, setTabletMode] = useState(false);
   const [mobileMode, setMobileMode] = useState(false);
-  const mobileModeRatio = 0.9; // A certain ratio by to determine mobile mode
+  const mobileModeRatio = 0.8; // A certain ratio by to determine mobile mode
   const blockRef = useRef(null);
   const dispatch = useDispatch();
 

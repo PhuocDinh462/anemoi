@@ -32,21 +32,21 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
   return (
     <>
       <div
-        className={`${leafStyle} bg-left`}
+        className={`${leafStyle} bg-left sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY}px`,
           backgroundImage: `url('${leaf?.leaf1_url}')`
         }}
       />
       <div
-        className={`${leafStyle} bg-center`}
+        className={`${leafStyle} bg-left sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY / 2}px`,
           backgroundImage: `url('${leaf?.leaf2_url}')`
         }}
       />
       <div
-        className={`${leafStyle} bg-right`}
+        className={`${leafStyle} bg-right sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY / 3}px`,
           backgroundImage: `url('${leaf?.leaf3_url}')`
