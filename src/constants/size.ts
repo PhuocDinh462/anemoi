@@ -1,4 +1,4 @@
-export const LEAF_START = 800;
+export const LEAF_START = 900;
 export const LEAF_HEIGHT = 1200;
 
 export const WIDTH_MIN = 300;
