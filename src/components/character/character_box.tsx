@@ -28,8 +28,16 @@ export default function CharacterBox() {
     else if (touchEndX - touchStartX > 50) prevChara();
   };
 
-  const nextChara = () => setCharaIndex((charaIndex + 1) % CHARACTERS.length);
-  const prevChara = () => setCharaIndex((charaIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
+  const nextChara = () => changeChara((charaIndex + 1) % CHARACTERS.length);
+  const prevChara = () => changeChara((charaIndex - 1 + CHARACTERS.length) % CHARACTERS.length);
+
+  const changeChara = async (index: number) => {
+    document.body.style.cursor = 'wait';
+    await loadCharaImages()
+      .then(() => setCharaIndex(index))
+      .catch((e) => console.error('Error loading images:', e))
+      .finally(() => (document.body.style.cursor = 'auto'));
+  };
 
   const { t } = useTranslation();
   const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
@@ -101,13 +109,7 @@ export default function CharacterBox() {
                 charaIndex === index ? character.thumbnailActive : character.thumbnail
               }')`
             }}
-            onClick={async () => {
-              document.body.style.cursor = 'wait';
-              await loadCharaImages()
-                .then(() => setCharaIndex(index))
-                .catch((e) => console.error('Error loading images:', e))
-                .finally(() => (document.body.style.cursor = 'auto'));
-            }}
+            onClick={() => changeChara(index)}
           />
         ))}
       </div>
