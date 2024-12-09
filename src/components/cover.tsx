@@ -18,20 +18,21 @@ export default function Cover() {
   const dispatch = useDispatch();
 
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-    setTabletMode(window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD);
-    setMobileMode(
-      window.innerWidth / window.innerHeight < mobileModeRatio || window.innerWidth <= WIDTH_SM
-    );
+    try {
+      setWindowWidth(window.innerWidth);
+      setTabletMode(window.innerWidth < window.innerHeight && window.innerWidth > WIDTH_MD);
+      setMobileMode(
+        window.innerWidth / window.innerHeight < mobileModeRatio || window.innerWidth <= WIDTH_SM
+      );
+    } finally {
+      setCheckScreenModeComplete(true);
+    }
   };
 
   useEffect(() => {
     handleResize();
     window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      setCheckScreenModeComplete(true);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
