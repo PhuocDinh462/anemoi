@@ -96,7 +96,7 @@ export default function Cover() {
 
   return (
     <>
-      {checkScreenModeComplete && (
+      {checkScreenModeComplete ? (
         <div
           className={`relative overflow-hidden md:h-screen bg-cover bg-no-repeat
           sm:bg-bottom sm:min-h-[900px] sm:bg-main-bg-sp
@@ -129,7 +129,7 @@ export default function Cover() {
               </div>
             )}
 
-            {/* Dummy component for logo's alignment */}
+            {/* Dummy component for logo's center alignment */}
             {currentLanguage === 'jp' && (
               <div className={`${mobileMode ? 'hidden' : 'invisible'}`}>{sloganJp}</div>
             )}
@@ -174,6 +174,9 @@ export default function Cover() {
             <div className="h-8 w-[.5px] bg-black animate-pathMove" />
           </div>
         </div>
+      ) : (
+        // Dummy component to prevent text box fade down animation in Intro component
+        <div className="h-screen" />
       )}
     </>
   );
