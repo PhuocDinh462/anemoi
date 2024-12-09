@@ -1,11 +1,9 @@
 import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from '@/constants/images';
 import { WIDTH_MD, WIDTH_SM } from '@/constants/size';
-import { Link } from '@mui/material';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
 import { useTranslation } from 'react-i18next';
-import React from 'react';
 
 export default function Cover() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -85,10 +83,10 @@ export default function Cover() {
       {t('title')
         .split('\n')
         .map((value, index) => (
-          <React.Fragment key={index}>
+          <Fragment key={index}>
             {index !== 0 && <br />}
             {value}
-          </React.Fragment>
+          </Fragment>
         ))}
       <span className="tracking-wider"> ――</span>
     </div>
@@ -150,7 +148,7 @@ export default function Cover() {
 
           {/* Key logo */}
           <div className="flex justify-end pr-[4%] pb-[4%]">
-            <Link
+            <a
               href="https://key.visualarts.gr.jp/"
               target="_blank"
               rel="noopener noreferrer"
@@ -163,7 +161,7 @@ export default function Cover() {
                 alt="Key"
                 className="align-bottom"
               />
-            </Link>
+            </a>
           </div>
 
           {/* Scroll */}

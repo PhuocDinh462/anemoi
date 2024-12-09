@@ -2,57 +2,56 @@ import { IconButton, styled } from '@mui/material';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { anemoi_logo_anime1, language_ic } from '@/constants/images';
-import React, { useEffect } from 'react';
+import { useEffect, useState, MouseEvent } from 'react';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
 import { changeLanguage } from '@/i18n';
 import Language from '@/models/language.model';
 
+const StyledMenu = styled((props: MenuProps) => (
+  <Menu
+    elevation={0}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'center'
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'right'
+    }}
+    {...props}
+  />
+))(({ theme }) => ({
+  '& .MuiPaper-root': {
+    borderRadius: 6,
+    marginTop: theme.spacing(1),
+    minWidth: 160,
+    color: 'rgb(55, 65, 81)',
+    boxShadow:
+      'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+    '& .MuiMenu-list': {
+      padding: '4px 0'
+    },
+    ...theme.applyStyles('dark', {
+      color: theme.palette.grey[300]
+    })
+  }
+}));
+
+const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
+  transition: 'all 0.3s ease',
+  '&:hover': {
+    backgroundColor: theme.palette.action.hover
+  }
+}));
+
 export default function LanguageMenu() {
   const currentLanguage = i18n.language;
 
-  // MUI custom menu
-  const StyledMenu = styled((props: MenuProps) => (
-    <Menu
-      elevation={0}
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'center'
-      }}
-      transformOrigin={{
-        vertical: 'top',
-        horizontal: 'right'
-      }}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    '& .MuiPaper-root': {
-      borderRadius: 6,
-      marginTop: theme.spacing(1),
-      minWidth: 160,
-      color: 'rgb(55, 65, 81)',
-      boxShadow:
-        'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
-      '& .MuiMenu-list': {
-        padding: '4px 0'
-      },
-      ...theme.applyStyles('dark', {
-        color: theme.palette.grey[300]
-      })
-    }
-  }));
-
-  const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      backgroundColor: theme.palette.action.hover
-    }
-  }));
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const openLanguageMenu = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
+  const handleClick = (event: MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
 
   const handleClose = () => setAnchorEl(null);
 
@@ -60,7 +59,6 @@ export default function LanguageMenu() {
     changeLanguage(lng.code);
     setAnchorEl(null);
   };
-  /// End MUI menu
 
   useEffect(() => {
     window.addEventListener('resize', handleClose);

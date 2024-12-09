@@ -1,6 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Fragment, TouchEvent } from 'react';
 import { CHARACTERS } from '@/constants/characters';
-import React from 'react';
 import { arrow_chara_left, arrow_chara_right } from '@/constants/images';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
@@ -14,11 +13,11 @@ export default function CharacterBox() {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     touchStartX = e.targetTouches[0].clientX;
   };
 
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
     touchEndX = e.targetTouches[0].clientX;
   };
 
@@ -119,7 +118,7 @@ export default function CharacterBox() {
       {CHARACTERS.map(
         (character, index) =>
           index === charaIndex && (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               {/* Vertical quote */}
               {currentLanguage?.code === 'jp' && (
                 <div
@@ -132,12 +131,12 @@ export default function CharacterBox() {
                   {t(`${currentChara.id}.quote`)
                     .split('\n')
                     .map((value, index) => (
-                      <React.Fragment key={index}>
+                      <Fragment key={index}>
                         <span className="size-fit bg-white py-[4px] px-[2px]">
                           {value}
                           <br className="sm:hidden" />
                         </span>
-                      </React.Fragment>
+                      </Fragment>
                     ))}
                 </div>
               )}
@@ -209,10 +208,10 @@ export default function CharacterBox() {
                   {t(`${currentChara.id}.profile`)
                     .split('\n')
                     .map((value, index) => (
-                      <React.Fragment key={index}>
+                      <Fragment key={index}>
                         {value}
                         <br />
-                      </React.Fragment>
+                      </Fragment>
                     ))}
                 </div>
 
@@ -251,7 +250,7 @@ export default function CharacterBox() {
                 }}>
                 {currentChara.latin}
               </div>
-            </React.Fragment>
+            </Fragment>
           )
       )}
 

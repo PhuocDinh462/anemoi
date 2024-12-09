@@ -1,4 +1,3 @@
-import { Link } from '@mui/material';
 import { anemoi_logo_bk } from '@/constants/images';
 import { SocialMediaArr } from '@/constants/social_media';
 import LeafBox from './leaf_box';
@@ -12,14 +11,14 @@ export default function Footer() {
       {/* Social media */}
       <div className="flex items-center justify-center mt-10 md:space-x-3 space-x-5">
         {SocialMediaArr.map((socialMedia, index) => (
-          <Link
+          <a
             aria-label={`Go to ${socialMedia.label}`}
             key={index}
             href={socialMedia.href}
             target="_blank"
             rel="noopener noreferrer">
             <img src={socialMedia.icon} className="w-7" alt={socialMedia.label} />
-          </Link>
+          </a>
         ))}
       </div>
 

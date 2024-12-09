@@ -1,11 +1,10 @@
 import { LeafType } from '@/models/leaf.model';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, Fragment } from 'react';
 import LeafBox from './leaf_box';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
 import { WIDTH_XS } from '@/constants/size';
-import React from 'react';
 
 export default function Story() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -73,7 +72,7 @@ export default function Story() {
           max-xs:text-[.875rem]/7"
           style={{ fontFamily: currentFont }}>
           {lines.map((line, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               {line}
               {index % 2 !== 0 ? (
                 <>
@@ -85,7 +84,7 @@ export default function Story() {
               ) : (
                 <br />
               )}
-            </React.Fragment>
+            </Fragment>
           ))}
         </div>
       </div>

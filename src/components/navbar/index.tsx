@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState, RefObject, Fragment } from 'react';
 import { Fade as Hamburger } from 'hamburger-react';
 import { Drawer } from '@mui/material';
 import { anemoi_logo_bk, language_ic } from '@/constants/images';
@@ -8,10 +8,7 @@ import { WIDTH_MIN } from '@/constants/size';
 import { selectLogoStatus } from '@/redux/slices/navbar.slice';
 import { useSelector } from 'react-redux';
 
-export default function Navbar(props: {
-  sections: string[];
-  refs: React.RefObject<HTMLDivElement>[];
-}) {
+export default function Navbar(props: { sections: string[]; refs: RefObject<HTMLDivElement>[] }) {
   const { sections, refs } = props;
   const logoStatus = useSelector(selectLogoStatus);
 
@@ -34,7 +31,7 @@ export default function Navbar(props: {
       for (; i < Math.min(itemsPerRow * j, sections.length); i++) {
         const refIndex = i;
         rowElements.push(
-          <React.Fragment key={i}>
+          <Fragment key={i}>
             <div
               className="font-thin px-[14px] cursor-pointer"
               onClick={() => {
@@ -44,7 +41,7 @@ export default function Navbar(props: {
               {sections[i]}
             </div>
             |
-          </React.Fragment>
+          </Fragment>
         );
       }
       const rowBlock = (
@@ -148,14 +145,14 @@ export default function Navbar(props: {
         <div className="flex items-center justify-center w-full">
           |
           {sections.map((section, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
               <div
                 className="font-thin px-[30px] cursor-pointer"
                 onClick={() => scrollToSelectedSection(index)}>
                 {section}
               </div>
               |
-            </React.Fragment>
+            </Fragment>
           ))}
         </div>
 
