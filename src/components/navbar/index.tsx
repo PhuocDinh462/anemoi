@@ -73,11 +73,11 @@ export default function Navbar(props: {
   /// End for mobile only
 
   return (
-    <div className="w-screen max-bm:relative" style={{ minWidth: WIDTH_MIN }}>
+    <div className="w-screen max-2sm:relative" style={{ minWidth: WIDTH_MIN }}>
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
-        bm:hidden size-fit absolute top-0 right-0">
+        2sm:hidden size-fit absolute top-0 right-0">
         <Hamburger
           direction="right"
           label="Show menu"
@@ -105,7 +105,7 @@ export default function Navbar(props: {
         slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
         <div
           className="relative flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
-          font-seasons text-white font-semibold text-lg 2xs:text-xl xs:text-2xl
+          font-seasons text-white font-semibold text-lg xs2:text-xl xs:text-2xl
           bg-gradient-to-b from-custom-blue-100 to-transparent">
           {/* Change language button */}
           <img
@@ -130,7 +130,7 @@ export default function Navbar(props: {
 
       {/* PC case */}
       <div
-        className="relative size-full max-bm:hidden pt-[16px] pb-[20px]
+        className="relative size-full max-2sm:hidden pt-[16px] pb-[20px]
         bg-gradient-to-b from-custom-blue-100 to-transparent
         flex items-center justify-center select-none text-center font-semibold
         tracking-widest text-[1em] font-seasons text-white">

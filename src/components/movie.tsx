@@ -67,11 +67,11 @@ export default function Movie() {
         {/* Movie title */}
         <div
           className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-10
-          sm:top-[10%] bm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]">
+          sm:top-[10%] 2sm:top-[12%] md:top-[14%] lg:top-[17%] top-[15%]">
           <div
             className="font-seasons text-5xl font-thin text-center drop-shadow-movie-title text-custom-black-900
           lg:text-5xl md:text-4xl sm:text-3xl
-          max-xs:text-4xl max-2xs:text-3xl">
+          max-xs:text-4xl max-xs2:text-3xl">
             movie
           </div>
           <div className="font-thomasita text-lg font-semibold text-center drop-shadow-movie-title text-[#4fc69a]">

@@ -31,7 +31,7 @@ export default function LanguageDrawer(props: {
       slotProps={{ backdrop: { sx: { backgroundColor: 'rgba(255, 255, 255, .5)' } } }}>
       <div
         className="relative flex flex-col items-center justify-center w-full pt-[16%] pb-[20%]
-        font-seasons text-white text-lg 2xs:text-xl xs:text-2xl
+        font-seasons text-white text-lg xs2:text-xl xs:text-2xl
         bg-gradient-to-b from-custom-blue-100 to-transparent
         space-y-3 xs:space-y-4 sm:space-y-5">
         <FontAwesomeIcon

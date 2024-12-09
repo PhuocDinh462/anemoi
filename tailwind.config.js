@@ -81,11 +81,12 @@ export default {
       }
     },
     screens: {
-      '2xs': '349px',
+      xs2: '349px',
       xs: '499px',
       sm: '699px',
-      bm: '799px',
+      '2sm': '799px',
       md: '899px',
+      '2md': '999px',
       lg: '1280px',
       xl: '1600px'
     }
