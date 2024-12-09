@@ -62,7 +62,7 @@ export default function Cover() {
         observer.unobserve(currentRef);
       }
     };
-  }, [dispatch]);
+  }, [dispatch, checkScreenModeComplete]);
 
   const { i18n } = useTranslation();
   const t = i18n.t;
