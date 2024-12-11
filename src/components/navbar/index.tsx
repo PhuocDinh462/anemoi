@@ -70,7 +70,7 @@ export default function Navbar(props: { sections: string[]; refs: RefObject<HTML
   /// End for mobile only
 
   return (
-    <div className="w-screen max-2sm:relative" style={{ minWidth: WIDTH_MIN }}>
+    <div className="w-full max-2sm:relative" style={{ minWidth: WIDTH_MIN }}>
       {/* Mobile case */}
       <div
         className="p-1 bg-gradient-to-b from-custom-blue-100 to-transparent
@@ -156,7 +156,7 @@ export default function Navbar(props: { sections: string[]; refs: RefObject<HTML
           ))}
         </div>
 
-        <div className="absolute right-4">
+        <div className="absolute right-0">
           <LanguageMenu />
         </div>
       </div>

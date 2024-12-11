@@ -60,7 +60,7 @@ export default function Movie() {
 
   return (
     <>
-      <div className="relative cursor-pointer" onClick={() => setBackdropOpen(true)}>
+      <div className="bg-white relative cursor-pointer" onClick={() => setBackdropOpen(true)}>
         {/* Slider */}
         <Slider {...settings}>{renderSlides()}</Slider>
 

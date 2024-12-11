@@ -113,7 +113,7 @@ export default function Home() {
 
       {loadingResourcesComplete && loadingTimeout && (
         <div style={{ minWidth: WIDTH_MIN }}>
-          <div className="w-fit fixed z-[99]">
+          <div className="w-full max-w-inherit fixed z-[99]">
             <Navbar sections={sections} refs={refs} />
           </div>
           <div ref={refs[0]}>

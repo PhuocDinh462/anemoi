@@ -17,6 +17,9 @@ export default {
       width: {
         100: '25rem'
       },
+      maxWidth: {
+        inherit: 'inherit'
+      },
       backgroundImage: {
         'main-bg': "url('@images/fv_main_bg.webp')",
         'main-bg-sp': "url('@images/fv_main_bg_sp.webp')",
@@ -44,7 +47,7 @@ export default {
           '100%': { transform: 'translateY(0)', opacity: '1' }
         },
         charaAnime: {
-          '0%': { transform: 'translateY(-100px)', rotate: '-10deg', opacity: '0' },
+          '0%': { transform: 'translateY(-18%)', rotate: '-10deg', opacity: '0' },
           '100%': { transform: 'translateY(0)', rotate: '0deg', opacity: '1' }
         },
         fadeIn: {

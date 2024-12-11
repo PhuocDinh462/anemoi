@@ -4,10 +4,20 @@ import { LeafType } from '@/models/leaf.model';
 import { useTranslation } from 'react-i18next';
 import LANGUAGES from '@/constants/languages';
 import i18n from '@/i18n';
+import { WIDTH_XL } from '@/constants/size';
 
 export default function Intro() {
   const componentRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const currentIntroRef = componentRef.current;
@@ -41,6 +51,7 @@ export default function Intro() {
     <div
       className="w-full h-screen min-h-[800px] bg-intro-bg bg-cover bg-no-repeat bg-center
       flex justify-center items-center relative overflow-hidden"
+      style={windowWidth >= WIDTH_XL ? { minHeight: `${(2 * windowWidth) / 3}px` } : {}}
       ref={componentRef}>
       {/* Text box */}
       <div

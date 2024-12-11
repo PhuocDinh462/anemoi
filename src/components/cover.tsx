@@ -1,5 +1,5 @@
 import { anemoi_logo, fv_main_bg_sp, key_logo_black, key_logo_white } from '@/constants/images';
-import { WIDTH_MD, WIDTH_SM } from '@/constants/size';
+import { WIDTH_MD, WIDTH_SM, WIDTH_XL } from '@/constants/size';
 import { useEffect, useRef, useState, Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { showLogo, hideLogo } from '@/redux/slices/navbar.slice';
@@ -99,6 +99,7 @@ export default function Cover() {
           className={`relative overflow-hidden md:h-screen bg-cover bg-no-repeat
           sm:bg-bottom sm:min-h-[900px] sm:bg-main-bg-sp
           ${!tabletMode && 'md:bg-top md:bg-main-bg'}`}
+          style={windowWidth >= WIDTH_XL ? { minHeight: `${(2 * windowWidth) / 3}px` } : {}}
           ref={blockRef}>
           {/* BG */}
           {windowWidth < WIDTH_SM && (

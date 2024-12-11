@@ -143,7 +143,7 @@ export default function CharacterBox() {
 
               {/* Character image */}
               <div
-                className={`absolute align-top sm:w-[70%] mt-2 -z-20
+                className={`max-xl:absolute align-top sm:w-[70%] mt-2 -z-20
                 md:w-[54%] md:top-[5%]
                 ${currentLanguage?.code === 'jp' ? '2sm:top-[5%] sm:top-[12%]' : '2sm:top-[14%] sm:top-[22%]'}
                 top-[18%] animate-charaAnime
@@ -157,7 +157,7 @@ export default function CharacterBox() {
                 2md:left-[52%]
                 md:top-[30%] md:left-[45%] md:w-[48%]
                 sm:top-[34%] sm:left-[52%] sm:absolute
-                bottom-0 max-sm:w-full bg-gradient-to-t max-sm:from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
+                bottom-0 max-sm:w-full max-sm:bg-gradient-to-t from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
                 max-xs:px-5 max-xs:pb-8
                 animate-fadeIn">
                 <div

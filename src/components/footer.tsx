@@ -4,7 +4,7 @@ import LeafBox from './leaf_box';
 
 export default function Footer() {
   return (
-    <footer className="py-6 flex flex-col items-center justify-center relative">
+    <footer className="bg-white py-6 flex flex-col items-center justify-center relative">
       {/* Logo */}
       <img src={anemoi_logo_bk} alt="anemoi_logo_bk" className="md:w-[15%] sm:w-[30%] w-1/2" />
 
