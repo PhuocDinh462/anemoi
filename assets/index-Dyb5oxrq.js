@@ -152,7 +152,7 @@ Cô còn giữ bí quyết làm nước xốt "sukiyaki" - thứ mà cô tin r�
       bg-cover bg-no-repeat bg-bottom relative overflow-hidden
       ${i} xl:h-auto`,ref:e,children:[k.jsxs("div",{className:`flex flex-col justify-center items-center z-50 absolute \r
         top-[100px] left-1/2 -translate-x-1/2`,children:[k.jsx("div",{className:`font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] \r
-          max-sm:text-4xl max-xs:text-3xl`,children:"character"}),k.jsx("div",{className:"font-thomasita text-[#4ddaf2] font-semibold text-lg",children:"anemoi"})]}),k.jsx("div",{className:`max-xl:absolute xl:mb-[3%] size-full z-20 ${t&&"animate-fadeUp"}`,children:k.jsx(ZC,{})}),k.jsx(tu,{})]})}var v1={exports:{}},b1={};/**
+          max-sm:text-4xl max-xs:text-3xl`,children:"character"}),k.jsx("div",{className:"font-thomasita text-[#4ddaf2] font-semibold text-lg",children:"anemoi"})]}),k.jsx("div",{className:`max-xl:absolute xl:my-[3%] size-full z-20 ${t&&"animate-fadeUp"}`,children:k.jsx(ZC,{})}),k.jsx(tu,{})]})}var v1={exports:{}},b1={};/**
  * @license React
  * use-sync-external-store-with-selector.production.min.js
  *
