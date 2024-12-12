@@ -55,7 +55,7 @@ export default function Character() {
         <div className="font-thomasita text-[#4ddaf2] font-semibold text-lg">anemoi</div>
       </div>
 
-      <div className={`max-xl:absolute xl:mb-[3%] size-full z-20 ${isInView && 'animate-fadeUp'}`}>
+      <div className={`max-xl:absolute xl:my-[3%] size-full z-20 ${isInView && 'animate-fadeUp'}`}>
         <CharacterBox />
       </div>
 
