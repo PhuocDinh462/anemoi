@@ -7,3 +7,5 @@ export const WIDTH_XS = 499;
 export const WIDTH_SM = 699;
 export const WIDTH_MD = 899;
 export const WIDTH_XL = 1600;
+
+export const BG_RATIO = 16 / 9;
