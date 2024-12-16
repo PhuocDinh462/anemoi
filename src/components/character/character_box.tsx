@@ -95,10 +95,14 @@ export default function CharacterBox() {
       onTouchEnd={handleTouchEnd}>
       {/* Thumbnail box */}
       <div
-        className="flex sm:left-[51%] sm:top-[27%] sm:w-[360px] sm:absolute sm:gap-2
-        md:top-[22%] md:w-[400px] md:left-[44%] md:gap-3
-        2md:left-[51%]
-        w-full top-[20%] left-1/2 max-sm:justify-evenly max-sm:mt-40">
+        className={`flex sm:top-[22%] sm:w-[360px] sm:absolute sm:gap-2
+        md:w-[400px] md:gap-3
+        w-full top-[20%] left-1/2 max-sm:justify-evenly max-sm:mt-40
+        ${
+          currentLanguage?.code === 'jp'
+            ? 'sm:left-[51%] md:left-[44%] 2md:left-[51%]'
+            : 'sm:left-[46%] md:left-[44%] 2md:left-[51%]'
+        }`}>
         {CHARACTERS.map((character, index) => (
           <div
             key={index}
@@ -143,9 +147,13 @@ export default function CharacterBox() {
 
               {/* Character image */}
               <div
-                className={`max-xl:absolute align-top sm:w-[70%] mt-2 -z-20
-                md:w-[54%] md:top-[5%]
-                ${currentLanguage?.code === 'jp' ? '2sm:top-[5%] sm:top-[12%]' : '2sm:top-[14%] sm:top-[22%]'}
+                className={`max-xl:absolute align-top mt-2 -z-20
+                md:w-[54%] sm:w-[70%]
+                ${
+                  currentLanguage?.code === 'jp'
+                    ? 'md:top-[5%] 2sm:top-[10%] sm:top-[12%]'
+                    : 'md:top-[8%] 2sm:top-[13%] sm:top-[15%] sm:left-[-5%] md:left-0'
+                }
                 top-[18%] animate-charaAnime
                 ${tabletMode && '!top-[10%]'}`}>
                 <img src={character.image} width="100%" alt={character.id} />
@@ -153,13 +161,17 @@ export default function CharacterBox() {
 
               {/* Text box */}
               <div
-                className="align-top drop-shadow-chara-text-box
-                2md:left-[52%]
-                md:top-[30%] md:left-[45%] md:w-[48%]
-                sm:top-[34%] sm:left-[52%] sm:absolute
+                className={`align-top drop-shadow-chara-text-box
+                md:top-[30%] md:w-[48%]
+                sm:top-[29%] sm:absolute
+                ${
+                  currentLanguage?.code === 'jp'
+                    ? 'sm:left-[52%] md:left-[45%] 2md:left-[52%]'
+                    : 'sm:left-[47%] md:left-[45%] 2md:left-[52%]'
+                }
                 bottom-0 max-sm:w-full max-sm:bg-gradient-to-t from-cb-blue from-50% max-sm:px-10 max-sm:pb-12 max-sm:mt-auto
                 max-xs:px-5 max-xs:pb-8
-                animate-fadeIn">
+                animate-fadeIn`}>
                 <div
                   className="sm:text-lg/10 text-white tracking-[.2em]
                   max-sm:text-xl/10"
