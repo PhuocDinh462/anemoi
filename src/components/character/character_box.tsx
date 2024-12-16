@@ -82,7 +82,7 @@ export default function CharacterBox() {
     'text-white ' +
     (currentLanguage?.code === 'jp'
       ? 'md:text-base/8 text-xs/7'
-      : 'md:text-sm/[1.85rem] text-xs/7 tracking-[.1em]');
+      : 'md:text-sm/[1.85rem] text-xs/[1.65rem] tracking-[.1em]');
 
   return (
     <div
@@ -95,14 +95,14 @@ export default function CharacterBox() {
       onTouchEnd={handleTouchEnd}>
       {/* Thumbnail box */}
       <div
-        className="flex sm:left-[51%] sm:top-[24%] sm:w-[360px] sm:absolute
-        md:top-[22%] md:w-[400px] md:left-[44%]
+        className="flex sm:left-[51%] sm:top-[27%] sm:w-[360px] sm:absolute sm:gap-2
+        md:top-[22%] md:w-[400px] md:left-[44%] md:gap-3
         2md:left-[51%]
-        w-full top-[20%] left-1/2 justify-evenly max-sm:mt-40">
+        w-full top-[20%] left-1/2 max-sm:justify-evenly max-sm:mt-40">
         {CHARACTERS.map((character, index) => (
           <div
             key={index}
-            className={`size-[70px] max-xs:size-[60px] bg-cover cursor-pointer
+            className={`md:size-[70px] size-[60px] bg-cover cursor-pointer
             hover:opacity-70 transition-opacity duration-300`}
             style={{
               backgroundImage: `url('${
