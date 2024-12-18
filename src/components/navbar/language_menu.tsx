@@ -68,6 +68,11 @@ export default function LanguageMenu() {
     return () => window.removeEventListener('resize', handleClose);
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleClose);
+    return () => window.removeEventListener('scroll', handleClose);
+  }, []);
+
   return (
     <>
       <IconButton
