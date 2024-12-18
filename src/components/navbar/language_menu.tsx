@@ -49,15 +49,18 @@ export default function LanguageMenu() {
   const currentLanguage = i18n.language;
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const openLanguageMenu = Boolean(anchorEl);
+  const [open, setOpen] = useState(Boolean(anchorEl));
 
-  const handleClick = (event: MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget);
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+    setOpen(true);
+  };
 
-  const handleClose = () => setAnchorEl(null);
+  const handleClose = () => setOpen(false);
 
   const handleChange = (lng: Language) => {
     changeLanguage(lng.code);
-    setAnchorEl(null);
+    handleClose();
   };
 
   useEffect(() => {
@@ -87,7 +90,7 @@ export default function LanguageMenu() {
         }}
         disableScrollLock
         anchorEl={anchorEl}
-        open={openLanguageMenu}
+        open={open}
         onClose={handleClose}>
         {LANGUAGES.map((lng, index) => (
           <StyledMenuItem key={index} onClick={() => handleChange(lng)} disableRipple>
