@@ -44,8 +44,8 @@ export default function Intro() {
   }, []);
 
   const { t } = useTranslation();
-  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
-  const currentFont = currentLanguage?.font ?? 'sans-serif';
+  const currentLanguage = LANGUAGES.find((lang) => lang.getCode() === i18n.language);
+  const currentFont = currentLanguage?.getFont() ?? 'sans-serif';
 
   return (
     <div

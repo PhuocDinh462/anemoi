@@ -8,7 +8,7 @@ interface props {
 }
 
 export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
-  const leaf = Leaves.find((leaf) => leaf.type === type);
+  const leaf = Leaves.find((leaf) => leaf.getType() === type);
   const [bgPositionY, setBgPositionY] = useState(LEAF_START);
 
   useEffect(() => {
@@ -35,21 +35,21 @@ export default function LeafBox({ type = LeafType.CHARA_LEAF }: props) {
         className={`${leafStyle} bg-left sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY}px`,
-          backgroundImage: `url('${leaf?.leaf1_url}')`
+          backgroundImage: `url('${leaf?.getLeaf1Url()}')`
         }}
       />
       <div
         className={`${leafStyle} bg-left sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY / 2}px`,
-          backgroundImage: `url('${leaf?.leaf2_url}')`
+          backgroundImage: `url('${leaf?.getLeaf2Url()}')`
         }}
       />
       <div
         className={`${leafStyle} bg-right sm:bg-center`}
         style={{
           backgroundPositionY: `${bgPositionY / 3}px`,
-          backgroundImage: `url('${leaf?.leaf3_url}')`
+          backgroundImage: `url('${leaf?.getLeaf3Url()}')`
         }}
       />
     </>

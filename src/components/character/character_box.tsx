@@ -39,8 +39,8 @@ export default function CharacterBox() {
   };
 
   const { t } = useTranslation();
-  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
-  const currentFont = currentLanguage?.font ?? 'sans-serif';
+  const currentLanguage = LANGUAGES.find((lang) => lang.getCode() === i18n.language);
+  const currentFont = currentLanguage?.getFont() ?? 'sans-serif';
 
   // Preload images
   const preloadedImages = useRef<HTMLImageElement[]>([]);
@@ -49,9 +49,9 @@ export default function CharacterBox() {
   when open/close toggle device toolbar in browser's DevTools */
   const loadCharaImages = () => {
     const charaImages = CHARACTERS.map((chara) => [
-      chara.image,
-      chara.thumbnail,
-      chara.thumbnailActive
+      chara.getImage(),
+      chara.getThumbnail(),
+      chara.getThumbnailActive()
     ]).flat();
 
     return Promise.all(
@@ -80,7 +80,7 @@ export default function CharacterBox() {
 
   const textStyle =
     'text-white ' +
-    (currentLanguage?.code === 'jp'
+    (currentLanguage?.getCode() === 'jp'
       ? 'md:text-base/8 text-xs/7'
       : 'md:text-sm/[1.85rem] text-xs/[1.65rem] tracking-[.1em]');
 
@@ -99,7 +99,7 @@ export default function CharacterBox() {
         md:w-[400px] md:gap-3
         w-full top-[20%] left-1/2 max-sm:justify-evenly max-sm:mt-40
         ${
-          currentLanguage?.code === 'jp'
+          currentLanguage?.getCode() === 'jp'
             ? 'sm:left-[51%] md:left-[44%] 2md:left-[51%]'
             : 'sm:left-[46%] md:left-[44%] 2md:left-[51%]'
         }`}>
@@ -110,7 +110,7 @@ export default function CharacterBox() {
             hover:opacity-70 transition-opacity duration-300`}
             style={{
               backgroundImage: `url('${
-                charaIndex === index ? character.thumbnailActive : character.thumbnail
+                charaIndex === index ? character.getThumbnailActive() : character.getThumbnail()
               }')`
             }}
             onClick={() => changeChara(index)}
@@ -124,7 +124,7 @@ export default function CharacterBox() {
           index === charaIndex && (
             <Fragment key={index}>
               {/* Vertical quote */}
-              {currentLanguage?.code === 'jp' && (
+              {currentLanguage?.getCode() === 'jp' && (
                 <div
                   className="md:top-[20%] left-[4%] -z-[1]
                   [writing-mode:vertical-rl] font-mincho size-fit
@@ -132,7 +132,7 @@ export default function CharacterBox() {
                   max-sm:ml-10 max-sm:mt-10
                   max-xs:text-sm max-xs:ml-5
                   animate-fadeIn">
-                  {t(`${currentChara.id}.quote`)
+                  {t(`${currentChara.getId()}.quote`)
                     .split('\n')
                     .map((value, index) => (
                       <Fragment key={index}>
@@ -150,13 +150,13 @@ export default function CharacterBox() {
                 className={`max-xl:absolute align-top mt-2 -z-20
                 md:w-[54%] sm:w-[70%]
                 ${
-                  currentLanguage?.code === 'jp'
+                  currentLanguage?.getCode() === 'jp'
                     ? 'md:top-[5%] 2sm:top-[10%] sm:top-[12%]'
                     : 'md:top-[8%] 2sm:top-[13%] sm:top-[15%] sm:left-[-5%] md:left-0'
                 }
                 top-[18%] animate-charaAnime
                 ${tabletMode && '!top-[10%]'}`}>
-                <img src={character.image} width="100%" alt={character.id} />
+                <img src={character.getImage()} width="100%" alt={character.getId()} />
               </div>
 
               {/* Text box */}
@@ -165,7 +165,7 @@ export default function CharacterBox() {
                 md:top-[30%] md:w-[48%]
                 sm:top-[29%] sm:absolute
                 ${
-                  currentLanguage?.code === 'jp'
+                  currentLanguage?.getCode() === 'jp'
                     ? 'sm:left-[52%] md:left-[45%] 2md:left-[52%]'
                     : 'sm:left-[47%] md:left-[45%] 2md:left-[52%]'
                 }
@@ -176,7 +176,7 @@ export default function CharacterBox() {
                   className="sm:text-lg/10 text-white tracking-[.2em]
                   max-sm:text-xl/10"
                   style={{ fontFamily: currentFont }}>
-                  {t(`${currentChara.id}.alias`)}
+                  {t(`${currentChara.getId()}.alias`)}
                 </div>
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
 
@@ -185,21 +185,21 @@ export default function CharacterBox() {
                   sm:text-2xl/10
                   text-3xl/[3.5rem]">
                   <span className="pr-[10px]" style={{ fontFamily: currentFont }}>
-                    {t(`${currentChara.id}.name`)}
+                    {t(`${currentChara.getId()}.name`)}
                   </span>
-                  {currentLanguage?.code === 'jp' && (
+                  {currentLanguage?.getCode() === 'jp' && (
                     <span className="text-[.4em] align-[8px] whitespace-nowrap font-mincho">
-                      {currentChara.furigana}
+                      {currentChara.getFurigana()}
                     </span>
                   )}
                 </div>
 
                 {/* Horizontal quote */}
-                {currentLanguage?.code !== 'jp' && (
+                {currentLanguage?.getCode() !== 'jp' && (
                   <div
                     className="mt-3 py-3 px-5 size-fit text-white font-voyage relative
                     md:text-xl 2sm:text-lg sm:text-base xs:text-xl text-base">
-                    {t(`${currentChara.id}.quote`)}
+                    {t(`${currentChara.getId()}.quote`)}
                     <div
                       className="h-10 w-5 border-white absolute top-0 left-0
                       border-t xs:border-t-2
@@ -217,7 +217,7 @@ export default function CharacterBox() {
                   profile
                 </div>
                 <div className={textStyle} style={{ fontFamily: currentFont }}>
-                  {t(`${currentChara.id}.profile`)
+                  {t(`${currentChara.getId()}.profile`)
                     .split('\n')
                     .map((value, index) => (
                       <Fragment key={index}>
@@ -230,14 +230,16 @@ export default function CharacterBox() {
                 <div className={`${textStyle} flex gap-x-4 flex-wrap`}>
                   <div style={{ fontFamily: currentFont }}>
                     <span className="text-xs font-seasons italic mr-4">spec</span>
-                    {`${t('height')}${t('colon')}${currentChara.height}cm`}
+                    {`${t('height')}${t('colon')}${currentChara.getHeight()}cm`}
                   </div>
-                  <div style={{ fontFamily: currentFont }}>{`${t('weight')}${t('colon')}${
-                    currentChara.weight
-                  }kg`}</div>
-                  <div style={{ fontFamily: currentFont }}>{`${t('b/w/h')}${t('colon')}${
-                    currentChara.threeSize
-                  }`}</div>
+                  <div
+                    style={{
+                      fontFamily: currentFont
+                    }}>{`${t('weight')}${t('colon')}${currentChara.getWeight()}kg`}</div>
+                  <div
+                    style={{
+                      fontFamily: currentFont
+                    }}>{`${t('b/w/h')}${t('colon')}${currentChara.getThreeSize()}`}</div>
                 </div>
 
                 <div
@@ -247,7 +249,7 @@ export default function CharacterBox() {
                   <span className="text-xs font-seasons italic mr-4">illustration</span>
                   <span className={textStyle} style={{ fontFamily: currentFont }}>{`${t(
                     'original artwork'
-                  )}${t('colon')}${t(`${currentChara.id}.artwork`)}`}</span>
+                  )}${t('colon')}${t(`${currentChara.getId()}.artwork`)}`}</span>
                 </div>
               </div>
 
@@ -258,9 +260,9 @@ export default function CharacterBox() {
                 bottom-[40%] max-sm:[writing-mode:vertical-rl] max-sm:right-5 text-7xl
                 animate-fadeIn`}
                 style={{
-                  color: `${currentChara.latinColor}`
+                  color: `${currentChara.getLatinColor()}`
                 }}>
-                {currentChara.latin}
+                {currentChara.getLatin()}
               </div>
             </Fragment>
           )

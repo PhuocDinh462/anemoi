@@ -59,7 +59,7 @@ export default function LanguageMenu() {
   const handleClose = () => setOpen(false);
 
   const handleChange = (lng: Language) => {
-    changeLanguage(lng.code);
+    changeLanguage(lng.getCode());
     handleClose();
   };
 
@@ -101,11 +101,11 @@ export default function LanguageMenu() {
           <StyledMenuItem key={index} onClick={() => handleChange(lng)} disableRipple>
             <div className="flex items-center justify-between w-full">
               <div
-                className={`${currentLanguage === lng.code && 'text-custom-blue-100'}`}
-                style={{ fontFamily: lng.font }}>
-                {lng.name}
+                className={`${currentLanguage === lng.getCode() && 'text-custom-blue-100'}`}
+                style={{ fontFamily: lng.getFont() }}>
+                {lng.getName()}
               </div>
-              {currentLanguage === lng.code && (
+              {currentLanguage === lng.getCode() && (
                 <img
                   className="ml-5 animate-spin"
                   src={anemoi_logo_anime1}

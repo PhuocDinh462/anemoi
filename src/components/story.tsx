@@ -44,8 +44,8 @@ export default function Story() {
   }, []);
 
   const { t } = useTranslation();
-  const currentLanguage = LANGUAGES.find((lang) => lang.code === i18n.language);
-  const currentFont = currentLanguage?.font ?? 'sans-serif';
+  const currentLanguage = LANGUAGES.find((lang) => lang.getCode() === i18n.language);
+  const currentFont = currentLanguage?.getFont() ?? 'sans-serif';
 
   const numberOfLines = 10;
   const lines = Array.from({ length: numberOfLines }, (_, index) => t(`story.line${index + 1}`));
@@ -80,7 +80,7 @@ export default function Story() {
                   <br />
                   <br />
                 </>
-              ) : currentLanguage?.code !== 'jp' && windowWidth < WIDTH_XS ? (
+              ) : currentLanguage?.getCode() !== 'jp' && windowWidth < WIDTH_XS ? (
                 ' '
               ) : (
                 <br />

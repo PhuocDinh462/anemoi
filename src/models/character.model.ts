@@ -1,14 +1,14 @@
 export default class Character {
-  id: string; // Use for i18n
-  furigana: string;
-  latin: string;
-  height: number;
-  weight: number;
-  threeSize: string;
-  image: string;
-  thumbnail: string;
-  thumbnailActive: string;
-  latinColor: string;
+  private id: string;
+  private furigana: string;
+  private latin: string;
+  private height: number;
+  private weight: number;
+  private threeSize: string;
+  private image: string;
+  private thumbnail: string;
+  private thumbnailActive: string;
+  private latinColor: string;
 
   constructor(
     id: string,
@@ -32,5 +32,45 @@ export default class Character {
     this.thumbnail = thumbnail;
     this.thumbnailActive = thumbnailActive;
     this.latinColor = latinColor;
+  }
+
+  getId(): string {
+    return this.id;
+  }
+
+  getFurigana(): string {
+    return this.furigana;
+  }
+
+  getLatin(): string {
+    return this.latin;
+  }
+
+  getHeight(): number {
+    return this.height;
+  }
+
+  getWeight(): number {
+    return this.weight;
+  }
+
+  getThreeSize(): string {
+    return this.threeSize;
+  }
+
+  getImage(): string {
+    return this.image;
+  }
+
+  getThumbnail(): string {
+    return this.thumbnail;
+  }
+
+  getThumbnailActive(): string {
+    return this.thumbnailActive;
+  }
+
+  getLatinColor(): string {
+    return this.latinColor;
   }
 }

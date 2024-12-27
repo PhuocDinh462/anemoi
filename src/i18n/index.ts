@@ -15,10 +15,10 @@ const resources = {
 };
 
 const getCurrentLanguage = () => {
-  const defaultLang = LANGUAGES[0].code;
+  const defaultLang = LANGUAGES[0].getCode();
   const currentLang = localStorage.getItem('language') || defaultLang;
 
-  if (LANGUAGES.map((language) => language.code).includes(currentLang)) return currentLang;
+  if (LANGUAGES.map((language) => language.getCode()).includes(currentLang)) return currentLang;
   return defaultLang;
 };
 

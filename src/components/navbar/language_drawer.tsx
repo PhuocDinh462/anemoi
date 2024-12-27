@@ -46,13 +46,13 @@ export default function LanguageDrawer(props: {
         {LANGUAGES.map((lng, index) => (
           <div
             key={index}
-            style={{ fontFamily: lng.font }}
+            style={{ fontFamily: lng.getFont() }}
             className="cursor-pointer"
             onClick={() => {
-              changeLanguage(lng.code);
+              changeLanguage(lng.getCode());
               setOpenLanguageDrawer(false);
             }}>
-            {lng.name}
+            {lng.getName()}
           </div>
         ))}
       </div>

@@ -12,12 +12,12 @@ export default function Footer() {
       <div className="flex items-center justify-center mt-10 md:space-x-3 space-x-5 z-50">
         {SocialMediaArr.map((socialMedia, index) => (
           <a
-            aria-label={`Go to ${socialMedia.label}`}
+            aria-label={`Go to ${socialMedia.getLabel()}`}
             key={index}
-            href={socialMedia.href}
+            href={socialMedia.getHref()}
             target="_blank"
             rel="noopener noreferrer">
-            <img src={socialMedia.icon} className="w-7" alt={socialMedia.label} />
+            <img src={socialMedia.getIcon()} className="w-7" alt={socialMedia.getLabel()} />
           </a>
         ))}
       </div>
