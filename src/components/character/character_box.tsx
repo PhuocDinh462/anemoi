@@ -181,7 +181,7 @@ export default function CharacterBox() {
                 <div className="h-[1px] w-full bg-cover bg-character_border" />
 
                 <div
-                  className="md:text-4xl/[4rem] text-white tracking-[.1em] 
+                  className="md:text-4xl/[4rem] text-white tracking-[.1em]
                   sm:text-2xl/10
                   text-3xl/[3.5rem]">
                   <span className="pr-[10px]" style={{ fontFamily: currentFont }}>

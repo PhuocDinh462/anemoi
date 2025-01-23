@@ -45,10 +45,10 @@ export default function Character() {
       ref={componentRef}>
       {/* Text box */}
       <div
-        className="flex flex-col justify-center items-center z-50 absolute 
+        className="flex flex-col justify-center items-center z-50 absolute
         top-[100px] left-1/2 -translate-x-1/2">
         <div
-          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
+          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em]
           max-sm:text-4xl max-xs:text-3xl">
           character
         </div>

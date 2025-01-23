@@ -136,12 +136,12 @@ export default function Cover() {
 
           {/* Coming 2025 */}
           <div
-            className="absolute bottom-[14%] sm:bottom-[22.5%] left-1/2 
+            className="absolute bottom-[14%] sm:bottom-[22.5%] left-1/2
             -translate-x-1/2 text-4xl text-[#7ca0d1] font-thomasita">
             Coming
           </div>
           <div
-            className="absolute bottom-[8%] sm:bottom-[18%] left-1/2 
+            className="absolute bottom-[8%] sm:bottom-[18%] left-1/2
             -translate-x-1/2 tracking-[0.42em] indent-[0.42em]
             font-seasons font-thin text-5xl text-custom-black-900">
             2025
@@ -167,7 +167,7 @@ export default function Cover() {
 
           {/* Scroll */}
           <div
-            className="max-sm:hidden absolute left-1/2 -translate-x-1/2 
+            className="max-sm:hidden absolute left-1/2 -translate-x-1/2
             flex flex-col items-center bottom-0 h-[70px] font-seasons w-10 overflow-hidden">
             <span className="text-xs tracking-widest italic pb-2">Scroll</span>
             <div className="h-8 w-[.5px] bg-black animate-pathMove" />

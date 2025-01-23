@@ -14,4 +14,4 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'no-irregular-whitespace': 'off'
   }
-}
+};

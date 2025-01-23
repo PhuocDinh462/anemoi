@@ -59,14 +59,14 @@ export default function Intro() {
           isInView && 'animate-fadeDown'
         }`}>
         <div
-          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em] 
+          className="font-seasons text-5xl font-light tracking-[.2em] indent-[.2em]
         max-sm:text-4xl max-xs:text-3xl">
           introduction
         </div>
         <div className="font-thomasita text-[#d7a732] font-semibold text-lg">anemoi</div>
 
         <div
-          className="py-[30px] text-center leading-10 
+          className="py-[30px] text-center leading-10
           max-sm:text-[.875rem]/8"
           style={{ fontFamily: currentFont }}>
           {t('intro.line1')}
@@ -80,7 +80,7 @@ export default function Intro() {
 
         <div className="font-thomasita font-semibold text-sm">staff</div>
         <div
-          className="text-center leading-10 
+          className="text-center leading-10
           max-sm:text-[.875rem]/8"
           style={{ fontFamily: currentFont }}>
           {`［ ${t('original artwork')} ］Na-Ga ／ ${t('fumuyun')} ／ ${t(
